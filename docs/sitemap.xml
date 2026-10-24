@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aranfelix.github.io/research-m-e.html</loc>
-    <lastmod>2026-10-24T14:29:30.732Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aranfelix.github.io/about.html</loc>
-    <lastmod>2026-10-24T14:29:30.702Z</lastmod>
-  </url>
-  <url>
     <loc>https://aranfelix.github.io/index.html</loc>
-    <lastmod>2026-10-24T14:29:30.679Z</lastmod>
+    <lastmod>2026-10-24T20:53:17.545Z</lastmod>
   </url>
   <url>
-    <loc>https://aranfelix.github.io/projects/kenya-voters.html</loc>
-    <lastmod>2026-10-24T08:53:14.506Z</lastmod>
+    <loc>https://aranfelix.github.io/projects.html</loc>
+    <lastmod>2026-10-24T08:53:14.425Z</lastmod>
   </url>
   <url>
     <loc>https://aranfelix.github.io/cv.html</loc>
     <lastmod>2026-10-24T14:29:30.751Z</lastmod>
   </url>
   <url>
-    <loc>https://aranfelix.github.io/projects.html</loc>
-    <lastmod>2026-10-24T08:53:14.425Z</lastmod>
+    <loc>https://aranfelix.github.io/about.html</loc>
+    <lastmod>2026-10-24T14:29:30.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aranfelix.github.io/projects/kenya-voters.html</loc>
+    <lastmod>2026-10-24T08:53:14.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aranfelix.github.io/research-m-e.html</loc>
+    <lastmod>2026-10-24T14:29:30.732Z</lastmod>
   </url>
 </urlset>

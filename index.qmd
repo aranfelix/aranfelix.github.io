@@ -61,7 +61,7 @@ I am a statistician and data analyst who turns raw data into clear, defensible e
 <h4><span class="acc">Programming</span>and databases</h4>
 <div class="tw-item"><span class="tw-logo"><img src="images/tools/sql.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">SQL</span></div>
 <div class="tw-item"><span class="tw-logo"><img src="images/tools/python.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Python</span></div>
-<div class="tw-item"><span class="tw-logo badge">R</span><span class="tw-name">R<small>RStudio</small></span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/rstudio.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">R<small>RStudio</small></span></div>
 </div>
 <div class="tw-col">
 <h4><span class="acc">Statistical and</span>qualitative software</h4>
@@ -74,14 +74,14 @@ I am a statistician and data analyst who turns raw data into clear, defensible e
 <h4><span class="acc">Data collection</span>and survey design</h4>
 <div class="tw-item"><span class="tw-logo wide"><img src="images/tools/odk.png" alt="" width="40" height="22" loading="lazy"></span><span class="tw-name">ODK Collect</span></div>
 <div class="tw-item"><span class="tw-logo"><img src="images/tools/kobo.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">KoboToolbox</span></div>
-<div class="tw-item"><span class="tw-logo badge tiny">RC</span><span class="tw-name">REDCap</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/redcap.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">REDCap</span></div>
 <div class="tw-item"><span class="tw-logo badge tiny">CAPI</span><span class="tw-name">CAPI<small>Computer-assisted interviewing</small></span></div>
 <div class="tw-item"><span class="tw-logo badge"><i class="bi bi-card-checklist"></i></span><span class="tw-name">Questionnaire design</span></div>
 </div>
 <div class="tw-col">
 <h4><span class="acc">Visualisation</span>and reporting</h4>
 <div class="tw-item"><span class="tw-logo"><img src="images/tools/tableau.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Tableau</span></div>
-<div class="tw-item"><span class="tw-logo badge"><i class="bi bi-bar-chart-fill"></i></span><span class="tw-name">Power BI</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/powerbi.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Power BI</span></div>
 <div class="tw-item"><span class="tw-logo"><img src="images/tools/excel.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Excel</span></div>
 </div>
 <div class="tw-col">

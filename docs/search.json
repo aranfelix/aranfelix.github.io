@@ -1,75 +1,5 @@
 [
   {
-    "objectID": "research-m-e.html",
-    "href": "research-m-e.html",
-    "title": "Research & M&E",
-    "section": "",
-    "text": "Evidence is only useful if it can be trusted and understood. I support research and M&E work from the first design decision to the final report."
-  },
-  {
-    "objectID": "research-m-e.html#what-you-need-and-what-you-get",
-    "href": "research-m-e.html#what-you-need-and-what-you-get",
-    "title": "Research & M&E",
-    "section": "What you need and what you get",
-    "text": "What you need and what you get\n\n\n\n\n\n\n\n\nYou need to…\nI deliver\nTools\n\n\n\n\nDesign a study or evaluation\nResearch questions, indicators, a sampling approach and well-structured questionnaires\nExcel, R\n\n\nCollect data digitally\nQuestionnaires prepared for phone or tablet collection, with the collected data checked for quality\nODK Collect, KoboToolbox, REDCap, CAPI\n\n\nAnalyse survey or programme data\nA cleaned dataset, statistical tests and models, tables and charts, and a clear interpretation\nSPSS, Stata, R, Python\n\n\nMake sense of interviews and focus groups\nCoded transcripts, themes backed by evidence from participants, and a written summary\nNVivo, ATLAS.ti\n\n\nTrack programme performance\nIndicator tracking tables, data quality checks and live dashboards\nExcel, SQL, Tableau, Power BI\n\n\nReport to donors, boards or the public\nA clear report with visuals and a plain-language summary of findings and limits\nR, Tableau, Power BI, Excel"
-  },
-  {
-    "objectID": "research-m-e.html#methods-i-work-with",
-    "href": "research-m-e.html#methods-i-work-with",
-    "title": "Research & M&E",
-    "section": "Methods I work with",
-    "text": "Methods I work with\n\nQuestionnaire designDigital data collectionDescriptive statisticsHypothesis testingRegressionSurvey data analysisThematic analysisMixed methodsIndicator frameworksData quality assessment"
-  },
-  {
-    "objectID": "research-m-e.html#how-i-handle-evidence",
-    "href": "research-m-e.html#how-i-handle-evidence",
-    "title": "Research & M&E",
-    "section": "How I handle evidence",
-    "text": "How I handle evidence\n\nHonest limits. Every analysis states what the data can and cannot show, including missing data and sampling issues.\nAssociation is not cause. I say clearly when a result describes a pattern rather than an effect.\nConfidentiality. I follow the ethics and data-protection requirements of each project and anonymise anything shared publicly.\n\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About me",
-    "section": "",
-    "text": "I am Aran Felix, a statistician and data analyst. I take a question that matters to you, find or build the evidence to answer it, and explain the answer so you can act on it.\nI hold a BSc in Statistics and currently work as a data analyst with ADAC Consultancy. I combine questionnaire design, digital data collection, statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report."
-  },
-  {
-    "objectID": "about.html#what-i-am-looking-for",
-    "href": "about.html#what-i-am-looking-for",
-    "title": "About me",
-    "section": "What I am looking for",
-    "text": "What I am looking for\n\nRoles: Data Analyst, Research Analyst or Officer, Monitoring and Evaluation Analyst, and Business Intelligence or Reporting Analyst.\nSectors: banks and financial institutions, NGOs and development organisations, research institutions, and data-driven businesses.\nAlso: freelance and consulting projects."
-  },
-  {
-    "objectID": "about.html#how-i-can-help",
-    "href": "about.html#how-i-can-help",
-    "title": "About me",
-    "section": "How I can help",
-    "text": "How I can help\n\n\n\n\nResearch and questionnaire design\n\n\nTurn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.\n\n\n\n\n\nDigital data collection\n\n\nCollect data on phones and tablets with ODK Collect, KoboToolbox, REDCap and CAPI, with quality checks along the way.\n\n\n\n\n\nQuantitative analysis\n\n\nClean, test and model survey and programme data in SPSS, Stata, R or Python, and interpret the results.\n\n\n\n\n\nQualitative analysis\n\n\nCode interviews and focus groups in NVivo or ATLAS.ti and draw out themes that trace back to what people said.\n\n\n\n\n\nMonitoring and evaluation\n\n\nSet up indicators, check data quality, track progress and report evidence to donors and boards.\n\n\n\n\n\nDashboards and reporting\n\n\nBuild Tableau and Power BI dashboards, SQL and Excel reports, and clear charts that show decision-makers what is happening."
-  },
-  {
-    "objectID": "about.html#who-i-work-with",
-    "href": "about.html#who-i-work-with",
-    "title": "About me",
-    "section": "Who I work with",
-    "text": "Who I work with\n\nBanks and financial institutions that need accurate, well-documented reporting and analysis.\nNGOs and development programmes that need credible M&E evidence for donors and boards.\nResearch teams and institutions that need rigorous, reproducible analysis.\nBusinesses and consultancies that want analysis and dashboards to track performance."
-  },
-  {
-    "objectID": "about.html#why-work-with-me",
-    "href": "about.html#why-work-with-me",
-    "title": "About me",
-    "section": "Why work with me",
-    "text": "Why work with me\n\nI work from questionnaire to report. I design the instrument, collect the data digitally, analyse it and report it, so quality is protected at every step.\nI work on both sides of research. Numbers show the scale of a problem and interviews explain it. I can do both, which matters in research and M&E.\nI show my working. Methods are documented and analyses are reproducible, and my code is open on GitHub.\nI tell you what the data cannot say. You get limitations and uncertainty stated plainly, not a result that sounds more certain than it is."
-  },
-  {
-    "objectID": "about.html#how-a-project-works",
-    "href": "about.html#how-a-project-works",
-    "title": "About me",
-    "section": "How a project works",
-    "text": "How a project works\n\n\n1. Conversation\n\nWe agree the question, the data available, the deadline and what a useful result looks like.\n\n\n\n2. Plan\n\nYou receive a short written scope with methods, outputs and timeline.\n\n\n\n3. Analysis\n\nI clean, analyse and check the results, sharing progress along the way.\n\n\n\n4. Delivery\n\nA clear report, dashboard or presentation, with the documentation behind it.\n\n\n\n5. Handover\n\nI walk you through the findings so you can explain and defend them.\n\n\n\nWhere work was done for clients, I share only what I am permitted to disclose and anonymise the rest.\nSee my projects View my CV\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Turning data into evidence and better decisions.",
@@ -102,7 +32,7 @@
     "href": "index.html#tools-and-methods",
     "title": "Turning data into evidence and better decisions.",
     "section": "Tools and methods",
-    "text": "Tools and methods\n\n\n\nProgrammingand databases\n\n\nSQL\n\n\nPython\n\n\nRRRStudio\n\n\n\n\nStatistical andqualitative software\n\n\nSPSS\n\n\nStata\n\n\nNVivo\n\n\nATLAS.ti\n\n\n\n\nData collectionand survey design\n\n\nODK Collect\n\n\nKoboToolbox\n\n\nRCREDCap\n\n\nCAPICAPIComputer-assisted interviewing\n\n\nQuestionnaire design\n\n\n\n\nVisualisationand reporting\n\n\nTableau\n\n\nPower BI\n\n\nExcel\n\n\n\n\nAnalyticmethods\n\n\n\nExploratory data analysis\n\n\nData cleaning and validation\n\n\nDescriptive and inferential statistics\n\n\nHypothesis tests (t-test, chi-square, post-hoc)\n\n\nANOVA\n\n\nLinear and logistic regression\n\n\nSegmentation and clustering\n\n\nCohort analysis\n\n\nA/B testing\n\n\nQuestionnaire and survey design, sampling\n\n\nThematic analysis"
+    "text": "Tools and methods\n\n\n\nProgrammingand databases\n\n\nSQL\n\n\nPython\n\n\nRRStudio\n\n\n\n\nStatistical andqualitative software\n\n\nSPSS\n\n\nStata\n\n\nNVivo\n\n\nATLAS.ti\n\n\n\n\nData collectionand survey design\n\n\nODK Collect\n\n\nKoboToolbox\n\n\nREDCap\n\n\nCAPICAPIComputer-assisted interviewing\n\n\nQuestionnaire design\n\n\n\n\nVisualisationand reporting\n\n\nTableau\n\n\nPower BI\n\n\nExcel\n\n\n\n\nAnalyticmethods\n\n\n\nExploratory data analysis\n\n\nData cleaning and validation\n\n\nDescriptive and inferential statistics\n\n\nHypothesis tests (t-test, chi-square, post-hoc)\n\n\nANOVA\n\n\nLinear and logistic regression\n\n\nSegmentation and clustering\n\n\nCohort analysis\n\n\nA/B testing\n\n\nQuestionnaire and survey design, sampling\n\n\nThematic analysis"
   },
   {
     "objectID": "index.html#methods-in-action",
@@ -112,46 +42,18 @@
     "text": "Methods in action\nPick a sector to see the methods I would apply and the questions they help answer.\n\nBanking & FinanceNGOs & M&EResearchBusiness analytics\n\n\n\nData validation and reconciliationExploratory analysisCustomer segmentationLogistic regressionTrend and seasonality analysisAnomaly detection (IQR, z-scores)KPI dashboards\n\nQuestions I can help answer\n\nWhich customer segments drive revenue, and which are likely to leave?\nWhere do reports disagree with the source data, and why?\nWhich transactions or accounts look unusual enough to review?\nHow is portfolio performance trending, and what is behind the change?\n\n\n\n\nQuestionnaire designDigital data collection (ODK, KoboToolbox, REDCap, CAPI)Indicator frameworksData quality assessmentSurvey data analysisThematic analysisMixed-methods triangulationDonor-style reporting\n\nQuestions I can help answer\n\nDid the programme reach its targets, and for whom?\nIs the data we are reporting reliable?\nWhat do participants say, and does it match the numbers?\nWhich locations or groups are falling behind?\n\n\n\n\nStudy design and samplingQuestionnaire designREDCap and CAPI data collectionSample-size planningHypothesis testingANOVA and non-parametric testsLinear and logistic regressionReproducible workflows\n\nQuestions I can help answer\n\nIs this difference real, or just noise?\nWhich factors are associated with the outcome after adjusting for others?\nHow large is the effect, and how sure are we?\nCould someone else reproduce this result?\n\n\n\n\nCohort and retention analysisA/B testingSegmentationForecasting and trendsSQL KPI reportingDashboard design\n\nQuestions I can help answer\n\nWhich customers stay, and what do they have in common?\nDid the change we made actually work?\nWhat is next quarter likely to look like?\nWhat should the dashboard show so managers act on it?\n\n\n\n\n\n  \n    Let's connect and work together!\n    Hiring for an analyst or research role, or need help with a data project? Send a message or reach me directly.\n\n    \n      \n      \n        Phone (WhatsApp)\n        +254 111 991 749\n      \n    \n\n    \n      \n      \n        E-mail\n        aranfelix2013@gmail.com\n      \n    \n\n    \n      \n      \n        LinkedIn\n        linkedin.com/in/aranfelix\n      \n    \n\n    \n      \n      \n        GitHub\n        github.com/aranfelix\n      \n    \n  \n\n  \n    \n      Send me a message\n      Name\n      Your email\n      Message\n      \n      \n      Send message"
   },
   {
-    "objectID": "projects/kenya-voters.html",
-    "href": "projects/kenya-voters.html",
-    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "Status: in progress. This page documents the project as it develops. Findings will be published here only after they have been checked, so every number you see is one I can defend."
+    "text": "Each case study explains the question, the data, the methods, the findings and the limitations. Use the search box to filter by title or category."
   },
   {
-    "objectID": "projects/kenya-voters.html#the-question",
-    "href": "projects/kenya-voters.html#the-question",
-    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
-    "section": "The question",
-    "text": "The question\nHow did voter registration and the network of polling stations change between the 2017 and 2022 Kenyan general elections, and what does that mean for how the electoral system serves voters?"
-  },
-  {
-    "objectID": "projects/kenya-voters.html#why-it-matters",
-    "href": "projects/kenya-voters.html#why-it-matters",
-    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
-    "section": "Why it matters",
-    "text": "Why it matters\nVoter registers and polling-station networks shape who can take part in an election and how elections are planned and observed. Comparing two election cycles shows where the system grew, where it stayed flat, and where the load on each station increased."
-  },
-  {
-    "objectID": "projects/kenya-voters.html#planned-analysis",
-    "href": "projects/kenya-voters.html#planned-analysis",
-    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
-    "section": "Planned analysis",
-    "text": "Planned analysis\n\nCombine and clean the registration and polling-station data for both elections so the two years can be compared fairly.\nCheck that area names and boundaries match across years, and document anything that does not.\nMeasure change in registered voters and polling stations, and the number of voters per station.\nShow the results with interactive charts and tables, and state the limitations of the data."
-  },
-  {
-    "objectID": "projects/kenya-voters.html#what-this-page-will-contain-when-complete",
-    "href": "projects/kenya-voters.html#what-this-page-will-contain-when-complete",
-    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
-    "section": "What this page will contain when complete",
-    "text": "What this page will contain when complete\nAn interactive chart and map of the results, a searchable data table, a short summary of findings, and a limitations section."
-  },
-  {
-    "objectID": "projects/kenya-voters.html#code-and-data",
-    "href": "projects/kenya-voters.html#code-and-data",
-    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
-    "section": "Code and data",
-    "text": "Code and data\nView the project on GitHub All projects\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+    "objectID": "projects.html#how-i-approach-a-project",
+    "href": "projects.html#how-i-approach-a-project",
+    "title": "Projects",
+    "section": "How I approach a project",
+    "text": "How I approach a project\n\n\n1. Question\n\nStart with a clearly defined question and the decision it supports.\n\n\n\n2. Data\n\nExamine the quality, structure and gaps in the data.\n\n\n\n3. Methods\n\nChoose methods that fit the question and document every step.\n\n\n\n4. Communicate\n\nPresent findings together with their limitations.\n\n\n\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
   },
   {
     "objectID": "cv.html",
@@ -203,17 +105,115 @@
     "text": "Software and tools\n\n\n\nArea\nTools\n\n\n\n\nStatistical analysis\nSPSS, Stata, R (RStudio), Python\n\n\nQualitative research\nNVivo, ATLAS.ti\n\n\nData collection\nODK Collect, KoboToolbox, REDCap, CAPI\n\n\nDatabases and spreadsheets\nSQL, Excel\n\n\nVisualisation and BI\nTableau, Power BI\n\n\n\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
   },
   {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
     "section": "",
-    "text": "Each case study explains the question, the data, the methods, the findings and the limitations. Use the search box to filter by title or category."
+    "text": "I am Aran Felix, a statistician and data analyst. I take a question that matters to you, find or build the evidence to answer it, and explain the answer so you can act on it.\nI hold a BSc in Statistics and currently work as a data analyst with ADAC Consultancy. I combine questionnaire design, digital data collection, statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report."
   },
   {
-    "objectID": "projects.html#how-i-approach-a-project",
-    "href": "projects.html#how-i-approach-a-project",
-    "title": "Projects",
-    "section": "How I approach a project",
-    "text": "How I approach a project\n\n\n1. Question\n\nStart with a clearly defined question and the decision it supports.\n\n\n\n2. Data\n\nExamine the quality, structure and gaps in the data.\n\n\n\n3. Methods\n\nChoose methods that fit the question and document every step.\n\n\n\n4. Communicate\n\nPresent findings together with their limitations.\n\n\n\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+    "objectID": "about.html#what-i-am-looking-for",
+    "href": "about.html#what-i-am-looking-for",
+    "title": "About me",
+    "section": "What I am looking for",
+    "text": "What I am looking for\n\nRoles: Data Analyst, Research Analyst or Officer, Monitoring and Evaluation Analyst, and Business Intelligence or Reporting Analyst.\nSectors: banks and financial institutions, NGOs and development organisations, research institutions, and data-driven businesses.\nAlso: freelance and consulting projects."
+  },
+  {
+    "objectID": "about.html#how-i-can-help",
+    "href": "about.html#how-i-can-help",
+    "title": "About me",
+    "section": "How I can help",
+    "text": "How I can help\n\n\n\n\nResearch and questionnaire design\n\n\nTurn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.\n\n\n\n\n\nDigital data collection\n\n\nCollect data on phones and tablets with ODK Collect, KoboToolbox, REDCap and CAPI, with quality checks along the way.\n\n\n\n\n\nQuantitative analysis\n\n\nClean, test and model survey and programme data in SPSS, Stata, R or Python, and interpret the results.\n\n\n\n\n\nQualitative analysis\n\n\nCode interviews and focus groups in NVivo or ATLAS.ti and draw out themes that trace back to what people said.\n\n\n\n\n\nMonitoring and evaluation\n\n\nSet up indicators, check data quality, track progress and report evidence to donors and boards.\n\n\n\n\n\nDashboards and reporting\n\n\nBuild Tableau and Power BI dashboards, SQL and Excel reports, and clear charts that show decision-makers what is happening."
+  },
+  {
+    "objectID": "about.html#who-i-work-with",
+    "href": "about.html#who-i-work-with",
+    "title": "About me",
+    "section": "Who I work with",
+    "text": "Who I work with\n\nBanks and financial institutions that need accurate, well-documented reporting and analysis.\nNGOs and development programmes that need credible M&E evidence for donors and boards.\nResearch teams and institutions that need rigorous, reproducible analysis.\nBusinesses and consultancies that want analysis and dashboards to track performance."
+  },
+  {
+    "objectID": "about.html#why-work-with-me",
+    "href": "about.html#why-work-with-me",
+    "title": "About me",
+    "section": "Why work with me",
+    "text": "Why work with me\n\nI work from questionnaire to report. I design the instrument, collect the data digitally, analyse it and report it, so quality is protected at every step.\nI work on both sides of research. Numbers show the scale of a problem and interviews explain it. I can do both, which matters in research and M&E.\nI show my working. Methods are documented and analyses are reproducible, and my code is open on GitHub.\nI tell you what the data cannot say. You get limitations and uncertainty stated plainly, not a result that sounds more certain than it is."
+  },
+  {
+    "objectID": "about.html#how-a-project-works",
+    "href": "about.html#how-a-project-works",
+    "title": "About me",
+    "section": "How a project works",
+    "text": "How a project works\n\n\n1. Conversation\n\nWe agree the question, the data available, the deadline and what a useful result looks like.\n\n\n\n2. Plan\n\nYou receive a short written scope with methods, outputs and timeline.\n\n\n\n3. Analysis\n\nI clean, analyse and check the results, sharing progress along the way.\n\n\n\n4. Delivery\n\nA clear report, dashboard or presentation, with the documentation behind it.\n\n\n\n5. Handover\n\nI walk you through the findings so you can explain and defend them.\n\n\n\nWhere work was done for clients, I share only what I am permitted to disclose and anonymise the rest.\nSee my projects View my CV\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+  },
+  {
+    "objectID": "projects/kenya-voters.html",
+    "href": "projects/kenya-voters.html",
+    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "section": "",
+    "text": "Status: in progress. This page documents the project as it develops. Findings will be published here only after they have been checked, so every number you see is one I can defend."
+  },
+  {
+    "objectID": "projects/kenya-voters.html#the-question",
+    "href": "projects/kenya-voters.html#the-question",
+    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "section": "The question",
+    "text": "The question\nHow did voter registration and the network of polling stations change between the 2017 and 2022 Kenyan general elections, and what does that mean for how the electoral system serves voters?"
+  },
+  {
+    "objectID": "projects/kenya-voters.html#why-it-matters",
+    "href": "projects/kenya-voters.html#why-it-matters",
+    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "section": "Why it matters",
+    "text": "Why it matters\nVoter registers and polling-station networks shape who can take part in an election and how elections are planned and observed. Comparing two election cycles shows where the system grew, where it stayed flat, and where the load on each station increased."
+  },
+  {
+    "objectID": "projects/kenya-voters.html#planned-analysis",
+    "href": "projects/kenya-voters.html#planned-analysis",
+    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "section": "Planned analysis",
+    "text": "Planned analysis\n\nCombine and clean the registration and polling-station data for both elections so the two years can be compared fairly.\nCheck that area names and boundaries match across years, and document anything that does not.\nMeasure change in registered voters and polling stations, and the number of voters per station.\nShow the results with interactive charts and tables, and state the limitations of the data."
+  },
+  {
+    "objectID": "projects/kenya-voters.html#what-this-page-will-contain-when-complete",
+    "href": "projects/kenya-voters.html#what-this-page-will-contain-when-complete",
+    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "section": "What this page will contain when complete",
+    "text": "What this page will contain when complete\nAn interactive chart and map of the results, a searchable data table, a short summary of findings, and a limitations section."
+  },
+  {
+    "objectID": "projects/kenya-voters.html#code-and-data",
+    "href": "projects/kenya-voters.html#code-and-data",
+    "title": "Kenya Registered Voters and Polling Stations, 2017 and 2022",
+    "section": "Code and data",
+    "text": "Code and data\nView the project on GitHub All projects\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+  },
+  {
+    "objectID": "research-m-e.html",
+    "href": "research-m-e.html",
+    "title": "Research & M&E",
+    "section": "",
+    "text": "Evidence is only useful if it can be trusted and understood. I support research and M&E work from the first design decision to the final report."
+  },
+  {
+    "objectID": "research-m-e.html#what-you-need-and-what-you-get",
+    "href": "research-m-e.html#what-you-need-and-what-you-get",
+    "title": "Research & M&E",
+    "section": "What you need and what you get",
+    "text": "What you need and what you get\n\n\n\n\n\n\n\n\nYou need to…\nI deliver\nTools\n\n\n\n\nDesign a study or evaluation\nResearch questions, indicators, a sampling approach and well-structured questionnaires\nExcel, R\n\n\nCollect data digitally\nQuestionnaires prepared for phone or tablet collection, with the collected data checked for quality\nODK Collect, KoboToolbox, REDCap, CAPI\n\n\nAnalyse survey or programme data\nA cleaned dataset, statistical tests and models, tables and charts, and a clear interpretation\nSPSS, Stata, R, Python\n\n\nMake sense of interviews and focus groups\nCoded transcripts, themes backed by evidence from participants, and a written summary\nNVivo, ATLAS.ti\n\n\nTrack programme performance\nIndicator tracking tables, data quality checks and live dashboards\nExcel, SQL, Tableau, Power BI\n\n\nReport to donors, boards or the public\nA clear report with visuals and a plain-language summary of findings and limits\nR, Tableau, Power BI, Excel"
+  },
+  {
+    "objectID": "research-m-e.html#methods-i-work-with",
+    "href": "research-m-e.html#methods-i-work-with",
+    "title": "Research & M&E",
+    "section": "Methods I work with",
+    "text": "Methods I work with\n\nQuestionnaire designDigital data collectionDescriptive statisticsHypothesis testingRegressionSurvey data analysisThematic analysisMixed methodsIndicator frameworksData quality assessment"
+  },
+  {
+    "objectID": "research-m-e.html#how-i-handle-evidence",
+    "href": "research-m-e.html#how-i-handle-evidence",
+    "title": "Research & M&E",
+    "section": "How I handle evidence",
+    "text": "How I handle evidence\n\nHonest limits. Every analysis states what the data can and cannot show, including missing data and sampling issues.\nAssociation is not cause. I say clearly when a result describes a pattern rather than an effect.\nConfidentiality. I follow the ethics and data-protection requirements of each project and anonymise anything shared publicly.\n\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
   }
 ]
