@@ -1,0 +1,36 @@
+
+---
+title: "Projects"
+---
+
+# Data Projects and Case Studies
+
+This portfolio presents practical applications of data analysis, statistics, research, and visualisation. Each case study will explain the problem, the data, the methods used, the findings, and their practical implications.
+
+## 1. Kenya Registered Voters Analysis
+
+**Focus:** Electoral data analysis and visualisation.
+
+**Repository:** [View the project on GitHub](https://github.com/aranfelix2013-cloud/kenya-registered-voters-analysis)
+
+This project provides a starting point for demonstrating how electoral registration data can support descriptive analysis and evidence-based interpretation.
+
+The published case study will document the dataset, analytical methods, key findings, and limitations after the repository has been reviewed.
+
+## 2. Statistical Analysis
+
+**Focus:** Statistical testing, relationships between variables, and interpretation.
+
+A case study will be added with a clearly defined research question, appropriate statistical methods, diagnostic checks where necessary, and an interpretation of the results.
+
+## 3. Business Intelligence and Visualisation
+
+**Focus:** Dashboards, reporting, and decision support.
+
+A case study will demonstrate how data preparation and visualisation can help users monitor performance and identify meaningful patterns.
+
+---
+
+## How I Approach Projects
+
+My approach begins with a clearly defined question. I examine the quality and structure of the data, select methods appropriate to the question, document the analysis, and communicate findings alongside their limitations.

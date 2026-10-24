@@ -1,0 +1,94 @@
+
+---
+title: "Home"
+---
+
+<div class="hero">
+  <p class="eyebrow">DATA · STATISTICS · RESEARCH</p>
+
+  # Aran Felix
+
+  ## Turning data into evidence and better decisions.
+
+  I work across data analytics, statistical research, business intelligence, and monitoring and evaluation. I use data preparation, statistical methods, and visualisation to investigate problems and communicate findings clearly.
+
+  <div class="hero-actions">
+    <a href="projects.qmd" class="btn btn-primary">Explore My Projects</a>
+    <a href="about.qmd" class="btn btn-outline-secondary">About Me</a>
+  </div>
+</div>
+
+---
+
+## What I Bring
+
+<div class="feature-grid">
+
+  <div class="feature-card">
+    <div class="feature-icon">01</div>
+    <h3>Data Analytics</h3>
+    <p>Cleaning, exploring, and analysing data to identify patterns, assess performance, and support decisions.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">02</div>
+    <h3>Research & Statistics</h3>
+    <p>Applying appropriate statistical methods to research questions and interpreting findings with care.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">03</div>
+    <h3>Monitoring & Evaluation</h3>
+    <p>Supporting data quality, indicator tracking, programme assessment, and evidence-based reporting.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="feature-icon">04</div>
+    <h3>Business Intelligence</h3>
+    <p>Communicating analytical findings through visualisations, reports, and dashboards.</p>
+  </div>
+
+</div>
+
+---
+
+## Selected Work
+
+### Kenya Registered Voters Analysis
+
+An analytical project focused on registered-voter data in Kenya. Explore the repository to review the available data, methods, and outputs.
+
+[View Project Repository](https://github.com/aranfelix2013-cloud/kenya-registered-voters-analysis){.btn .btn-outline-primary}
+
+<div class="project-note">
+  More case studies will be added as their data, methodology, results, and limitations are documented.
+</div>
+
+---
+
+## Tools I Work With
+
+<div class="skill-list">
+  <span>SQL</span>
+  <span>Python</span>
+  <span>R</span>
+  <span>Excel</span>
+  <span>Power BI</span>
+  <span>Tableau</span>
+  <span>Statistical Analysis</span>
+  <span>Data Visualisation</span>
+</div>
+
+I continue to strengthen these skills through practical analysis and project work. My proficiency varies by tool and task.
+
+---
+
+<div class="closing-cta">
+
+## Have a research or data project in mind?
+
+I welcome conversations about analytical projects, research collaboration, and data-driven problem-solving.
+
+[Contact Me](about.qmd#contact){.btn .btn-primary}
+
+</div>

@@ -1,0 +1,65 @@
+
+---
+title: "About"
+---
+
+# About Me
+
+I have a Bachelor of Science in Statistics and an interest in using quantitative methods to solve practical problems. My work and professional interests span data analytics, statistical research, business intelligence, and monitoring and evaluation.
+
+I am interested in how organisations can use reliable data to understand performance, assess programme outcomes, identify patterns, and make informed decisions.
+
+## Areas of Interest
+
+My professional interests include statistical analysis, data quality, research methods, data visualisation, business intelligence, forecasting, and evidence-based programme assessment.
+
+## Technical Skills
+
+My analytical toolkit includes SQL, Python, R, Excel, Power BI, Tableau, and statistical software. My level of proficiency varies by tool and task, and I continue to develop these skills through practical projects.
+
+## Professional Approach
+
+I value transparent analytical methods, reproducible work, clear communication, and conclusions that reflect what the data can actually support.
+
+## Explore My Work
+
+Visit my [GitHub profile](https://github.com/aranfelix2013-cloud) to explore my public repositories and analytical projects.
+
+---
+
+
+## Get in Touch {#contact}
+
+Have a question about my work, research collaboration, a consultancy or data analytics project?  Send me a message using the form below.
+
+[WhatsApp Me](https://wa.me/254111991749){.btn .btn-primary}
+
+[Connect on GitHub](https://github.com/aranfelix2013-cloud){.btn .btn-outline-secondary}
+
+```{=html}
+<form action="https://formspree.io/f/mgaaejjg" method="POST" class="contact-form">
+
+  <div class="contact-field">
+    <label for="contact-name">Your name</label>
+    <input type="text" id="contact-name" name="name" autocomplete="name" required>
+  </div>
+
+  <div class="contact-field">
+    <label for="contact-email">Your email address</label>
+    <input type="email" id="contact-email" name="email" autocomplete="email" required>
+  </div>
+
+  <div class="contact-field">
+    <label for="contact-subject">Subject</label>
+    <input type="text" id="contact-subject" name="subject" required>
+  </div>
+
+  <div class="contact-field">
+    <label for="contact-message">Your message</label>
+    <textarea id="contact-message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Send Message</button>
+</form>
+```
+

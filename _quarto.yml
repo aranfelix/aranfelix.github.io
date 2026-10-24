@@ -1,0 +1,43 @@
+
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Aran Felix"
+  description: "Data analytics, statistics, research and evidence-based decision-making."
+  navbar:
+    background: "#10243A"
+    foreground: "#FFFFFF"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Projects"
+        href: projects.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: whatsapp
+        href: "https://wa.me/254111991749"
+        aria-label: WhatsApp
+
+      - icon: envelope
+        href: "about.qmd#contact"
+        aria-label: Contact form
+
+      - icon: github
+        href: https://github.com/aranfelix2013-cloud
+        aria-label: GitHub
+        
+  page-footer:
+    left: "© 2026 Aran Felix"
+    right: "Built with Quarto"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+
+execute:
+  freeze: auto

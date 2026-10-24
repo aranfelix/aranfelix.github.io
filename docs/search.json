@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "DATA · STATISTICS · RESEARCH\n\n# Aran Felix\n## Turning data into evidence and better decisions.\nI work across data analytics, statistical research, business intelligence, and monitoring and evaluation. I use data preparation, statistical methods, and visualisation to investigate problems and communicate findings clearly.\n\n&lt;a href=\"projects.qmd\" class=\"btn btn-primary\"&gt;Explore My Projects&lt;/a&gt;\n&lt;a href=\"about.qmd\" class=\"btn btn-outline-secondary\"&gt;About Me&lt;/a&gt;"
+  },
+  {
+    "objectID": "index.html#data-analytics-statistics-research-me",
+    "href": "index.html#data-analytics-statistics-research-me",
+    "title": "Home",
+    "section": "",
+    "text": "I use data analysis, statistical methods, and visualisation to investigate problems, communicate evidence, and support better decisions.\nMy work focuses on data-driven research, business intelligence, statistical analysis, and monitoring and evaluation. I am particularly interested in transforming complex datasets into clear findings that organisations can use.\nExplore My Projects\nView My GitHub"
+  },
+  {
+    "objectID": "index.html#what-i-do",
+    "href": "index.html#what-i-do",
+    "title": "Home",
+    "section": "",
+    "text": "I analyse, clean, and visualise data to identify patterns, assess performance, and communicate findings through reports and dashboards.\n\n\n\nI apply statistical methods to research questions, investigate relationships between variables, and interpret quantitative evidence.\n\n\n\nI support evidence-based programme assessment through data quality checks, descriptive analysis, indicator tracking, and clear reporting.\n\n\n\nI use programming, exploratory analysis, and predictive modelling techniques to investigate datasets and develop analytical solutions."
+  },
+  {
+    "objectID": "index.html#selected-projects",
+    "href": "index.html#selected-projects",
+    "title": "Home",
+    "section": "",
+    "text": "Explore practical projects demonstrating my approach to data preparation, statistical analysis, visualisation, and interpretation.\nProject case studies will appear here as they are added to the portfolio.\nBrowse All Projects"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "This portfolio presents practical applications of data analysis, statistics, research, and visualisation. Each case study will explain the problem, the data, the methods used, the findings, and their practical implications.\n\n\nFocus: Electoral data analysis and visualisation.\nRepository: View the project on GitHub\nThis project provides a starting point for demonstrating how electoral registration data can support descriptive analysis and evidence-based interpretation.\nThe published case study will document the dataset, analytical methods, key findings, and limitations after the repository has been reviewed.\n\n\n\nFocus: Statistical testing, relationships between variables, and interpretation.\nA case study will be added with a clearly defined research question, appropriate statistical methods, diagnostic checks where necessary, and an interpretation of the results.\n\n\n\nFocus: Dashboards, reporting, and decision support.\nA case study will demonstrate how data preparation and visualisation can help users monitor performance and identify meaningful patterns.\n\n\n\n\nMy approach begins with a clearly defined question. I examine the quality and structure of the data, select methods appropriate to the question, document the analysis, and communicate findings alongside their limitations."
+  },
+  {
+    "objectID": "projects.html#kenya-registered-voters-analysis",
+    "href": "projects.html#kenya-registered-voters-analysis",
+    "title": "Projects",
+    "section": "",
+    "text": "Focus: Electoral data analysis and visualisation.\nRepository: View the project on GitHub\nThis project provides a starting point for demonstrating how electoral registration data can support descriptive analysis and evidence-based interpretation.\nThe published case study will document the dataset, analytical methods, key findings, and limitations after the repository has been reviewed."
+  },
+  {
+    "objectID": "projects.html#statistical-analysis",
+    "href": "projects.html#statistical-analysis",
+    "title": "Projects",
+    "section": "",
+    "text": "Focus: Statistical testing, relationships between variables, and interpretation.\nA case study will be added with a clearly defined research question, appropriate statistical methods, diagnostic checks where necessary, and an interpretation of the results."
+  },
+  {
+    "objectID": "projects.html#business-intelligence-and-visualisation",
+    "href": "projects.html#business-intelligence-and-visualisation",
+    "title": "Projects",
+    "section": "",
+    "text": "Focus: Dashboards, reporting, and decision support.\nA case study will demonstrate how data preparation and visualisation can help users monitor performance and identify meaningful patterns."
+  },
+  {
+    "objectID": "projects.html#how-i-approach-projects",
+    "href": "projects.html#how-i-approach-projects",
+    "title": "Projects",
+    "section": "",
+    "text": "My approach begins with a clearly defined question. I examine the quality and structure of the data, select methods appropriate to the question, document the analysis, and communicate findings alongside their limitations."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I have a Bachelor of Science in Statistics and an interest in using quantitative methods to solve practical problems. My work and professional interests span data analytics, statistical research, business intelligence, and monitoring and evaluation.\nI am interested in how organisations can use reliable data to understand performance, assess programme outcomes, identify patterns, and make informed decisions.\n\n\nMy professional interests include statistical analysis, data quality, research methods, data visualisation, business intelligence, forecasting, and evidence-based programme assessment.\n\n\n\nMy analytical toolkit includes SQL, Python, R, Excel, Power BI, Tableau, and statistical software. My level of proficiency varies by tool and task, and I continue to develop these skills through practical projects.\n\n\n\nI value transparent analytical methods, reproducible work, clear communication, and conclusions that reflect what the data can actually support.\n\n\n\nVisit my GitHub profile to explore my public repositories and analytical projects.\n\n\n\n\nHave a question about my work, research collaboration, a consultancy or data analytics project? Send me a message using the form below.\nWhatsApp Me\nConnect on GitHub\n\n\n  \n    Your name\n    \n  \n\n  \n    Your email address\n    \n  \n\n  \n    Subject\n    \n  \n\n  \n    Your message\n    \n  \n\n  Send Message"
+  },
+  {
+    "objectID": "about.html#areas-of-interest",
+    "href": "about.html#areas-of-interest",
+    "title": "About",
+    "section": "",
+    "text": "My professional interests include statistical analysis, data quality, research methods, data visualisation, business intelligence, forecasting, and evidence-based programme assessment."
+  },
+  {
+    "objectID": "about.html#technical-skills",
+    "href": "about.html#technical-skills",
+    "title": "About",
+    "section": "",
+    "text": "My analytical toolkit includes SQL, Python, R, Excel, Power BI, Tableau, and statistical software. My level of proficiency varies by tool and task, and I continue to develop these skills through practical projects."
+  },
+  {
+    "objectID": "about.html#professional-approach",
+    "href": "about.html#professional-approach",
+    "title": "About",
+    "section": "",
+    "text": "I value transparent analytical methods, reproducible work, clear communication, and conclusions that reflect what the data can actually support."
+  },
+  {
+    "objectID": "about.html#explore-my-work",
+    "href": "about.html#explore-my-work",
+    "title": "About",
+    "section": "",
+    "text": "Visit my GitHub profile to explore my public repositories and analytical projects."
+  },
+  {
+    "objectID": "about.html#get-in-touch",
+    "href": "about.html#get-in-touch",
+    "title": "About",
+    "section": "",
+    "text": "Have a question about my work, research collaboration, a consultancy or data analytics project? Send me a message using the form below.\n\n\n&lt;label for=\"contact-name\"&gt;Your name&lt;/label&gt;\n&lt;input type=\"text\" id=\"contact-name\" name=\"name\" autocomplete=\"name\" required&gt;\n\n\n&lt;label for=\"contact-email\"&gt;Your email address&lt;/label&gt;\n&lt;input type=\"email\" id=\"contact-email\" name=\"email\" autocomplete=\"email\" required&gt;\n\n\n&lt;label for=\"contact-subject\"&gt;Subject&lt;/label&gt;\n&lt;input type=\"text\" id=\"contact-subject\" name=\"subject\" required&gt;\n\n\n&lt;label for=\"contact-message\"&gt;Your message&lt;/label&gt;\n&lt;textarea id=\"contact-message\" name=\"message\" rows=\"6\" required&gt;&lt;/textarea&gt;\n\n\nSend Message"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "Have a question about my work, research collaboration, a consultancy or data analytics project? Send me a message using the form below.\nWhatsApp Me\nConnect on GitHub\n\n\n  \n    Your name\n    \n  \n\n  \n    Your email address\n    \n  \n\n  \n    Subject\n    \n  \n\n  \n    Your message\n    \n  \n\n  Send Message"
+  },
+  {
+    "objectID": "index.html#what-i-bring",
+    "href": "index.html#what-i-bring",
+    "title": "Home",
+    "section": "What I Bring",
+    "text": "What I Bring\n\n\n&lt;div class=\"feature-icon\"&gt;01&lt;/div&gt;\n&lt;h3&gt;Data Analytics&lt;/h3&gt;\n&lt;p&gt;Cleaning, exploring, and analysing data to identify patterns, assess performance, and support decisions.&lt;/p&gt;\n\n\n&lt;div class=\"feature-icon\"&gt;02&lt;/div&gt;\n&lt;h3&gt;Research & Statistics&lt;/h3&gt;\n&lt;p&gt;Applying appropriate statistical methods to research questions and interpreting findings with care.&lt;/p&gt;\n\n\n&lt;div class=\"feature-icon\"&gt;03&lt;/div&gt;\n&lt;h3&gt;Monitoring & Evaluation&lt;/h3&gt;\n&lt;p&gt;Supporting data quality, indicator tracking, programme assessment, and evidence-based reporting.&lt;/p&gt;\n\n\n&lt;div class=\"feature-icon\"&gt;04&lt;/div&gt;\n&lt;h3&gt;Business Intelligence&lt;/h3&gt;\n&lt;p&gt;Communicating analytical findings through visualisations, reports, and dashboards.&lt;/p&gt;"
+  },
+  {
+    "objectID": "index.html#selected-work",
+    "href": "index.html#selected-work",
+    "title": "Home",
+    "section": "Selected Work",
+    "text": "Selected Work\n\nKenya Registered Voters Analysis\nAn analytical project focused on registered-voter data in Kenya. Explore the repository to review the available data, methods, and outputs.\nView Project Repository\n\nMore case studies will be added as their data, methodology, results, and limitations are documented."
+  },
+  {
+    "objectID": "index.html#tools-i-work-with",
+    "href": "index.html#tools-i-work-with",
+    "title": "Home",
+    "section": "Tools I Work With",
+    "text": "Tools I Work With\n\nSQL Python R Excel Power BI Tableau Statistical Analysis Data Visualisation\n\nI continue to strengthen these skills through practical analysis and project work. My proficiency varies by tool and task."
+  },
+  {
+    "objectID": "index.html#have-a-research-or-data-project-in-mind",
+    "href": "index.html#have-a-research-or-data-project-in-mind",
+    "title": "Home",
+    "section": "Have a research or data project in mind?",
+    "text": "Have a research or data project in mind?\nI welcome conversations about analytical projects, research collaboration, and data-driven problem-solving.\nContact Me"
+  }
+]
