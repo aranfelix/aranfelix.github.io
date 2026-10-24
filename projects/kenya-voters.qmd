@@ -1,0 +1,37 @@
+---
+title: "Kenya Registered Voters and Polling Stations, 2017 and 2022"
+description: "Analysing voter registration and polling-station data from two Kenyan general elections."
+date: 2026-10-24
+categories: [Elections, Data Analysis, Statistics]
+image: ../images/kenya-voters.svg
+---
+
+::: {.status}
+**Status: in progress.** This page documents the project as it develops. Findings will be published here only after they have been checked, so every number you see is one I can defend.
+:::
+
+## The question
+
+How did voter registration and the network of polling stations change between the 2017 and 2022 Kenyan general elections, and what does that mean for how the electoral system serves voters?
+
+## Why it matters
+
+Voter registers and polling-station networks shape who can take part in an election and how elections are planned and observed. Comparing two election cycles shows where the system grew, where it stayed flat, and where the load on each station increased.
+
+## Planned analysis
+
+- Combine and clean the registration and polling-station data for both elections so the two years can be compared fairly.
+- Check that area names and boundaries match across years, and document anything that does not.
+- Measure change in registered voters and polling stations, and the number of voters per station.
+- Show the results with interactive charts and tables, and state the limitations of the data.
+
+## What this page will contain when complete
+
+An interactive chart and map of the results, a searchable data table, a short summary of findings, and a limitations section.
+
+## Code and data
+
+[View the project on GitHub](https://github.com/aranfelix/kenya-registered-voters-analysis){.btn .btn-primary}
+[All projects](/projects.qmd){.btn .btn-outline-dark}
+
+{{< include ../_cta.qmd >}}

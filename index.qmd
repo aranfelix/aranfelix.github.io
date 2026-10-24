@@ -1,94 +1,54 @@
-
 ---
-title: "Home"
----
-
-<div class="hero">
-  <p class="eyebrow">DATA · STATISTICS · RESEARCH</p>
-
-  # Aran Felix
-
-  ## Turning data into evidence and better decisions.
-
-  I work across data analytics, statistical research, business intelligence, and monitoring and evaluation. I use data preparation, statistical methods, and visualisation to investigate problems and communicate findings clearly.
-
-  <div class="hero-actions">
-    <a href="projects.qmd" class="btn btn-primary">Explore My Projects</a>
-    <a href="about.qmd" class="btn btn-outline-secondary">About Me</a>
-  </div>
-</div>
-
+pagetitle: "Aran Felix | Statistics, Data Analytics and Research"
+listing:
+  id: featured
+  contents: "projects/*.qmd"
+  type: grid
+  max-items: 3
+  sort: "date desc"
+  fields: [image, title, description, categories]
 ---
 
-## What I Bring
+::::: {.hero}
+<span class="pill">STATISTICS &middot; DATA ANALYTICS &middot; RESEARCH &amp; M&amp;E</span>
+
+# Turning data into evidence and better decisions.
+
+I help NGOs, research teams and businesses turn raw data into clear, defensible evidence: study design, statistical analysis, qualitative coding, dashboards and M&E reporting.
+
+[Explore Projects](projects.qmd){.btn .btn-primary}
+[View CV](cv.qmd){.btn .btn-outline-dark}
+:::::
 
 <div class="feature-grid">
-
-  <div class="feature-card">
-    <div class="feature-icon">01</div>
-    <h3>Data Analytics</h3>
-    <p>Cleaning, exploring, and analysing data to identify patterns, assess performance, and support decisions.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="feature-icon">02</div>
-    <h3>Research & Statistics</h3>
-    <p>Applying appropriate statistical methods to research questions and interpreting findings with care.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="feature-icon">03</div>
-    <h3>Monitoring & Evaluation</h3>
-    <p>Supporting data quality, indicator tracking, programme assessment, and evidence-based reporting.</p>
-  </div>
-
-  <div class="feature-card">
-    <div class="feature-icon">04</div>
-    <h3>Business Intelligence</h3>
-    <p>Communicating analytical findings through visualisations, reports, and dashboards.</p>
-  </div>
-
+<a class="feature-card" href="projects.html"><i class="bi bi-database ic"></i><h3>Data Analytics</h3><p>Data cleaning, SQL, Python and R analysis, and dashboards that answer real questions.</p></a>
+<a class="feature-card" href="research-m-e.html"><i class="bi bi-journal-text ic"></i><h3>Research &amp; Statistics</h3><p>Study design, SPSS and Stata analysis, and results explained in plain language.</p></a>
+<a class="feature-card" href="projects.html"><i class="bi bi-bar-chart-line ic"></i><h3>Business Intelligence</h3><p>Tableau and Power BI reporting that decision-makers actually use.</p></a>
+<a class="feature-card" href="research-m-e.html"><i class="bi bi-clipboard-check ic"></i><h3>Monitoring &amp; Evaluation</h3><p>Indicators, data quality checks and programme evidence for donors and boards.</p></a>
 </div>
 
----
+## Featured work
 
-## Selected Work
+::: {#featured}
+:::
 
-### Kenya Registered Voters Analysis
+[See all projects &rarr;](projects.qmd)
 
-An analytical project focused on registered-voter data in Kenya. Explore the repository to review the available data, methods, and outputs.
+## Why work with me
 
-[View Project Repository](https://github.com/aranfelix2013-cloud/kenya-registered-voters-analysis){.btn .btn-outline-primary}
-
-<div class="project-note">
-  More case studies will be added as their data, methodology, results, and limitations are documented.
+<div class="feature-grid three">
+<div class="feature-card"><i class="bi bi-diagram-3 ic"></i><h3>Numbers and narratives</h3><p>I work in both quantitative tools (SPSS, Stata, R, Python) and qualitative tools (NVivo, ATLAS.ti), so your evidence has both the scale and the story.</p></div>
+<div class="feature-card"><i class="bi bi-shield-check ic"></i><h3>Work you can check</h3><p>Methods are documented and analyses are reproducible. I state limitations plainly and never present association as proof of cause.</p></div>
+<div class="feature-card"><i class="bi bi-chat-left-text ic"></i><h3>Plain-language results</h3><p>You get findings that a programme manager, donor or board member can understand and use, not just tables of output.</p></div>
 </div>
 
----
+## Tools I work with
 
-## Tools I Work With
-
-<div class="skill-list">
-  <span>SQL</span>
-  <span>Python</span>
-  <span>R</span>
-  <span>Excel</span>
-  <span>Power BI</span>
-  <span>Tableau</span>
-  <span>Statistical Analysis</span>
-  <span>Data Visualisation</span>
+<div class="tool-groups">
+<div class="tool-group"><h4>Statistical analysis</h4><div class="pills"><span>SPSS</span><span>Stata</span><span>R (RStudio)</span><span>Python</span></div></div>
+<div class="tool-group"><h4>Qualitative research</h4><div class="pills"><span>NVivo</span><span>ATLAS.ti</span></div></div>
+<div class="tool-group"><h4>Data and databases</h4><div class="pills"><span>SQL</span><span>Excel</span></div></div>
+<div class="tool-group"><h4>Visualisation and BI</h4><div class="pills"><span>Tableau</span><span>Power BI</span></div></div>
 </div>
 
-I continue to strengthen these skills through practical analysis and project work. My proficiency varies by tool and task.
-
----
-
-<div class="closing-cta">
-
-## Have a research or data project in mind?
-
-I welcome conversations about analytical projects, research collaboration, and data-driven problem-solving.
-
-[Contact Me](about.qmd#contact){.btn .btn-primary}
-
-</div>
+{{< include _cta.qmd >}}

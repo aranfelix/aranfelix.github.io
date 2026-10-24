@@ -1,65 +1,61 @@
-
 ---
-title: "About"
----
-
-# About Me
-
-I have a Bachelor of Science in Statistics and an interest in using quantitative methods to solve practical problems. My work and professional interests span data analytics, statistical research, business intelligence, and monitoring and evaluation.
-
-I am interested in how organisations can use reliable data to understand performance, assess programme outcomes, identify patterns, and make informed decisions.
-
-## Areas of Interest
-
-My professional interests include statistical analysis, data quality, research methods, data visualisation, business intelligence, forecasting, and evidence-based programme assessment.
-
-## Technical Skills
-
-My analytical toolkit includes SQL, Python, R, Excel, Power BI, Tableau, and statistical software. My level of proficiency varies by tool and task, and I continue to develop these skills through practical projects.
-
-## Professional Approach
-
-I value transparent analytical methods, reproducible work, clear communication, and conclusions that reflect what the data can actually support.
-
-## Explore My Work
-
-Visit my [GitHub profile](https://github.com/aranfelix2013-cloud) to explore my public repositories and analytical projects.
-
+title: "About me"
+description: "Who I am, what I do and how I can help."
 ---
 
+::: {.lead}
+I am Aran Felix, a statistician and data analyst. I take a question that matters to you, find or build the evidence to answer it, and explain the answer so you can act on it.
+:::
 
-## Get in Touch {#contact}
+I hold a **BSc in Statistics** and currently work as a data analyst with **ADAC Consultancy**. I combine statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report.
 
-Have a question about my work, research collaboration, a consultancy or data analytics project?  Send me a message using the form below.
+## How I can help
 
-[WhatsApp Me](https://wa.me/254111991749){.btn .btn-primary}
+<div class="feature-grid three">
+<div class="feature-card"><i class="bi bi-compass ic"></i><h3>Research design</h3><p>Turn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.</p></div>
+<div class="feature-card"><i class="bi bi-calculator ic"></i><h3>Quantitative analysis</h3><p>Clean, test and model survey and programme data in SPSS, Stata, R or Python, and interpret the results.</p></div>
+<div class="feature-card"><i class="bi bi-chat-quote ic"></i><h3>Qualitative analysis</h3><p>Code interviews and focus groups in NVivo or ATLAS.ti and draw out themes that trace back to what people said.</p></div>
+<div class="feature-card"><i class="bi bi-bar-chart-line ic"></i><h3>Dashboards and visuals</h3><p>Build Tableau and Power BI dashboards and clear charts that show decision-makers what is happening.</p></div>
+<div class="feature-card"><i class="bi bi-clipboard-check ic"></i><h3>Monitoring and evaluation</h3><p>Set up indicators, check data quality, track progress and report evidence to donors and boards.</p></div>
+<div class="feature-card"><i class="bi bi-database ic"></i><h3>SQL and reporting</h3><p>Extract and organise data from databases and turn it into regular, reliable reports.</p></div>
+</div>
 
-[Connect on GitHub](https://github.com/aranfelix2013-cloud){.btn .btn-outline-secondary}
+## Who I work with
 
-```{=html}
-<form action="https://formspree.io/f/mgaaejjg" method="POST" class="contact-form">
+- **NGOs and development programmes** that need credible M&E evidence for donors and boards.
+- **Research teams and institutions** that need rigorous, well-documented analysis.
+- **Businesses and consultancies** that want analysis and dashboards to track performance.
 
-  <div class="contact-field">
-    <label for="contact-name">Your name</label>
-    <input type="text" id="contact-name" name="name" autocomplete="name" required>
-  </div>
+## Why work with me
 
-  <div class="contact-field">
-    <label for="contact-email">Your email address</label>
-    <input type="email" id="contact-email" name="email" autocomplete="email" required>
-  </div>
+- **I work on both sides of research.** Numbers show the scale of a problem and interviews explain it. I can do both, which matters in research and M&E.
+- **I show my working.** Methods are documented and analyses are reproducible, and my code is open on [GitHub](https://github.com/aranfelix).
+- **I tell you what the data cannot say.** You get limitations and uncertainty stated plainly, not a result that sounds more certain than it is.
+- **I explain it in plain language.** The point is that you can use and defend the findings.
 
-  <div class="contact-field">
-    <label for="contact-subject">Subject</label>
-    <input type="text" id="contact-subject" name="subject" required>
-  </div>
+## How a project works
 
-  <div class="contact-field">
-    <label for="contact-message">Your message</label>
-    <textarea id="contact-message" name="message" rows="6" required></textarea>
-  </div>
+<div class="steps">
+<div class="step"><b>1. Conversation</b><p>We agree the question, the data available, the deadline and what a useful result looks like.</p></div>
+<div class="step"><b>2. Plan</b><p>You receive a short written scope with methods, outputs and timeline.</p></div>
+<div class="step"><b>3. Analysis</b><p>I clean, analyse and check the results, sharing progress along the way.</p></div>
+<div class="step"><b>4. Delivery</b><p>A clear report, dashboard or presentation, with the documentation behind it.</p></div>
+<div class="step"><b>5. Handover</b><p>I walk you through the findings so you can explain and defend them.</p></div>
+</div>
 
-  <button type="submit" class="btn btn-primary">Send Message</button>
-</form>
-```
+## Tools
 
+<div class="tool-groups">
+<div class="tool-group"><h4>Statistical analysis</h4><div class="pills"><span>SPSS</span><span>Stata</span><span>R (RStudio)</span><span>Python</span></div></div>
+<div class="tool-group"><h4>Qualitative research</h4><div class="pills"><span>NVivo</span><span>ATLAS.ti</span></div></div>
+<div class="tool-group"><h4>Data and databases</h4><div class="pills"><span>SQL</span><span>Excel</span></div></div>
+<div class="tool-group"><h4>Visualisation and BI</h4><div class="pills"><span>Tableau</span><span>Power BI</span></div></div>
+<div class="tool-group"><h4>What I do</h4><div class="pills"><span>Data analysis</span><span>Data visualisation</span><span>Research</span><span>Data science</span></div></div>
+</div>
+
+Where work was done for clients, I share only what I am permitted to disclose and anonymise the rest.
+
+[See my projects](projects.qmd){.btn .btn-primary}
+[View my CV](cv.qmd){.btn .btn-outline-dark}
+
+{{< include _cta.qmd >}}

@@ -1,43 +1,72 @@
-
 project:
   type: website
   output-dir: docs
+  resources:
+    - files/*
 
 website:
-  title: "Aran Felix"
-  description: "Data analytics, statistics, research and evidence-based decision-making."
+  title: "ARAN FELIX"
+  site-url: https://aranfelix.github.io
+  description: "Statistics, data analytics and research & M&E portfolio of Aran Felix."
+  favicon: images/favicon.svg
+  open-graph: true
+  twitter-card: true
+  search: true
+  back-to-top-navigation: true
   navbar:
+    logo: images/logo.svg
+    logo-alt: "Aran Felix logo"
     background: "#10243A"
     foreground: "#FFFFFF"
+    collapse-below: lg
     left:
       - text: "Home"
         href: index.qmd
       - text: "Projects"
         href: projects.qmd
+      - text: "Research & M&E"
+        href: research-m-e.qmd
       - text: "About"
         href: about.qmd
+      - text: "Contact"
+        href: contact.qmd
     right:
       - icon: whatsapp
         href: "https://wa.me/254111991749"
         aria-label: WhatsApp
-
-      - icon: envelope
-        href: "about.qmd#contact"
-        aria-label: Contact form
-
       - icon: github
-        href: https://github.com/aranfelix2013-cloud
+        href: https://github.com/aranfelix
         aria-label: GitHub
-        
+      - icon: linkedin
+        href: https://www.linkedin.com/in/aranfelix/
+        aria-label: LinkedIn
   page-footer:
-    left: "© 2026 Aran Felix"
+    left: "&copy; 2026 Aran Felix"
+    center: "Statistics &middot; Data Analytics &middot; Research &amp; M&amp;E"
     right: "Built with Quarto"
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
+      dark: darkly
+    respect-user-color-scheme: true
     css: styles.css
+    lang: en-GB
+    grid:
+      sidebar-width: 0px
+      body-width: 1060px
+      margin-width: 0px
+      gutter-width: 1.5rem
     toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    code-fold: true
+    code-tools: false
+    fig-align: center
 
 execute:
   freeze: auto
+  warning: false
+  message: false

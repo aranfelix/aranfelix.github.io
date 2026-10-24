@@ -1,0 +1,48 @@
+---
+title: "Curriculum Vitae"
+description: "Profile, education, skills and tools."
+execute:
+  freeze: false
+---
+
+```{r}
+#| echo: false
+#| output: asis
+if (file.exists("files/Aran-Felix-CV.pdf")) {
+  cat('[Download the full CV (PDF)](files/Aran-Felix-CV.pdf){.btn .btn-primary}\n')
+} else {
+  cat('A full CV with dates and references is available on request. [Get in touch](/contact.qmd).\n')
+}
+```
+
+## Profile
+
+Statistician and data analyst working across research, monitoring and evaluation, and business intelligence. I combine quantitative analysis, qualitative research and dashboarding to produce evidence that decision-makers can use.
+
+## Education
+
+**BSc in Statistics**
+
+## Current role
+
+**Data Analyst**, ADAC Consultancy
+
+## Core competencies
+
+- Research design, sampling and data collection tools
+- Statistical analysis and interpretation of survey and programme data
+- Qualitative coding and thematic analysis
+- Monitoring and evaluation: indicators, data quality and reporting
+- Data visualisation and dashboards
+- Data science and data analysis workflows
+
+## Software and tools
+
+| Area | Tools |
+|---|---|
+| Statistical analysis | SPSS, Stata, R (RStudio), Python |
+| Qualitative research | NVivo, ATLAS.ti |
+| Databases and spreadsheets | SQL, Excel |
+| Visualisation and BI | Tableau, Power BI |
+
+{{< include _cta.qmd >}}
