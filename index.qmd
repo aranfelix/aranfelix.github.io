@@ -1,5 +1,5 @@
 ---
-pagetitle: "Aran Felix | Statistics, Data Analytics and Research"
+pagetitle: "Aran Felix | The Data Cruncher | Statistics, Data Analytics and Research"
 listing:
   id: featured
   contents: "projects/*.qmd"
@@ -10,21 +10,33 @@ listing:
 ---
 
 ::::: {.hero}
-<span class="pill">STATISTICS &middot; DATA ANALYTICS &middot; RESEARCH &amp; M&amp;E</span>
+<span class="pill">STATISTICS &middot; DATA ANALYTICS &middot; RESEARCH &amp; M&amp;E</span><span class="open-badge">Open to opportunities</span>
 
 # Turning data into evidence and better decisions.
 
-I help NGOs, research teams and businesses turn raw data into clear, defensible evidence: study design, statistical analysis, qualitative coding, dashboards and M&E reporting.
+I am a statistician and data analyst who turns raw data into clear, defensible evidence for banks, NGOs, research organisations and businesses: questionnaire design, digital data collection, statistical analysis, qualitative research, dashboards and M&E reporting.
 
 [Explore Projects](projects.qmd){.btn .btn-primary}
 [View CV](cv.qmd){.btn .btn-outline-dark}
+[Contact me](#contact){.btn .btn-outline-dark}
+
+<p class="hero-note">Open to full-time roles, contracts and consulting &middot; Data Analyst &middot; Research Analyst &middot; M&amp;E Analyst &middot; BI &amp; Reporting Analyst</p>
 :::::
 
 <div class="feature-grid">
 <a class="feature-card" href="projects.html"><i class="bi bi-database ic"></i><h3>Data Analytics</h3><p>Data cleaning, SQL, Python and R analysis, and dashboards that answer real questions.</p></a>
-<a class="feature-card" href="research-m-e.html"><i class="bi bi-journal-text ic"></i><h3>Research &amp; Statistics</h3><p>Study design, SPSS and Stata analysis, and results explained in plain language.</p></a>
+<a class="feature-card" href="research-m-e.html"><i class="bi bi-journal-text ic"></i><h3>Research &amp; Statistics</h3><p>Study and questionnaire design, SPSS and Stata analysis, and results explained in plain language.</p></a>
 <a class="feature-card" href="projects.html"><i class="bi bi-bar-chart-line ic"></i><h3>Business Intelligence</h3><p>Tableau and Power BI reporting that decision-makers actually use.</p></a>
-<a class="feature-card" href="research-m-e.html"><i class="bi bi-clipboard-check ic"></i><h3>Monitoring &amp; Evaluation</h3><p>Indicators, data quality checks and programme evidence for donors and boards.</p></a>
+<a class="feature-card" href="research-m-e.html"><i class="bi bi-clipboard-check ic"></i><h3>Monitoring &amp; Evaluation</h3><p>Indicators, digital data collection and data quality checks for donors and boards.</p></a>
+</div>
+
+## Where I add value
+
+<div class="feature-grid">
+<div class="feature-card"><i class="bi bi-bank ic"></i><h3>Banking &amp; Finance</h3><p>Accurate numbers, clear reporting and analysis that can be audited.</p><ul class="mini"><li>SQL extraction, validation and reconciliation</li><li>Excel, Tableau and Power BI reporting</li><li>Segmentation, trend analysis and logistic regression</li></ul></div>
+<div class="feature-card"><i class="bi bi-people ic"></i><h3>NGOs &amp; Development</h3><p>Donor-ready evidence you can trust.</p><ul class="mini"><li>Questionnaires and digital data collection (ODK, KoboToolbox)</li><li>Indicator frameworks and data quality checks</li><li>Survey analysis in SPSS, Stata and R</li><li>Qualitative coding in NVivo and ATLAS.ti</li><li>Donor-style reporting</li></ul></div>
+<div class="feature-card"><i class="bi bi-mortarboard ic"></i><h3>Research Organisations</h3><p>Rigorous analysis that others can reproduce.</p><ul class="mini"><li>Study design, sampling and questionnaire design</li><li>REDCap and CAPI data collection</li><li>Hypothesis testing, regression and ANOVA</li><li>Mixed-methods analysis</li><li>Documented workflows in R, Python and Stata</li></ul></div>
+<div class="feature-card"><i class="bi bi-graph-up-arrow ic"></i><h3>Business &amp; Corporate</h3><p>Insight that moves decisions.</p><ul class="mini"><li>KPI dashboards in Tableau and Power BI</li><li>Cohort, trend and A/B-test analysis</li><li>SQL-based reporting</li><li>Plain-language summaries for managers</li></ul></div>
 </div>
 
 ## Featured work
@@ -38,17 +50,108 @@ I help NGOs, research teams and businesses turn raw data into clear, defensible 
 
 <div class="feature-grid three">
 <div class="feature-card"><i class="bi bi-diagram-3 ic"></i><h3>Numbers and narratives</h3><p>I work in both quantitative tools (SPSS, Stata, R, Python) and qualitative tools (NVivo, ATLAS.ti), so your evidence has both the scale and the story.</p></div>
-<div class="feature-card"><i class="bi bi-shield-check ic"></i><h3>Work you can check</h3><p>Methods are documented and analyses are reproducible. I state limitations plainly and never present association as proof of cause.</p></div>
-<div class="feature-card"><i class="bi bi-chat-left-text ic"></i><h3>Plain-language results</h3><p>You get findings that a programme manager, donor or board member can understand and use, not just tables of output.</p></div>
+<div class="feature-card"><i class="bi bi-shield-check ic"></i><h3>From questionnaire to report</h3><p>I design the questionnaire, collect the data digitally, analyse it and report it, so quality is protected at every step.</p></div>
+<div class="feature-card"><i class="bi bi-chat-left-text ic"></i><h3>Plain-language results</h3><p>You get findings that a programme manager, donor or board member can understand and use, not just tables of output. Limits are stated plainly.</p></div>
 </div>
 
-## Tools I work with
+## Tools and methods
 
-<div class="tool-groups">
-<div class="tool-group"><h4>Statistical analysis</h4><div class="pills"><span>SPSS</span><span>Stata</span><span>R (RStudio)</span><span>Python</span></div></div>
-<div class="tool-group"><h4>Qualitative research</h4><div class="pills"><span>NVivo</span><span>ATLAS.ti</span></div></div>
-<div class="tool-group"><h4>Data and databases</h4><div class="pills"><span>SQL</span><span>Excel</span></div></div>
-<div class="tool-group"><h4>Visualisation and BI</h4><div class="pills"><span>Tableau</span><span>Power BI</span></div></div>
+<div class="toolwall">
+<div class="tw-col">
+<h4><span class="acc">Programming</span>and databases</h4>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/sql.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">SQL</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/python.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Python</span></div>
+<div class="tw-item"><span class="tw-logo badge">R</span><span class="tw-name">R<small>RStudio</small></span></div>
+</div>
+<div class="tw-col">
+<h4><span class="acc">Statistical and</span>qualitative software</h4>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/spss.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">SPSS</span></div>
+<div class="tw-item"><span class="tw-logo wide"><img src="images/tools/stata.png" alt="" width="40" height="14" loading="lazy"></span><span class="tw-name">Stata</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/nvivo.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">NVivo</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/atlasti.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">ATLAS.ti</span></div>
+</div>
+<div class="tw-col">
+<h4><span class="acc">Data collection</span>and survey design</h4>
+<div class="tw-item"><span class="tw-logo wide"><img src="images/tools/odk.png" alt="" width="40" height="22" loading="lazy"></span><span class="tw-name">ODK Collect</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/kobo.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">KoboToolbox</span></div>
+<div class="tw-item"><span class="tw-logo badge tiny">RC</span><span class="tw-name">REDCap</span></div>
+<div class="tw-item"><span class="tw-logo badge tiny">CAPI</span><span class="tw-name">CAPI<small>Computer-assisted interviewing</small></span></div>
+<div class="tw-item"><span class="tw-logo badge"><i class="bi bi-card-checklist"></i></span><span class="tw-name">Questionnaire design</span></div>
+</div>
+<div class="tw-col">
+<h4><span class="acc">Visualisation</span>and reporting</h4>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/tableau.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Tableau</span></div>
+<div class="tw-item"><span class="tw-logo badge"><i class="bi bi-bar-chart-fill"></i></span><span class="tw-name">Power BI</span></div>
+<div class="tw-item"><span class="tw-logo"><img src="images/tools/excel.png" alt="" width="30" height="30" loading="lazy"></span><span class="tw-name">Excel</span></div>
+</div>
+<div class="tw-col">
+<h4><span class="acc">Analytic</span>methods</h4>
+<ul class="method-list">
+<li>Exploratory data analysis</li>
+<li>Data cleaning and validation</li>
+<li>Descriptive and inferential statistics</li>
+<li>Hypothesis tests (t-test, chi-square, post-hoc)</li>
+<li>ANOVA</li>
+<li>Linear and logistic regression</li>
+<li>Segmentation and clustering</li>
+<li>Cohort analysis</li>
+<li>A/B testing</li>
+<li>Questionnaire and survey design, sampling</li>
+<li>Thematic analysis</li>
+</ul>
+</div>
 </div>
 
-{{< include _cta.qmd >}}
+## Methods in action
+
+Pick a sector to see the methods I would apply and the questions they help answer.
+
+::: {.panel-tabset}
+
+### Banking & Finance
+
+<div class="pills"><span>Data validation and reconciliation</span><span>Exploratory analysis</span><span>Customer segmentation</span><span>Logistic regression</span><span>Trend and seasonality analysis</span><span>Anomaly detection (IQR, z-scores)</span><span>KPI dashboards</span></div>
+
+**Questions I can help answer**
+
+- Which customer segments drive revenue, and which are likely to leave?
+- Where do reports disagree with the source data, and why?
+- Which transactions or accounts look unusual enough to review?
+- How is portfolio performance trending, and what is behind the change?
+
+### NGOs & M&E
+
+<div class="pills"><span>Questionnaire design</span><span>Digital data collection (ODK, KoboToolbox, REDCap, CAPI)</span><span>Indicator frameworks</span><span>Data quality assessment</span><span>Survey data analysis</span><span>Thematic analysis</span><span>Mixed-methods triangulation</span><span>Donor-style reporting</span></div>
+
+**Questions I can help answer**
+
+- Did the programme reach its targets, and for whom?
+- Is the data we are reporting reliable?
+- What do participants say, and does it match the numbers?
+- Which locations or groups are falling behind?
+
+### Research
+
+<div class="pills"><span>Study design and sampling</span><span>Questionnaire design</span><span>REDCap and CAPI data collection</span><span>Sample-size planning</span><span>Hypothesis testing</span><span>ANOVA and non-parametric tests</span><span>Linear and logistic regression</span><span>Reproducible workflows</span></div>
+
+**Questions I can help answer**
+
+- Is this difference real, or just noise?
+- Which factors are associated with the outcome after adjusting for others?
+- How large is the effect, and how sure are we?
+- Could someone else reproduce this result?
+
+### Business analytics
+
+<div class="pills"><span>Cohort and retention analysis</span><span>A/B testing</span><span>Segmentation</span><span>Forecasting and trends</span><span>SQL KPI reporting</span><span>Dashboard design</span></div>
+
+**Questions I can help answer**
+
+- Which customers stay, and what do they have in common?
+- Did the change we made actually work?
+- What is next quarter likely to look like?
+- What should the dashboard show so managers act on it?
+
+:::
+
+{{< include _contact.qmd >}}

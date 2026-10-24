@@ -1,6 +1,6 @@
 ---
 title: "Research & M&E"
-description: "Research design, statistical and qualitative analysis, and monitoring and evaluation support."
+description: "Research design, data collection, statistical and qualitative analysis, and monitoring and evaluation support."
 ---
 
 Evidence is only useful if it can be trusted and understood. I support research and M&E work from the first design decision to the final report.
@@ -9,7 +9,8 @@ Evidence is only useful if it can be trusted and understood. I support research 
 
 | You need to... | I deliver | Tools |
 |---|---|---|
-| Design a study or evaluation | Research questions, indicators, a sampling approach and data collection instruments | Excel, R |
+| Design a study or evaluation | Research questions, indicators, a sampling approach and well-structured questionnaires | Excel, R |
+| Collect data digitally | Questionnaires prepared for phone or tablet collection, with the collected data checked for quality | ODK Collect, KoboToolbox, REDCap, CAPI |
 | Analyse survey or programme data | A cleaned dataset, statistical tests and models, tables and charts, and a clear interpretation | SPSS, Stata, R, Python |
 | Make sense of interviews and focus groups | Coded transcripts, themes backed by evidence from participants, and a written summary | NVivo, ATLAS.ti |
 | Track programme performance | Indicator tracking tables, data quality checks and live dashboards | Excel, SQL, Tableau, Power BI |
@@ -18,7 +19,7 @@ Evidence is only useful if it can be trusted and understood. I support research 
 ## Methods I work with
 
 <div class="pills">
-<span>Descriptive statistics</span><span>Hypothesis testing</span><span>Regression</span><span>Survey data analysis</span><span>Thematic analysis</span><span>Mixed methods</span><span>Indicator frameworks</span><span>Data quality assessment</span>
+<span>Questionnaire design</span><span>Digital data collection</span><span>Descriptive statistics</span><span>Hypothesis testing</span><span>Regression</span><span>Survey data analysis</span><span>Thematic analysis</span><span>Mixed methods</span><span>Indicator frameworks</span><span>Data quality assessment</span>
 </div>
 
 ## How I handle evidence

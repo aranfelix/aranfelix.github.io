@@ -1,0 +1,85 @@
+```{=html}
+<section id="contact" class="contact-section">
+  <div class="contact-left">
+    <h2>Let's <span>connect</span> and <span>work together</span>!</h2>
+    <p class="sub">Hiring for an analyst or research role, or need help with a data project? Send a message or reach me directly.</p>
+
+    <div class="contact-row">
+      <a class="contact-ic" href="https://wa.me/254111991749?text=Hello%20Aran%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      <div>
+        <div class="contact-label">Phone (WhatsApp)</div>
+        <a class="contact-link" href="https://wa.me/254111991749?text=Hello%20Aran%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20talk." target="_blank" rel="noopener">+254 111 991 749</a>
+      </div>
+    </div>
+
+    <div class="contact-row">
+      <a class="contact-ic" href="mailto:aranfelix2013@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      <div>
+        <div class="contact-label">E-mail</div>
+        <a class="contact-link" href="mailto:aranfelix2013@gmail.com">aranfelix2013@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="contact-row">
+      <a class="contact-ic" href="https://www.linkedin.com/in/aranfelix/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <div>
+        <div class="contact-label">LinkedIn</div>
+        <a class="contact-link" href="https://www.linkedin.com/in/aranfelix/" target="_blank" rel="noopener">linkedin.com/in/aranfelix</a>
+      </div>
+    </div>
+
+    <div class="contact-row">
+      <a class="contact-ic" href="https://github.com/aranfelix" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <div>
+        <div class="contact-label">GitHub</div>
+        <a class="contact-link" href="https://github.com/aranfelix" target="_blank" rel="noopener">github.com/aranfelix</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-right">
+    <form id="contact-form" class="contact-form-card" action="https://formspree.io/f/mgaaejjg" method="POST">
+      <h3>Send me a message</h3>
+      <div class="contact-field"><label for="cf-name">Name</label><input id="cf-name" type="text" name="name" autocomplete="name" required></div>
+      <div class="contact-field"><label for="cf-email">Your email</label><input id="cf-email" type="email" name="email" autocomplete="email" required></div>
+      <div class="contact-field"><label for="cf-message">Message</label><textarea id="cf-message" name="message" rows="5" required></textarea></div>
+      <input type="hidden" name="_subject" value="New enquiry from aranfelix.github.io">
+      <div class="hidden-field" aria-hidden="true"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  if (!form) return;
+  var status = document.getElementById("form-status");
+  var button = form.querySelector("button[type=submit]");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    button.disabled = true;
+    button.textContent = "Sending...";
+    status.textContent = "";
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    }).then(function (r) {
+      if (r.ok) {
+        form.reset();
+        status.className = "form-status ok";
+        status.textContent = "Thank you! Your message has been sent. I will reply as soon as I can.";
+        button.disabled = false;
+        button.textContent = "Send message";
+      } else {
+        HTMLFormElement.prototype.submit.call(form);
+      }
+    }).catch(function () {
+      HTMLFormElement.prototype.submit.call(form);
+    });
+  });
+})();
+</script>
+```

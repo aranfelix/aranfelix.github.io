@@ -5,21 +5,22 @@ project:
     - files/*
 
 website:
-  title: "ARAN FELIX"
+  title: "Aran Felix"
   site-url: https://aranfelix.github.io
-  description: "Statistics, data analytics and research & M&E portfolio of Aran Felix."
+  description: "Aran Felix, The Data Cruncher: statistics, data analytics and research & M&E portfolio."
   favicon: images/favicon.svg
   open-graph: true
   twitter-card: true
   search: true
   back-to-top-navigation: true
   navbar:
-    logo: images/logo.svg
-    logo-alt: "Aran Felix logo"
+    logo: images/logo.png
+    logo-alt: "Aran Felix, The Data Cruncher"
+    title: false
     background: "#10243A"
     foreground: "#FFFFFF"
     collapse-below: lg
-    left:
+    right:
       - text: "Home"
         href: index.qmd
       - text: "Projects"
@@ -29,20 +30,21 @@ website:
       - text: "About"
         href: about.qmd
       - text: "Contact"
-        href: contact.qmd
-    right:
-      - icon: whatsapp
-        href: "https://wa.me/254111991749"
-        aria-label: WhatsApp
-      - icon: github
-        href: https://github.com/aranfelix
-        aria-label: GitHub
-      - icon: linkedin
-        href: https://www.linkedin.com/in/aranfelix/
-        aria-label: LinkedIn
+        menu:
+          - text: "WhatsApp"
+            icon: whatsapp
+            href: "https://wa.me/254111991749"
+          - text: "LinkedIn"
+            icon: linkedin
+            href: "https://www.linkedin.com/in/aranfelix/"
+          - text: "Email"
+            icon: envelope
+            href: "mailto:aranfelix2013@gmail.com"
+          - text: "GitHub"
+            icon: github
+            href: "https://github.com/aranfelix"
   page-footer:
-    left: "&copy; 2026 Aran Felix"
-    center: "Statistics &middot; Data Analytics &middot; Research &amp; M&amp;E"
+    left: "&copy; 2026 Aran Felix &middot; The Data Cruncher"
     right: "Built with Quarto"
 
 format:
@@ -51,7 +53,9 @@ format:
       light: cosmo
       dark: darkly
     respect-user-color-scheme: true
-    css: styles.css
+    css:
+      - styles.css
+      - tools.css
     lang: en-GB
     grid:
       sidebar-width: 0px

@@ -1,37 +1,44 @@
 ---
 title: "About me"
-description: "Who I am, what I do and how I can help."
+description: "Who I am, what I do, what I am looking for and how I can help."
 ---
 
 ::: {.lead}
 I am Aran Felix, a statistician and data analyst. I take a question that matters to you, find or build the evidence to answer it, and explain the answer so you can act on it.
 :::
 
-I hold a **BSc in Statistics** and currently work as a data analyst with **ADAC Consultancy**. I combine statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report.
+I hold a **BSc in Statistics** and currently work as a data analyst with **ADAC Consultancy**. I combine questionnaire design, digital data collection, statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report.
+
+## What I am looking for
+
+- **Roles:** Data Analyst, Research Analyst or Officer, Monitoring and Evaluation Analyst, and Business Intelligence or Reporting Analyst.
+- **Sectors:** banks and financial institutions, NGOs and development organisations, research institutions, and data-driven businesses.
+- **Also:** freelance and consulting projects.
 
 ## How I can help
 
 <div class="feature-grid three">
-<div class="feature-card"><i class="bi bi-compass ic"></i><h3>Research design</h3><p>Turn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.</p></div>
+<div class="feature-card"><i class="bi bi-card-checklist ic"></i><h3>Research and questionnaire design</h3><p>Turn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.</p></div>
+<div class="feature-card"><i class="bi bi-phone ic"></i><h3>Digital data collection</h3><p>Collect data on phones and tablets with ODK Collect, KoboToolbox, REDCap and CAPI, with quality checks along the way.</p></div>
 <div class="feature-card"><i class="bi bi-calculator ic"></i><h3>Quantitative analysis</h3><p>Clean, test and model survey and programme data in SPSS, Stata, R or Python, and interpret the results.</p></div>
 <div class="feature-card"><i class="bi bi-chat-quote ic"></i><h3>Qualitative analysis</h3><p>Code interviews and focus groups in NVivo or ATLAS.ti and draw out themes that trace back to what people said.</p></div>
-<div class="feature-card"><i class="bi bi-bar-chart-line ic"></i><h3>Dashboards and visuals</h3><p>Build Tableau and Power BI dashboards and clear charts that show decision-makers what is happening.</p></div>
 <div class="feature-card"><i class="bi bi-clipboard-check ic"></i><h3>Monitoring and evaluation</h3><p>Set up indicators, check data quality, track progress and report evidence to donors and boards.</p></div>
-<div class="feature-card"><i class="bi bi-database ic"></i><h3>SQL and reporting</h3><p>Extract and organise data from databases and turn it into regular, reliable reports.</p></div>
+<div class="feature-card"><i class="bi bi-bar-chart-line ic"></i><h3>Dashboards and reporting</h3><p>Build Tableau and Power BI dashboards, SQL and Excel reports, and clear charts that show decision-makers what is happening.</p></div>
 </div>
 
 ## Who I work with
 
+- **Banks and financial institutions** that need accurate, well-documented reporting and analysis.
 - **NGOs and development programmes** that need credible M&E evidence for donors and boards.
-- **Research teams and institutions** that need rigorous, well-documented analysis.
+- **Research teams and institutions** that need rigorous, reproducible analysis.
 - **Businesses and consultancies** that want analysis and dashboards to track performance.
 
 ## Why work with me
 
+- **I work from questionnaire to report.** I design the instrument, collect the data digitally, analyse it and report it, so quality is protected at every step.
 - **I work on both sides of research.** Numbers show the scale of a problem and interviews explain it. I can do both, which matters in research and M&E.
 - **I show my working.** Methods are documented and analyses are reproducible, and my code is open on [GitHub](https://github.com/aranfelix).
 - **I tell you what the data cannot say.** You get limitations and uncertainty stated plainly, not a result that sounds more certain than it is.
-- **I explain it in plain language.** The point is that you can use and defend the findings.
 
 ## How a project works
 
@@ -41,16 +48,6 @@ I hold a **BSc in Statistics** and currently work as a data analyst with **ADAC 
 <div class="step"><b>3. Analysis</b><p>I clean, analyse and check the results, sharing progress along the way.</p></div>
 <div class="step"><b>4. Delivery</b><p>A clear report, dashboard or presentation, with the documentation behind it.</p></div>
 <div class="step"><b>5. Handover</b><p>I walk you through the findings so you can explain and defend them.</p></div>
-</div>
-
-## Tools
-
-<div class="tool-groups">
-<div class="tool-group"><h4>Statistical analysis</h4><div class="pills"><span>SPSS</span><span>Stata</span><span>R (RStudio)</span><span>Python</span></div></div>
-<div class="tool-group"><h4>Qualitative research</h4><div class="pills"><span>NVivo</span><span>ATLAS.ti</span></div></div>
-<div class="tool-group"><h4>Data and databases</h4><div class="pills"><span>SQL</span><span>Excel</span></div></div>
-<div class="tool-group"><h4>Visualisation and BI</h4><div class="pills"><span>Tableau</span><span>Power BI</span></div></div>
-<div class="tool-group"><h4>What I do</h4><div class="pills"><span>Data analysis</span><span>Data visualisation</span><span>Research</span><span>Data science</span></div></div>
 </div>
 
 Where work was done for clients, I share only what I am permitted to disclose and anonymise the rest.

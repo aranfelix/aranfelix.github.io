@@ -11,13 +11,17 @@ execute:
 if (file.exists("files/Aran-Felix-CV.pdf")) {
   cat('[Download the full CV (PDF)](files/Aran-Felix-CV.pdf){.btn .btn-primary}\n')
 } else {
-  cat('A full CV with dates and references is available on request. [Get in touch](/contact.qmd).\n')
+  cat('A full CV with dates and references is available on request. [Get in touch](/index.qmd#contact).\n')
 }
 ```
 
 ## Profile
 
-Statistician and data analyst working across research, monitoring and evaluation, and business intelligence. I combine quantitative analysis, qualitative research and dashboarding to produce evidence that decision-makers can use.
+Statistician and data analyst working across research, monitoring and evaluation, and business intelligence. I combine questionnaire design, digital data collection, quantitative analysis, qualitative research and dashboarding to produce evidence that decision-makers can use.
+
+## Target roles
+
+Data Analyst, Research Analyst or Officer, Monitoring and Evaluation Analyst, and Business Intelligence or Reporting Analyst, in banking and finance, NGOs, research organisations and data-driven businesses.
 
 ## Education
 
@@ -29,12 +33,13 @@ Statistician and data analyst working across research, monitoring and evaluation
 
 ## Core competencies
 
-- Research design, sampling and data collection tools
+- Research design, sampling and questionnaire design
+- Digital data collection with ODK Collect, KoboToolbox, REDCap and CAPI
 - Statistical analysis and interpretation of survey and programme data
 - Qualitative coding and thematic analysis
 - Monitoring and evaluation: indicators, data quality and reporting
 - Data visualisation and dashboards
-- Data science and data analysis workflows
+- SQL data extraction, validation and reporting
 
 ## Software and tools
 
@@ -42,6 +47,7 @@ Statistician and data analyst working across research, monitoring and evaluation
 |---|---|
 | Statistical analysis | SPSS, Stata, R (RStudio), Python |
 | Qualitative research | NVivo, ATLAS.ti |
+| Data collection | ODK Collect, KoboToolbox, REDCap, CAPI |
 | Databases and spreadsheets | SQL, Excel |
 | Visualisation and BI | Tableau, Power BI |
 
