@@ -402,3 +402,70 @@ table { font-size: 0.94rem; }
 @media print {
   #quarto-header, .nav-footer, .btn, .contact-section { display: none !important; }
 }
+
+/* ===== Phase 8.3: small-screen layout safeguards (site-wide) ===== */
+/* Preserve Quarto/Bootstrap's navigation and the existing desktop design. */
+.feature-grid > *, .tools-col, .tool-name, .contact-section > *, .cta-band,
+.quarto-grid-item, .pills > * { min-width: 0; }
+.tool-name, .pills span, .feature-card, .cta-band { overflow-wrap: anywhere; }
+.pills span { max-width: 100%; box-sizing: border-box; }
+
+/* Keep the standard project title, images and code inside their column. */
+#quarto-document-content { min-width: 0; }
+#quarto-document-content img, #quarto-document-content svg,
+#quarto-document-content video, #quarto-document-content canvas {
+  max-width: 100%;
+  height: auto;
+}
+#quarto-document-content .quarto-figure { max-width: 100%; min-width: 0; }
+#quarto-document-content .table-responsive { max-width: 100%; overflow-x: auto; }
+#quarto-document-content pre { max-width: 100%; overflow-x: auto; }
+#quarto-document-content a { overflow-wrap: anywhere; }
+#quarto-document-content p { overflow-wrap: anywhere; }
+#quarto-document-content p code, #quarto-document-content li code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Preserve automatic Quarto title metadata in narrow viewports. */
+#title-block-header .quarto-title-meta > div { min-width: 0; }
+#title-block-header .quarto-title-meta-contents { overflow-wrap: anywhere; }
+
+@media (max-width: 767px) {
+  #quarto-header { padding: 10px 8px 0; }
+  #quarto-header .navbar { padding: .5rem .75rem; border-radius: 12px; }
+  .navbar .navbar-brand { min-width: 0; max-width: calc(100vw - 120px); }
+  .navbar .navbar-brand img, .navbar .navbar-logo {
+    max-width: min(210px, calc(100vw - 135px)) !important;
+    height: auto !important;
+    max-height: 42px !important;
+    object-fit: contain;
+  }
+  .navbar .dropdown-menu {
+    position: static !important;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  #title-block-header .quarto-title-meta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .75rem;
+  }
+  h1.title { font-size: clamp(1.7rem, 6.2vw, 2.1rem); line-height: 1.2; overflow-wrap: anywhere; }
+  .feature-grid, .feature-grid.three { grid-template-columns: minmax(0, 1fr); }
+  .tools-board { grid-template-columns: minmax(0, 1fr); }
+  .tools-col { border-right: 0; border-bottom: 1px solid var(--line); }
+  .tools-col:last-child { border-bottom: 0; }
+  .tools-col:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .contact-section { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding: 1.6rem 1.2rem; }
+  .cta-band { padding: 1.2rem 1rem; }
+}
+@media (max-width: 400px) {
+  .contact-section { padding: 1.3rem 1rem; }
+  .contact-form-card { padding: 1rem; }
+  .feature-card { padding: 1rem; }
+  .navbar .dropdown-menu { box-shadow: none; }
+}

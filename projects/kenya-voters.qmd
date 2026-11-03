@@ -1,37 +1,331 @@
 ---
-title: "Kenya Registered Voters and Polling Stations, 2017 and 2022"
-description: "Analysing voter registration and polling-station data from two Kenyan general elections."
-date: 2026-10-24
-categories: [Elections, Data Analysis, Statistics]
-image: ../images/kenya-voters.svg
+title: "Mapping Kenya’s Electorate: Voter Registration, Presidential Turnout and Demographic Patterns, 2017–2022"
+subtitle: "An independent, reproducible analysis of Kenya's 2017 and 2022 general elections"
+description: "County, constituency and ward comparisons of voter registration, presidential turnout and demographic patterns in Kenya, 2017–2022."
+author: "Aran Felix"
+date: 2026-11-02
+categories: [Elections, Research, Data Analysis, Statistics, Python, R]
+image: ../images/kenya-election/electorate-card.webp
+toc: true
+toc-title: "On this page"
+toc-depth: 2
+anchor-sections: true
+format:
+  html:
+    code-fold: false
 ---
 
-::: {.status}
-**Status: in progress.** This page documents the project as it develops. Findings will be published here only after they have been checked, so every number you see is one I can defend.
+<!-- BEGIN PHASE 8.3 ELECTION IMAGE INTEGRATION -->
+<style>
+/* BEGIN PHASE 8.3 ELECTION IMAGE — local to the Kenya case-study page */
+#title-block-header {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: clamp(300px, 30vw, 430px);
+  padding: clamp(1.4rem, 3.2vw, 2.7rem);
+  margin: 1.2rem 0 1.65rem;
+  border-radius: 17px;
+  background-color: #07192c;
+  background-image:
+    linear-gradient(90deg, rgba(4, 17, 31, .97) 0%, rgba(5, 18, 33, .94) 49%, rgba(5, 18, 33, .82) 74%, rgba(5, 18, 33, .60) 100%),
+    url("../images/kenya-election/electorate-hero.webp");
+  background-position: center, center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  isolation: isolate;
+}
+#title-block-header h1,
+#title-block-header h1.title,
+#title-block-header .title,
+#title-block-header .subtitle,
+#title-block-header .quarto-title-meta-heading,
+#title-block-header .quarto-title-meta-contents,
+#title-block-header .quarto-title-authors,
+#title-block-header .quarto-title-affiliation,
+#title-block-header .description,
+#title-block-header p {
+  color: #f8fafc !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+}
+#title-block-header .subtitle,
+#title-block-header .description,
+#title-block-header .quarto-title-meta-heading { color: #d4e2f1 !important; }
+#title-block-header .quarto-title-meta { max-width: 100%; min-width: 0; }
+#title-block-header .quarto-title-meta > div { min-width: 0; }
+#title-block-header .quarto-title-meta-contents { overflow-wrap: anywhere; }
+#title-block-header .quarto-category,
+#title-block-header .quarto-category a {
+  color: #f3f7fc !important;
+  border-color: rgba(231, 241, 253, .55) !important;
+  background: rgba(3, 15, 27, .30) !important;
+}
+#title-block-header a { color: #eef7ff !important; }
+@media (max-width: 767px) {
+  #title-block-header {
+    min-height: 0;
+    padding: 1.5rem 1.12rem;
+    border-radius: 12px;
+    background-position: center, 68% center;
+    background-image:
+      linear-gradient(90deg, rgba(4, 17, 31, .98) 0%, rgba(5, 18, 33, .95) 75%, rgba(5, 18, 33, .88) 100%),
+      url("../images/kenya-election/electorate-hero.webp");
+  }
+  #title-block-header h1.title { font-size: clamp(1.65rem, 6.2vw, 2.15rem); line-height: 1.19; }
+}
+.kenya-image-credit { margin: -0.9rem 0 1rem; font-size: 0.78rem; color: var(--muted, #64748b); line-height: 1.5; }
+/* END PHASE 8.3 ELECTION IMAGE */
+</style>
+
+<!-- END PHASE 8.3 ELECTION IMAGE INTEGRATION -->
+
+
+<style>
+/* Kenya case study only — flexible layout for phones, tablets and desktop. */
+.kenya-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: .65rem;
+  max-width: 100%;
+  margin: 1.15rem 0 1.5rem;
+}
+.kenya-meta .kenya-meta-badge {
+  flex: 0 1 auto;
+  display: block;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: .38rem .8rem;
+  border: 1px solid var(--bs-border-color, #cbd5e1);
+  border-radius: 999px;
+  font-size: .87rem;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.kenya-lead { font-size: 1.075rem; line-height: 1.72; max-width: 76ch; }
+.kenya-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 1rem;
+  max-width: 100%;
+  margin: 1.15rem 0 1.6rem;
+}
+.kenya-kpi {
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid var(--bs-border-color, #cbd5e1);
+  border-radius: 12px;
+  padding: 1.05rem;
+  overflow-wrap: anywhere;
+}
+.kenya-kpi b { display: block; font-size: clamp(1.35rem, 2.8vw, 1.6rem); line-height: 1.25; letter-spacing: -.02em; }
+.kenya-kpi small { display: block; opacity: .85; line-height: 1.4; margin-top: .25rem; }
+.kenya-note { border-left: 4px solid #607d96; padding: .5rem 1rem; margin: 1.3rem 0; background: var(--bs-tertiary-bg,rgba(180,180,180,.1)); }
+.kenya-figure { width: 100%; max-width: 940px; margin: 1.4rem auto; min-width: 0; }
+.kenya-figure img { display: block; width: 100%; max-width: 100%; height: auto; box-sizing: border-box; border: 1px solid var(--bs-border-color, #cbd5e1); border-radius: 8px; }
+.kenya-preview { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; border: 1px solid var(--bs-border-color, #cbd5e1); border-radius: 12px; padding: 1.3rem; margin: 1.1rem 0 1.5rem; overflow-wrap: anywhere; }
+.kenya-preview label { display: block; font-weight: 700; margin-bottom: .4rem; }
+.kenya-preview select { max-width: 340px; width: 100%; padding: .55rem; border: 1px solid var(--bs-border-color, #777); border-radius: 6px; background: var(--bs-body-bg, #fff); color: var(--bs-body-color, #222); }
+.kenya-preview .mini { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: .7rem; margin-top: 1.1rem; }
+.kenya-preview .mini div { min-width: 0; padding: .85rem; background: var(--bs-tertiary-bg, #f4f4f4); border-radius: 8px; }
+.kenya-preview .mini strong { display: block; font-size: clamp(1.1rem, 3vw, 1.4rem); overflow-wrap: anywhere; }
+.kenya-preview .turnout-row { margin-top: .8rem; }
+.kenya-preview .turnout-label { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .35rem .7rem; font-size: .92rem; }
+.kenya-preview .turnout-label span { min-width: 0; overflow-wrap: anywhere; }
+.kenya-preview .track { width: 100%; height: 17px; background: var(--bs-tertiary-bg, #ddd); border-radius: 4px; overflow: hidden; }
+.kenya-preview .track > div { height: 100%; border-radius: 4px; background: #2775ae; }
+.kenya-preview .track .comparison { background: #b26c45; }
+.kenya-resources { display: flex; flex-wrap: wrap; align-items: stretch; gap: .7rem; max-width: 100%; margin: 1rem 0; }
+.kenya-resources a, .kenya-resources span { display: inline-flex; align-items: center; box-sizing: border-box; min-width: 0; max-width: 100%; margin: 0; padding: .7rem .95rem; border-radius: 6px; border: 1px solid var(--bs-border-color, #aab4c2); white-space: normal; overflow-wrap: anywhere; text-align: center; }
+.kenya-resources a:focus-visible { outline: 3px solid #2676b2; outline-offset: 3px; }
+@media (max-width: 540px) {
+  .kenya-meta { gap: .5rem; }
+  .kenya-meta .kenya-meta-badge { width: 100%; border-radius: 12px; }
+  .kenya-kpis, .kenya-preview .mini { grid-template-columns: minmax(0, 1fr); }
+  .kenya-preview { padding: 1rem; }
+  .kenya-resources a, .kenya-resources span { width: 100%; justify-content: center; }
+}
+</style>
+
+<div class="kenya-meta" aria-label="Study details">
+  <div class="kenya-meta-badge"><strong>Author:</strong> Aran Felix</div>
+  <div class="kenya-meta-badge"><strong>Study period:</strong> 2017–2022</div>
+  <div class="kenya-meta-badge"><strong>Coverage:</strong> 47 counties</div>
+  <div class="kenya-meta-badge"><strong>Methods:</strong> Python, descriptive statistics, correlations and geospatial analysis</div>
+  <div class="kenya-meta-badge"><strong>Research:</strong> completed; interactive dashboard published</div>
+</div>
+
+<div class="kenya-kpis" aria-label="Headline results">
+  <div class="kenya-kpi"><b>+2.51 million</b><small>additional registered voters nationally</small></div>
+  <div class="kenya-kpi"><b>+12.79%</b><small>change in national registration, 2017–2022</small></div>
+  <div class="kenya-kpi"><b>−12.72 pp</b><small>change in national presidential turnout</small></div>
+  <div class="kenya-kpi"><b>47 of 47</b><small>counties with registration growth and lower presidential turnout</small></div>
+</div>
+
+[Explore Interactive Dashboard](https://aranfelix.github.io/kenya-registered-voters-analysis/){.btn .btn-primary} [Read Full Research Report (PDF)](../files/Mapping_Kenyas_Electorate_2017-2022_Aran_Felix_REVISED.pdf){.btn .btn-outline-secondary}
+
+## Executive Summary
+
+Kenya’s registered electorate grew between the 2017 and 2022 general elections, but presidential participation did not follow the same pattern. I examined the Independent Electoral and Boundaries Commission’s (IEBC) voter-registration and presidential-results publications alongside Kenya National Bureau of Statistics (KNBS) population and socioeconomic data. The validated research covers 47 counties, 290 constituencies and 1,450 wards. National registration rose from 19,611,423 voters in 2017 to 22,120,458 in 2022, an increase of 2,509,035 (12.79%). Over the same period, counted presidential ballots fell from 15,196,307 to 14,326,751. National turnout therefore declined from 77.49% to 64.77%, or 12.72 percentage points. Every county recorded growth in registered voters and a decrease in presidential turnout, although the size of these changes differed substantially. Two constituencies and 16 wards recorded declines in registration even as their wider counties grew. I also examined population size, density, education and information-technology indicators to describe county-level associations. Those relationships are exploratory and cannot establish individual voting behaviour or causes of turnout change. This project demonstrates how careful data extraction, validation, geographic matching and transparent interpretation can turn complex administrative records into evidence that researchers, journalists and public-sector planners can examine. The **[full research report](../files/Mapping_Kenyas_Electorate_2017-2022_Aran_Felix_REVISED.pdf)** provides detailed tables, figures, source definitions and limitations.
+
+## Research Background and Questions
+
+A rise in the number of registered voters does not necessarily mean that more people cast ballots. Registration measures the size of an administrative roll; turnout uses a defined denominator to assess election-day participation. A county may add registered voters while recording lower turnout, and aggregate changes can hide different patterns across constituencies and wards. To examine these distinctions, the study asks how registration changed between the two election cycles, where changes were concentrated, how presidential turnout shifted, and how geographic variation relates to selected population and socioeconomic measures. The analysis is descriptive rather than causal. It provides a historical comparison that readers can check against original electoral and census publications, rather than a prediction of subsequent election outcomes. Previous research also shows why election administration and political circumstances matter when interpreting participation (Harris, 2021; Cheeseman et al., 2019, 2024).
+
+## Data and Methodology
+
+The analysis draws on two IEBC polling-station register publications, the IEBC’s presidential-results documents for the **8 August 2017** and **9 August 2022** general elections, KNBS 2019 census volumes, and KNBS county population projections for 2022. I extracted registration records from PDF tables, standardized geographic identifiers, examined duplicate and shifted headings, and checked derived counts against the original publications. The resulting geographic panel contains 47 counties, 290 constituencies and 1,450 wards in each election year. I used descriptive totals, absolute and percentage changes, national and county turnout rates, Pearson correlations and Spearman rank correlations. The full report records how each statistic was constructed and identifies where the sources do not use identical population or electoral denominators.
+
+National and county-only registration figures are **not interchangeable**. The published national totals include non-geographic registration categories, while the mapped analysis covers the 47 geographic counties. The corresponding county-only totals are 19,601,502 in 2017 and 22,102,532 in 2022. The demographic analysis uses actual observations from the 2019 census and **projections** for 2022 population. For example, a count of registered voters per 1,000 projected residents is not a registration rate among eligible adults, and it must not be described as one. I preserved source discrepancies in the research record instead of adjusting published values without documentation.
+
+## Findings and Statistical Results
+
+### 1. National Registration Increased as Presidential Turnout Fell
+
+| Indicator | 2017 | 2022 |
+|:--|--:|--:|
+| Registered voters (national) | 19,611,423 | 22,120,458 |
+| Counted presidential ballots | 15,196,307 | 14,326,751 |
+| Presidential turnout | 77.49% | 64.77% |
+
+The 2017-to-2022 comparison shows that registered voters increased by 2,509,035 while counted presidential ballots decreased by 869,556. The turnout gap widened because more people were registered but fewer ballots were counted. These indicators use the IEBC’s published national register and presidential ballot totals; they do not measure participation in other contests such as gubernatorial or parliamentary races. The figures below place both outcomes on separate, clearly labelled scales. They answer different questions: the first compares absolute counts, while the second shows turnout as a share of registered voters.
+
+::: {.kenya-figure}
+![National registration and counted presidential ballots. Source: IEBC, 2017 and 2022; analysis by Aran Felix.](../images/kenya-election/national_registered_vs_ballots.png){#fig-national-counts width="100%"}
 :::
 
-## The question
+::: {.kenya-figure}
+![Presidential turnout in Kenya, 2017 and 2022. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/national_presidential_turnout.png){#fig-national-turnout width="100%"}
+:::
 
-How did voter registration and the network of polling stations change between the 2017 and 2022 Kenyan general elections, and what does that mean for how the electoral system serves voters?
+### 2. County Growth Was Uneven
 
-## Why it matters
+Every geographic county recorded an increase in registered voters. **Nairobi City added 164,457 voters**, the largest absolute increase, followed by Nakuru (+105,238) and Kakamega (+100,815). In contrast, **Wajir recorded the largest proportional growth (27.54%)**, followed by Turkana (24.60%) and Mandera (23.56%). Nairobi’s high absolute gain and relatively modest percentage growth (7.31%) illustrate why counts and percentages should be examined together. County presidential turnout fell across the board, but the size of the decline varied. Nyandarua’s decline of 19.50 percentage points was among the largest, while Kericho’s was only 0.08 percentage points. The maps and detailed county dashboard planned for the next phase will make these contrasts easier to explore across the entire country.
 
-Voter registers and polling-station networks shape who can take part in an election and how elections are planned and observed. Comparing two election cycles shows where the system grew, where it stayed flat, and where the load on each station increased.
+::: {.kenya-figure}
+![Ranking of county voter-registration growth, 2017–2022. Source: validated IEBC registration records; analysis by Aran Felix.](../images/kenya-election/county_registration_growth_ranked.png){#fig-county-growth width="100%"}
+:::
 
-## Planned analysis
+::: {.kenya-figure}
+![Changes in presidential turnout by county, 2017–2022, in percentage points. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/county_turnout_change_ranked.png){#fig-county-turnout width="100%"}
+:::
 
-- Combine and clean the registration and polling-station data for both elections so the two years can be compared fairly.
-- Check that area names and boundaries match across years, and document anything that does not.
-- Measure change in registered voters and polling stations, and the number of voters per station.
-- Show the results with interactive charts and tables, and state the limitations of the data.
+### 3. Local Areas Did Not All Follow Their County Trends
 
-## What this page will contain when complete
+County-level growth concealed decreases in **two of 290 constituencies** and **16 of 1,450 wards**. That result matters because a regional total can increase even when some component areas decline. The observed changes may reflect different demographic, administrative or geographical circumstances, but the two election snapshots cannot establish the reason for a specific local decline. For this reason, the study avoids treating changes in individual polling-station rows as evidence that a physical polling location opened or closed; one building may contain multiple administrative station records. The geographic comparison also checks available names and codes before attributing differences to the same location across years. Constituency and ward details remain available in the supporting research tables and will be integrated into the dedicated county explorer.
 
-An interactive chart and map of the results, a searchable data table, a short summary of findings, and a limitations section.
+### 4. Registration Growth and Turnout Change Were Associated Across Counties
 
-## Code and data
+Across 47 counties, the Pearson correlation between **percentage registration growth** and **change in presidential turnout** was **r = 0.604**, while Spearman’s rank correlation was **ρ = 0.689**. The positive sign needs careful interpretation because county turnout changes were negative: counties with stronger registration growth tended, on average, to record *smaller* turnout declines. This relationship does not mean that registering more voters caused turnout to improve or that a particular voter was more likely to participate. The plotted dots represent counties, not individual voters, and the results reflect two election years rather than repeated observation of a long-term trend. The companion report explains the indicator definitions and documents relevant source discrepancies before any interpretation is drawn.
 
-[View the project on GitHub](https://github.com/aranfelix/kenya-registered-voters-analysis){.btn .btn-primary}
-[All projects](/projects.qmd){.btn .btn-outline-dark}
+::: {.kenya-figure}
+![County registration growth compared with presidential turnout change. Each observation represents one county. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/county_growth_vs_turnout_scatter.png){#fig-growth-turnout width="100%"}
+:::
+
+### 5. Population and Socioeconomic Indicators Added Context
+
+Counties with larger projected populations generally had more registered voters in 2022 (**Pearson’s r = 0.972**). This strong association primarily reflects differences in county size; it does not establish the proportion of eligible residents who registered. The remaining demographic associations require greater caution. For example, the raw-density Pearson correlation with 2022 presidential turnout was **r = −0.437**, whereas Spearman’s rank correlation was approximately **ρ = −0.010**. This contrast shows how skewed population density affects summary statistics. Spearman correlations between *turnout change* and the 2019 measures of mobile-phone ownership, internet use and education share were **ρ = −0.625**, **ρ = −0.451** and **ρ = −0.421**, respectively. All of these associations describe counties and combine indicators with different reference years and denominators; none demonstrates that access to technology or education caused turnout to fall.
+
+::: {.kenya-figure}
+![2022 projected county population compared with registered voters. Source: KNBS and IEBC; analysis by Aran Felix.](../images/kenya-election/population_vs_registration_2022.png){#fig-population-registration width="100%"}
+:::
+
+::: {.kenya-figure}
+![Exploratory socioeconomic correlations and changes in presidential turnout. Source: KNBS and IEBC; analysis by Aran Felix.](../images/kenya-election/socioeconomic_spearman_correlations.png){#fig-socioeconomic width="100%"}
+:::
+
+## Explore a County: Interactive Preview
+
+Use the selector to view one county’s registration growth and presidential turnout comparison. The values come from the same validated county research table used for the report. This lightweight preview works directly in the portfolio; the [interactive election dashboard](https://aranfelix.github.io/kenya-registered-voters-analysis/) provides county maps, constituency and ward comparisons, and verified leadership history.
+
+<div class="kenya-preview" id="kenya-county-preview">
+<label for="kenya-county-select">Select a county</label>
+<select id="kenya-county-select"><option>Loading counties…</option></select>
+<div class="mini" aria-live="polite">
+<div><small>Registered-voter increase</small><strong id="kenya-gain">—</strong></div>
+<div><small>Registration growth</small><strong id="kenya-growth">—</strong></div>
+<div><small>Turnout change</small><strong id="kenya-change">—</strong></div>
+</div>
+<div class="turnout-row"><div class="turnout-label"><span>2017 presidential turnout</span><b id="kenya-17">—</b></div><div class="track"><div id="kenya-bar-17" style="width:0%"></div></div></div>
+<div class="turnout-row"><div class="turnout-label"><span>2022 presidential turnout</span><b id="kenya-22">—</b></div><div class="track"><div id="kenya-bar-22" class="comparison" style="width:0%"></div></div></div>
+<p><small>Note: County turnout uses county election-result denominators. Percentages are rounded for display.</small></p>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  const records = [{"county":"Baringo","gain":48795,"growth":21.01,"turnout17":82.29,"turnout22":77.59,"change":-4.71},{"county":"Bomet","gain":54973,"growth":17.07,"turnout17":82.34,"turnout22":79.88,"change":-2.46},{"county":"Bungoma","gain":86748,"growth":15.49,"turnout17":75.41,"turnout22":63.51,"change":-11.9},{"county":"Busia","gain":65708,"growth":18.72,"turnout17":79.16,"turnout22":67.08,"change":-12.07},{"county":"Elgeyo/Marakwet","gain":33220,"growth":18.39,"turnout17":81.35,"turnout22":77.96,"change":-3.39},{"county":"Embu","gain":24834,"growth":8.02,"turnout17":81.69,"turnout22":66.61,"change":-15.08},{"county":"Garissa","gain":38123,"growth":23.34,"turnout17":69.86,"turnout22":54.86,"change":-15.0},{"county":"Homa Bay","gain":74196,"growth":15.56,"turnout17":84.71,"turnout22":73.7,"change":-11.01},{"county":"Isiolo","gain":14166,"growth":18.8,"turnout17":72.15,"turnout22":66.47,"change":-5.68},{"county":"Kajiado","gain":52080,"growth":12.67,"turnout17":79.81,"turnout22":66.96,"change":-12.85},{"county":"Kakamega","gain":100815,"growth":13.56,"turnout17":74.94,"turnout22":60.29,"change":-14.65},{"county":"Kericho","gain":52399,"growth":13.95,"turnout17":78.64,"turnout22":78.56,"change":-0.08},{"county":"Kiambu","gain":94088,"growth":7.97,"turnout17":83.74,"turnout22":65.15,"change":-18.58},{"county":"Kilifi","gain":80534,"growth":15.85,"turnout17":64.91,"turnout22":49.03,"change":-15.88},{"county":"Kirinyaga","gain":26165,"growth":7.48,"turnout17":87.15,"turnout22":69.85,"change":-17.3},{"county":"Kisii","gain":90430,"growth":16.54,"turnout17":74.39,"turnout22":63.92,"change":-10.48},{"county":"Kisumu","gain":67544,"growth":12.53,"turnout17":81.64,"turnout22":71.37,"change":-10.27},{"county":"Kitui","gain":58246,"growth":12.27,"turnout17":76.36,"turnout22":62.38,"change":-13.97},{"county":"Kwale","gain":47212,"growth":16.8,"turnout17":66.35,"turnout22":54.94,"change":-11.42},{"county":"Laikipia","gain":16525,"growth":6.7,"turnout17":81.21,"turnout22":64.73,"change":-16.48},{"county":"Lamu","gain":11677,"growth":16.73,"turnout17":71.8,"turnout22":62.55,"change":-9.25},{"county":"Machakos","gain":67311,"growth":10.85,"turnout17":76.24,"turnout22":60.2,"change":-16.04},{"county":"Makueni","gain":56091,"growth":13.25,"turnout17":78.85,"turnout22":61.05,"change":-17.8},{"county":"Mandera","gain":41388,"growth":23.56,"turnout17":77.36,"turnout22":62.85,"change":-14.51},{"county":"Marsabit","gain":25204,"growth":17.79,"turnout17":78.42,"turnout22":69.12,"change":-9.3},{"county":"Meru","gain":69659,"growth":9.92,"turnout17":77.97,"turnout22":66.18,"change":-11.8},{"county":"Migori","gain":80386,"growth":20.68,"turnout17":83.2,"turnout22":74.49,"change":-8.72},{"county":"Mombasa","gain":61690,"growth":10.63,"turnout17":59.45,"turnout22":43.76,"change":-15.68},{"county":"Murang'A","gain":33803,"growth":5.76,"turnout17":86.88,"turnout22":68.1,"change":-18.79},{"county":"Nairobi City","gain":164457,"growth":7.31,"turnout17":72.68,"turnout22":55.96,"change":-16.73},{"county":"Nakuru","gain":105238,"growth":11.08,"turnout17":79.91,"turnout22":65.53,"change":-14.38},{"county":"Nandi","gain":60281,"growth":17.42,"turnout17":78.65,"turnout22":76.05,"change":-2.59},{"county":"Narok","gain":57054,"growth":16.7,"turnout17":82.69,"turnout22":77.73,"change":-4.96},{"county":"Nyamira","gain":44430,"growth":15.93,"turnout17":73.97,"turnout22":65.16,"change":-8.81},{"county":"Nyandarua","gain":25531,"growth":7.61,"turnout17":86.56,"turnout22":67.06,"change":-19.5},{"county":"Nyeri","gain":24683,"growth":5.4,"turnout17":86.82,"turnout22":68.29,"change":-18.53},{"county":"Samburu","gain":17227,"growth":20.81,"turnout17":77.33,"turnout22":70.65,"change":-6.68},{"county":"Siaya","gain":75642,"growth":16.52,"turnout17":83.02,"turnout22":70.89,"change":-12.13},{"county":"Taita Taveta","gain":26111,"growth":16.77,"turnout17":72.8,"turnout22":61.77,"change":-11.03},{"county":"Tana River","gain":22769,"growth":19.24,"turnout17":74.05,"turnout22":67.02,"change":-7.03},{"county":"Tharaka-Nithi","gain":18778,"growth":8.81,"turnout17":82.36,"turnout22":70.08,"change":-12.28},{"county":"Trans Nzoia","gain":59359,"growth":17.48,"turnout17":73.51,"turnout22":63.37,"change":-10.14},{"county":"Turkana","gain":47093,"growth":24.6,"turnout17":69.03,"turnout22":60.63,"change":-8.4},{"county":"Uasin Gishu","gain":56083,"growth":12.46,"turnout17":76.22,"turnout22":69.51,"change":-6.71},{"county":"Vihiga","gain":37634,"growth":13.82,"turnout17":74.14,"turnout22":60.13,"change":-14.0},{"county":"Wajir","gain":44856,"growth":27.54,"turnout17":73.26,"turnout22":64.69,"change":-8.57},{"county":"West Pokot","gain":39794,"growth":22.08,"turnout17":84.07,"turnout22":79.51,"change":-4.56}];
+  const select = document.getElementById('kenya-county-select');
+  if (!select) return;
+  select.innerHTML = '';
+  for (const d of records) {
+    const option = document.createElement('option');
+    option.value = d.county;
+    option.textContent = d.county;
+    select.appendChild(option);
+  }
+  const $ = id => document.getElementById(id);
+  const signed = x => (x > 0 ? '+' : '') + x.toFixed(2);
+  function show(name) {
+    const d = records.find(row => row.county === name);
+    if (!d) return;
+    $('kenya-gain').textContent = '+' + d.gain.toLocaleString('en-KE');
+    $('kenya-growth').textContent = '+' + d.growth.toFixed(2) + '%';
+    $('kenya-change').textContent = signed(d.change).replace('-', '−') + ' pp';
+    $('kenya-17').textContent = d.turnout17.toFixed(2) + '%';
+    $('kenya-22').textContent = d.turnout22.toFixed(2) + '%';
+    $('kenya-bar-17').style.width = Math.max(0,Math.min(100,d.turnout17)) + '%';
+    $('kenya-bar-22').style.width = Math.max(0,Math.min(100,d.turnout22)) + '%';
+  }
+  select.addEventListener('change', () => show(select.value));
+  select.value = 'Nairobi City';
+  show(select.value);
+})();
+</script>
+
+## Discussion and Implications
+
+The national figures show why registration and electoral participation should not be described as the same outcome. Registration expanded, yet counted presidential ballots declined. The county comparisons show that this pattern was geographically widespread without being uniform in magnitude. The constituency and ward analysis adds an important second finding: growth at one administrative level can mask declines at a more local level. These distinctions can inform research questions about electoral administration, planning, outreach and political participation, but the available tables cannot identify individual motives. Previous academic studies discuss the institutional and political circumstances of the 2017 and 2022 contests (Cheeseman et al., 2019, 2024) and the role of polling-place administration (Harris, 2021). I use that literature to frame the questions, not to claim that this descriptive county dataset proves any specific explanation.
+
+## Limitations and Research Integrity
+
+This comparison covers two general elections only and cannot establish a long-term trend or a causal mechanism. National and geographic county totals cover different registration categories. The IEBC’s published 2017 national and county-derived presidential figures contain documented differences, including a **34-person** registered-voter discrepancy and a **30,924-vote** discrepancy in valid ballots, which the report treats transparently. The KNBS 2022 national population projection differs by **20 people** from the sum of its displayed county projections. Population projections are estimates, while 2019 census measures refer to an earlier date and may cover groups younger than voting age. County correlations can mask within-county variation and should not be interpreted as individual-level findings. The separately verified leadership-history timeline contains 23 reviewed events across 11 counties; it is not a complete national leadership record and is therefore maintained separately from this report’s registration and turnout findings.
+
+## Conclusion
+
+The strongest finding is a measurable gap between voter registration and presidential participation. Kenya added approximately 2.51 million registered voters between 2017 and 2022, yet counted presidential ballots decreased and turnout fell in all 47 counties. National averages concealed substantial geographic differences, and growth in county totals did not eliminate all local declines. The results show the value of combining official electoral records with careful geographic matching, statistical checking and transparent discussion of source limitations. They also demonstrate why meaningful analysis does not end with a chart: the denominator, unit of observation and limits of interpretation determine what a finding can support. Further research could examine eligible-voter population estimates, local polling-place access and election-administration records using designs better suited to testing explanations.
+
+## Research Resources
+
+<div class="kenya-resources">
+  <a href="../files/Mapping_Kenyas_Electorate_2017-2022_Aran_Felix_REVISED.pdf" class="btn btn-primary">Read the Full Research Report (PDF)</a>
+  <a href="https://github.com/aranfelix/kenya-registered-voters-analysis" class="btn btn-outline-secondary">Election Research Repository</a>
+  <a href="https://aranfelix.github.io/kenya-registered-voters-analysis/" class="btn btn-outline-primary">Explore Full Dashboard</a>
+</div>
+
+This research is part of my [professional portfolio](https://aranfelix.github.io/). The [full interactive dashboard](https://aranfelix.github.io/kenya-registered-voters-analysis/) offers detailed comparisons, maps and the reviewed leadership history. The case study and published data extracts are maintained separately from the original research pipeline.
+
+## Selected References
+
+Cheeseman, N., Kanyinga, K., Lynch, G., Ruteere, M., & Willis, J. (2019). Kenya’s 2017 elections: Winner-takes-all politics as usual? *Journal of Eastern African Studies, 13*(2), 215–234. https://doi.org/10.1080/17531055.2019.1594072
+
+Cheeseman, N., Kanyinga, K., Lynch, G., & Willis, J. (2024). Has Kenya democratized? Institutional strengthening and contingency in the 2022 general elections. *Journal of Eastern African Studies, 18*(2), 240–260. https://doi.org/10.1080/17531055.2024.2359154
+
+Harris, J. A. (2021). Election administration, resource allocation, and turnout: Evidence from Kenya. *Comparative Political Studies, 54*(3–4), 623–651. https://doi.org/10.1177/0010414020938083
+
+Independent Electoral and Boundaries Commission. (2020). *Data report of 2017 elections.*
+
+Independent Electoral and Boundaries Commission. (2022). *Declaration of results for the election of President of the Republic of Kenya at the national tallying centre.*
+
+Kenya National Bureau of Statistics. (2019). *2019 Kenya population and housing census: Volumes I and IV.*
+
+Kenya National Bureau of Statistics. (n.d.). *Summary report on Kenya’s population projections.*
 
 {{< include ../_cta.qmd >}}
