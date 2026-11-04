@@ -5,15 +5,11 @@ execute:
   freeze: false
 ---
 
-```{r}
-#| echo: false
-#| output: asis
-if (file.exists("files/Aran-Felix-CV.pdf")) {
-  cat('[Download the full CV (PDF)](files/Aran-Felix-CV.pdf){.btn .btn-primary}\n')
-} else {
-  cat('A full CV with dates and references is available on request. [Get in touch](/index.qmd#contact).\n')
-}
-```
+::: {.callout-note}
+### CV available upon request
+
+My current CV is available upon request. Please use the [contact section](index.qmd#contact) to request a copy.
+:::
 
 ## Profile
 
