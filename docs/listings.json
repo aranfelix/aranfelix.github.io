@@ -2,12 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
+      "/projects/kenya-financial-inclusion-2024.html",
       "/projects/kenya-voters.html"
     ]
   },
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/kenya-financial-inclusion-2024.html",
       "/projects/kenya-voters.html"
     ]
   }

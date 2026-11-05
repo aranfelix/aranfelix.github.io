@@ -1,0 +1,59 @@
+/* FinAccess 2024 case study. Scoped to .fa24-wrapper to preserve the portfolio theme. */
+.fa24-wrapper {color:var(--bs-body-color, #e6edf7);max-width:1100px;margin:0 auto;padding:1rem .6rem 3rem;line-height:1.68}
+.fa24-wrapper h2{font-size:1.55rem;font-weight:750;margin:2.6rem 0 1rem;padding-top:.25rem;color:var(--bs-heading-color,inherit)}
+.fa24-wrapper h3{font-size:1.2rem;font-weight:700;margin:1.8rem 0 .9rem}
+.fa24-wrapper p{margin:0 0 1.12rem}.fa24-hero{position:relative;isolation:isolate;overflow:hidden;border-radius:16px;background:#06192b;min-height:385px;margin:0 0 1.3rem;display:flex;align-items:end;box-shadow:0 10px 35px rgba(0,0,0,.15)}
+.fa24-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.fa24-hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(3,18,34,.98),rgba(3,18,34,.82) 47%,rgba(3,18,34,.28) 100%),linear-gradient(0deg,rgba(3,18,34,.85),transparent 75%)}
+.fa24-hero-content{padding:2.2rem 2.5rem;color:#fff;max-width:920px}.fa24-eyebrow{font-size:.72rem;font-weight:750;letter-spacing:.12em;color:#7dcce0}.fa24-hero h1{font-size:clamp(1.65rem,4.1vw,2.75rem);font-weight:800;color:#fff;line-height:1.15;margin:.6rem 0}.fa24-lead{font-size:1.04rem;max-width:780px;color:#d8e7f3}.fa24-tags,.fa24-pills{display:flex;flex-wrap:wrap;gap:.46rem}.fa24-tags span{border:1px solid #58728c99;padding:.18rem .42rem;border-radius:4px;font-size:.61rem;font-weight:650;letter-spacing:.035em;color:#edf4fb}.fa24-byline{display:flex;gap:2.5rem;margin-top:1.3rem;flex-wrap:wrap}.fa24-byline div{display:flex;flex-direction:column}.fa24-byline small{font-size:.61rem;color:#adc2d8;letter-spacing:.08em}.fa24-byline strong{font-size:.86rem;color:#fff}
+.fa24-pills{margin:.5rem 0 1.2rem}.fa24-pills span{border:1px solid #7a8ba7;border-radius:20px;padding:.35rem .65rem;font-size:.72rem}.fa24-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.85rem;margin:1.5rem 0}.fa24-metric{border:1px solid var(--bs-border-color,#455266);background:var(--bs-tertiary-bg,rgba(15,34,55,.13));border-radius:10px;padding:1.1rem;min-height:130px;display:flex;flex-direction:column}.fa24-metric strong{font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.16;color:#46acc8}.fa24-metric span{font-size:.82rem;line-height:1.38;margin-top:.5rem}
+.fa24-actions{display:flex;gap:.65rem;flex-wrap:wrap;align-items:center;margin:1.2rem 0 1.4rem}.fa24-actions a,.fa24-actions .fa24-btn-disabled{display:inline-block;text-decoration:none;border-radius:7px;padding:.6rem .95rem;font-size:.83rem;font-weight:700}.fa24-btn-primary{background:#246cf0;color:#fff!important}.fa24-btn-primary:hover{background:#1258d7}.fa24-btn-outline{color:var(--bs-body-color,inherit)!important;border:1px solid var(--bs-border-color,#65758a)}.fa24-btn-disabled{opacity:.58;border:1px dashed var(--bs-border-color,#687689);cursor:default}.fa24-status{border-left:4px solid #1fa5bd;background:var(--bs-tertiary-bg,rgba(24,56,78,.24));padding:1rem 1.2rem;border-radius:0 8px 8px 0;font-size:.9rem}
+.fa24-question-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}.fa24-question-grid>div{border:1px solid var(--bs-border-color,#4b5866);border-radius:8px;padding:1rem}.fa24-question-grid strong{color:#239fbe}.fa24-question-grid p{font-size:.88rem;margin:.4rem 0 0}.fa24-figure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}.fa24-figure-grid figure{margin:0;border:1px solid var(--bs-border-color,#526178);border-radius:8px;overflow:hidden;background:#fff}.fa24-figure-grid img{display:block;width:100%;height:auto;object-fit:contain}.fa24-figure-grid figcaption{padding:.65rem .9rem;font-size:.75rem;color:#2d4054;line-height:1.42}.fa24-deliverables{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}.fa24-deliverables>div{display:flex;flex-direction:column;padding:1rem;border-radius:8px;border:1px solid var(--bs-border-color,#4c5b6c)}.fa24-deliverables strong{color:#21a0ba}.fa24-deliverables span{font-size:.85rem;margin-top:.35rem}.fa24-art-note{font-size:.7rem;opacity:.7;margin-top:1.7rem}
+@media(max-width:780px){.fa24-hero{min-height:435px}.fa24-hero-content{padding:1.6rem}.fa24-hero-shade{background:linear-gradient(90deg,rgba(3,18,34,.96),rgba(3,18,34,.65) 75%,rgba(3,18,34,.45)),linear-gradient(0deg,rgba(3,18,34,.9),transparent 90%)}.fa24-metrics,.fa24-question-grid,.fa24-figure-grid,.fa24-deliverables{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.fa24-wrapper{padding:.5rem .2rem 2rem}.fa24-hero{min-height:420px}.fa24-hero-content{padding:1.1rem}.fa24-hero h1{font-size:1.55rem}.fa24-lead{font-size:.9rem}.fa24-byline{gap:1rem}.fa24-metrics,.fa24-question-grid,.fa24-figure-grid,.fa24-deliverables{grid-template-columns:1fr}.fa24-metric{min-height:95px}.fa24-figure-grid img{width:100%}}
+
+/* November 2026 correction: high-contrast, theme-independent publication cards. */
+.fa24-wrapper{max-width:1080px;padding-top:0.35rem}
+.fa24-hero{min-height:405px;border-radius:14px;margin-top:0;box-shadow:0 14px 32px rgba(0,0,0,.16)}
+.fa24-hero-shade{background:linear-gradient(90deg,rgba(4,20,36,.97) 0%,rgba(4,20,36,.88) 40%,rgba(4,20,36,.24) 100%),linear-gradient(0deg,rgba(3,17,32,.66),transparent 75%)}
+.fa24-hero-content{padding:2.3rem 2.5rem;max-width:800px}
+.fa24-hero .fa24-eyebrow{display:block;color:#8bd5e4!important;font-size:.75rem;letter-spacing:.12em;font-weight:750}
+.fa24-hero .fa24-lead{color:#f0f5fa!important;max-width:680px}
+.fa24-hero .fa24-tags span{color:#f4f8ff!important;background:rgba(5,23,43,.5)}
+.fa24-hero .fa24-byline small{color:#b8cadd!important}
+.fa24-hero .fa24-byline strong{color:#fff!important}
+.fa24-metrics{gap:1rem;margin:1.2rem 0}
+.fa24-metric{
+  background:#10253b!important;
+  border:1px solid #355572!important;
+  color:#f2f7fb!important;
+  border-radius:11px;
+  padding:1.15rem 1.2rem;
+  min-height:136px;
+  box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+.fa24-metric strong{color:#6ed4e8!important;font-weight:800;overflow-wrap:anywhere}
+.fa24-metric span{color:#e6eef7!important;font-weight:500;line-height:1.52}
+.fa24-status{background:#103146!important;border:1px solid #24627b!important;border-left:4px solid #52c2dc!important;color:#e7f3f8!important;line-height:1.65}
+.fa24-status strong{color:#fff!important}
+.fa24-question-grid>div,.fa24-deliverables>div{background:rgba(35,83,112,.08)}
+.fa24-pills span{line-height:1.3}
+.fa24-wrapper h2{font-weight:750;letter-spacing:-.02em}
+.fa24-actions a:focus-visible{outline:3px solid #81d1ef;outline-offset:3px}
+.fa24-figure-grid figure{box-shadow:0 4px 12px rgba(0,0,0,.06)}
+@media(max-width:760px){
+  .fa24-hero{min-height:390px}
+  .fa24-hero-content{padding:1.7rem}
+  .fa24-hero-shade{background:linear-gradient(90deg,rgba(4,20,36,.95),rgba(4,20,36,.53)),linear-gradient(0deg,rgba(3,17,32,.87),transparent)}
+}
+@media(max-width:520px){
+  .fa24-hero{min-height:390px}
+  .fa24-hero-content{padding:1.15rem}
+  .fa24-metric{min-height:100px}
+  .fa24-status{padding:.8rem .9rem}
+}
+
+/* Hide the automatic Quarto title on the FinAccess case study */
+#title-block-header {
+    display: none !important;
+}
