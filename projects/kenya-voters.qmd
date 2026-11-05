@@ -6,6 +6,7 @@ author: "Aran Felix"
 date: 2026-11-02
 categories: [Elections, Research, Data Analysis, Statistics, Python, R]
 image: ../images/kenya-election/electorate-card.webp
+image-alt: "Illustration representing voter registration and electoral data analysis in Kenya."
 toc: true
 toc-title: "On this page"
 toc-depth: 2
@@ -198,11 +199,11 @@ National and county-only registration figures are **not interchangeable**. The p
 The 2017-to-2022 comparison shows that registered voters increased by 2,509,035 while counted presidential ballots decreased by 869,556. The turnout gap widened because more people were registered but fewer ballots were counted. These indicators use the IEBC’s published national register and presidential ballot totals; they do not measure participation in other contests such as gubernatorial or parliamentary races. The figures below place both outcomes on separate, clearly labelled scales. They answer different questions: the first compares absolute counts, while the second shows turnout as a share of registered voters.
 
 ::: {.kenya-figure}
-![National registration and counted presidential ballots. Source: IEBC, 2017 and 2022; analysis by Aran Felix.](../images/kenya-election/national_registered_vs_ballots.png){#fig-national-counts width="100%"}
+![National registration and counted presidential ballots. Source: IEBC, 2017 and 2022; analysis by Aran Felix.](../images/kenya-election/national_registered_vs_ballots.png){#fig-national-counts width="100%" fig-alt="Side-by-side comparison of the national registered-voter totals and counted presidential ballots in Kenya's 2017 and 2022 general elections."}
 :::
 
 ::: {.kenya-figure}
-![Presidential turnout in Kenya, 2017 and 2022. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/national_presidential_turnout.png){#fig-national-turnout width="100%"}
+![Presidential turnout in Kenya, 2017 and 2022. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/national_presidential_turnout.png){#fig-national-turnout width="100%" fig-alt="Bar chart showing national presidential turnout falling from 77.49 percent in August 2017 to 64.77 percent in August 2022."}
 :::
 
 ### 2. County Growth Was Uneven
@@ -210,11 +211,11 @@ The 2017-to-2022 comparison shows that registered voters increased by 2,509,035 
 Every geographic county recorded an increase in registered voters. **Nairobi City added 164,457 voters**, the largest absolute increase, followed by Nakuru (+105,238) and Kakamega (+100,815). In contrast, **Wajir recorded the largest proportional growth (27.54%)**, followed by Turkana (24.60%) and Mandera (23.56%). Nairobi’s high absolute gain and relatively modest percentage growth (7.31%) illustrate why counts and percentages should be examined together. County presidential turnout fell across the board, but the size of the decline varied. Nyandarua’s decline of 19.50 percentage points was among the largest, while Kericho’s was only 0.08 percentage points. The maps and detailed county dashboard planned for the next phase will make these contrasts easier to explore across the entire country.
 
 ::: {.kenya-figure}
-![Ranking of county voter-registration growth, 2017–2022. Source: validated IEBC registration records; analysis by Aran Felix.](../images/kenya-election/county_registration_growth_ranked.png){#fig-county-growth width="100%"}
+![Ranking of county voter-registration growth, 2017–2022. Source: validated IEBC registration records; analysis by Aran Felix.](../images/kenya-election/county_registration_growth_ranked.png){#fig-county-growth width="100%" fig-alt="Ranked chart showing percentage growth in registered voters by county between 2017 and 2022; all 47 counties recorded increases."}
 :::
 
 ::: {.kenya-figure}
-![Changes in presidential turnout by county, 2017–2022, in percentage points. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/county_turnout_change_ranked.png){#fig-county-turnout width="100%"}
+![Changes in presidential turnout by county, 2017–2022, in percentage points. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/county_turnout_change_ranked.png){#fig-county-turnout width="100%" fig-alt="Ranked county-level changes in presidential turnout between the 2017 and 2022 general elections, measured in percentage points."}
 :::
 
 ### 3. Local Areas Did Not All Follow Their County Trends
@@ -226,7 +227,7 @@ County-level growth concealed decreases in **two of 290 constituencies** and **1
 Across 47 counties, the Pearson correlation between **percentage registration growth** and **change in presidential turnout** was **r = 0.604**, while Spearman’s rank correlation was **ρ = 0.689**. The positive sign needs careful interpretation because county turnout changes were negative: counties with stronger registration growth tended, on average, to record *smaller* turnout declines. This relationship does not mean that registering more voters caused turnout to improve or that a particular voter was more likely to participate. The plotted dots represent counties, not individual voters, and the results reflect two election years rather than repeated observation of a long-term trend. The companion report explains the indicator definitions and documents relevant source discrepancies before any interpretation is drawn.
 
 ::: {.kenya-figure}
-![County registration growth compared with presidential turnout change. Each observation represents one county. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/county_growth_vs_turnout_scatter.png){#fig-growth-turnout width="100%"}
+![County registration growth compared with presidential turnout change. Each observation represents one county. Source: IEBC; analysis by Aran Felix.](../images/kenya-election/county_growth_vs_turnout_scatter.png){#fig-growth-turnout width="100%" fig-alt="Scatterplot comparing registration growth and presidential turnout change across Kenya's 47 counties; one point represents one county."}
 :::
 
 ### 5. Population and Socioeconomic Indicators Added Context
@@ -234,11 +235,11 @@ Across 47 counties, the Pearson correlation between **percentage registration gr
 Counties with larger projected populations generally had more registered voters in 2022 (**Pearson’s r = 0.972**). This strong association primarily reflects differences in county size; it does not establish the proportion of eligible residents who registered. The remaining demographic associations require greater caution. For example, the raw-density Pearson correlation with 2022 presidential turnout was **r = −0.437**, whereas Spearman’s rank correlation was approximately **ρ = −0.010**. This contrast shows how skewed population density affects summary statistics. Spearman correlations between *turnout change* and the 2019 measures of mobile-phone ownership, internet use and education share were **ρ = −0.625**, **ρ = −0.451** and **ρ = −0.421**, respectively. All of these associations describe counties and combine indicators with different reference years and denominators; none demonstrates that access to technology or education caused turnout to fall.
 
 ::: {.kenya-figure}
-![2022 projected county population compared with registered voters. Source: KNBS and IEBC; analysis by Aran Felix.](../images/kenya-election/population_vs_registration_2022.png){#fig-population-registration width="100%"}
+![2022 projected county population compared with registered voters. Source: KNBS and IEBC; analysis by Aran Felix.](../images/kenya-election/population_vs_registration_2022.png){#fig-population-registration width="100%" fig-alt="Comparison of projected 2022 county populations with registered voters, using KNBS population projections and IEBC voter registration data."}
 :::
 
 ::: {.kenya-figure}
-![Exploratory socioeconomic correlations and changes in presidential turnout. Source: KNBS and IEBC; analysis by Aran Felix.](../images/kenya-election/socioeconomic_spearman_correlations.png){#fig-socioeconomic width="100%"}
+![Exploratory socioeconomic correlations and changes in presidential turnout. Source: KNBS and IEBC; analysis by Aran Felix.](../images/kenya-election/socioeconomic_spearman_correlations.png){#fig-socioeconomic width="100%" fig-alt="Chart of exploratory county-level Spearman correlations between socioeconomic indicators and change in presidential turnout; these associations do not establish causation."}
 :::
 
 ## Explore a County: Interactive Preview

@@ -1,4 +1,5 @@
 ---
+description: "Aran Felix's professional portfolio: statistics, data analytics, research and monitoring and evaluation in Kenya. Explore project case studies, skills and reports."
 pagetitle: "Aran Felix | The Data Cruncher | Statistics, Data Analytics and Research"
 listing:
   id: featured
