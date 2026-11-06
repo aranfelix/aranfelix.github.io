@@ -1,7 +1,7 @@
 ---
 title: "Financial Inclusion and Financial Health in Kenya, 2024"
-description: "2024 FinAccess research: 84.8% formal inclusion, but only 18.3% financially healthy. Interim evidence release."
-date: 2026-11-05
+description: "Survey-weighted research on financial access, financial health and socioeconomic disparities among 19,750 Kenyan adults."
+date: 2026-11-06
 categories: [Kenya, Research, Financial Inclusion, Survey Analysis, R, Statistics]
 image: ../images/finaccess-2024/finaccess-card.webp
 image-alt: "Illustrative Kenyan market scene with mobile payment, community savings and abstract data graphics; AI-generated artwork"
@@ -17,32 +17,31 @@ format:
 ::: {.fa24-wrapper}
 
 ```{=html}
-<div class="fa24-hero" role="region" aria-label="Financial inclusion research project">
-  <img class="fa24-hero-img" src="../images/finaccess-2024/finaccess-hero.webp" alt="Illustration of mobile money, a market payment and a community savings activity in Kenya" loading="eager">
+<div class="fa24-hero" role="region" aria-label="Financial inclusion and financial health study">
+  <img class="fa24-hero-img" src="../images/finaccess-2024/finaccess-hero.webp" alt="AI-generated illustration of Kenyan market activity and a mobile-money payment" loading="eager">
   <div class="fa24-hero-shade"></div>
   <div class="fa24-hero-content">
-    <span class="fa24-eyebrow">FINANCIAL INCLUSION · SURVEY RESEARCH</span>
     <h1>Financial Inclusion and Financial Health in Kenya, 2024</h1>
-    <p class="fa24-lead">Socioeconomic disparities and the relationship between access to financial services and financial wellbeing.</p>
-    <div class="fa24-tags"><span>KENYA</span><span>FINACCESS 2024</span><span>RESEARCH</span><span>R</span><span>SURVEY-WEIGHTED ANALYSIS</span></div>
-    <div class="fa24-byline"><div><small>AUTHOR</small><strong>Aran Felix</strong></div><div><small>DATA YEAR</small><strong>2024</strong></div><div><small>RELEASE STATUS</small><strong>Interim research case study</strong></div></div>
+    <p class="fa24-lead">An independent, survey-weighted analysis of financial access and financial health in Kenya.</p>
+    <div class="fa24-tags"><span>FINANCIAL INCLUSION</span><span>RESEARCH</span><span>SURVEY ANALYSIS</span><span>STATISTICS</span><span>R</span></div>
+    <p class="fa24-description">Socioeconomic disparities by household wealth, education, livelihood, residence and demographic characteristics in the 2024 FinAccess survey.</p>
+    <div class="fa24-byline"><div><small>AUTHOR</small><strong>Aran Felix</strong></div><div><small>PUBLISHED</small><strong>6 November 2026</strong></div></div>
   </div>
 </div>
-
 ```
 
-<div class="fa24-pills"><span>19,750 adults</span><span>47 counties</span><span>Weighted survey estimates</span><span>Exploratory regression</span><span>Methodological review ongoing</span></div>
+<div class="fa24-pills"><span><strong>Author:</strong> Aran Felix</span><span><strong>Survey:</strong> FinAccess 2024</span><span><strong>Coverage:</strong> 47 counties</span><span><strong>Methods:</strong> R, survey-weighted analysis and exploratory regression</span><span><strong>Sample:</strong> 19,750 adults</span></div>
 
 <div class="fa24-metrics">
 <div class="fa24-metric"><strong>84.8%</strong><span>Formal financial inclusion</span></div>
 <div class="fa24-metric"><strong>18.3%</strong><span>Financially healthy adults</span></div>
 <div class="fa24-metric"><strong>9.9%</strong><span>Financially excluded adults</span></div>
-<div class="fa24-metric"><strong>40.3% vs 3.8%</strong><span>Financially healthy: highest vs lowest wealth quintile</span></div>
+<div class="fa24-metric"><strong>40.3% vs 3.8%</strong><span>Financial health: highest and lowest wealth quintiles</span></div>
 </div>
 
-<div class="fa24-actions"><a class="fa24-btn-primary" href="#executive-summary">Read executive summary ↓</a><a class="fa24-btn-outline" href="#results-and-figures">Explore selected figures ↓</a><span class="fa24-btn-disabled" aria-label="Full research report not publicly released">Full research report · under review</span></div>
+<div class="fa24-actions"><span class="fa24-dashboard-disabled" role="link" aria-disabled="true" title="Tableau Public visualization is not yet published">Explore Interactive Dashboard</span><a class="fa24-btn-outline" href="../files/finaccess-2024/FinAccess_2024_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer">Read Full Research Report (PDF) ↗</a></div>
+<p class="fa24-dashboard-hint">Tableau Public visualization is in preparation. The dashboard button will open the live visualization once published.</p>
 
-<div class="fa24-status"><strong>Interim research release.</strong> Weighted national point estimates reproduce the official FinAccess 2024 benchmarks. Confidence intervals, p-values and model-based inference remain <strong>provisional</strong> because the original public-use survey-design identifiers have not been independently certified. This page presents associations, not causal effects.</div>
 
 ## Executive summary {#executive-summary}
 
@@ -97,15 +96,17 @@ I used the **2024 FinAccess Household Survey public-use dataset**, produced by t
 
 The official sampling documentation describes 92 geographic/residence strata and a planned sample of 1,885 enumeration areas. The public-use file contains 1,849 observed distinct cluster identifiers. The survey manual identifies A7 as the KNBS-provided cluster number and A8 as the KNBS-defined rural/urban type. I reconstructed the candidate design from those variables and county codes, but the original variance-estimation identifiers have not been independently certified. Confidence intervals, significance tests and adjusted-prediction uncertainty are therefore **provisional**. The vulnerability index was excluded from the main models because its original construction could not be adequately established.
 
-**Additional limitations:** This is a cross-sectional observational analysis. Associations cannot establish causation, and unmeasured confounding is possible. Adjusted probability intervals condition on the observed covariate distribution. The publication is an interim case study, not a finalized methodological certification.
+**Additional limitations:** This is a cross-sectional observational analysis. Associations cannot establish causation, and unmeasured confounding is possible. Adjusted probability intervals condition on the observed covariate distribution. The published manuscript retains the documented survey-design qualifications; confidence intervals and model-based inference remain provisional.
 
-## Research materials and release status
+<div class="fa24-method-note" role="note"><strong>Methodological transparency.</strong> The national weighted point estimates reproduce official FinAccess 2024 benchmarks. Confidence intervals, p-values and adjusted-model inference remain <strong>provisional</strong> because the public-use variance-design identifiers have not been independently certified. The study reports associations, not causal effects.</div>
+
+## Research materials
 
 <div class="fa24-deliverables">
-<div><strong>Interim case study</strong><span>Available on this page, with selected findings and figures.</span></div>
-<div><strong>Full manuscript</strong><span>Prepared for final author review; public PDF not released.</span></div>
-<div><strong>Power BI / interactive dashboard</strong><span>Planned; no dashboard link until an approved release exists.</span></div>
-<div><strong>Reproducibility</strong><span>Research scripts and aggregate outputs are retained in a separate analytical project; individual-level data are not published here.</span></div>
+<div><strong>Full research manuscript</strong><span><a href="../files/finaccess-2024/FinAccess_2024_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer">Read the published 24-page PDF report ↗</a>. This is the author-approved, unchanged document.</span></div>
+<div><strong>Tableau Public dashboard</strong><span>In development. An interactive link will be activated after the Tableau Public visualization is published.</span></div>
+<div><strong>Research methods</strong><span>Survey weighting, subgroup comparisons and exploratory adjusted associations; uncertainty remains qualified in the report.</span></div>
+<div><strong>Reproducibility</strong><span>Analysis scripts and aggregate research outputs are maintained separately. No respondent-level records are published on this portfolio.</span></div>
 </div>
 
 **Official sources:** [2024 FinAccess Household Survey report (Central Bank of Kenya)](https://www.centralbank.go.ke/wp-content/uploads/2024/12/2024-FINACCESS-HOUSEHOLD-SURVEY-MAIN-REPORT.pdf) · [2024 FinAccess Survey Manual](https://www.centralbank.go.ke/wp-content/uploads/2024/12/2024-FinAccess-Household-Survey-Manual.pdf).

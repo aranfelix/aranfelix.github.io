@@ -57,3 +57,235 @@
 #title-block-header {
     display: none !important;
 }
+
+/* FinAccess 2024 | election-case-study visual alignment
+   Scoped: loaded only by finaccess-case-study.css on the FinAccess project page.
+   Existing global portfolio CSS and Kenya-election page remain untouched. */
+
+/* Retain the Quarto page title in metadata/listings without duplicating it above the hero. */
+#title-block-header { display: none !important; }
+
+.fa24-wrapper {
+  max-width: 1080px;
+  padding: .15rem .6rem 3rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* Compact editorial hero, in the same visual family as the election research. */
+.fa24-hero {
+  display: block;
+  min-height: 0;
+  margin: 0 0 1.2rem;
+  border-radius: 12px;
+  box-shadow: none;
+  overflow: hidden;
+  background: #06192b;
+}
+.fa24-hero-img { object-position: center center; }
+.fa24-hero-shade {
+  background:
+    linear-gradient(90deg, rgba(3, 18, 34, .98) 0%, rgba(3, 18, 34, .94) 47%, rgba(3,18,34,.35) 100%),
+    linear-gradient(0deg, rgba(3,18,34,.71), transparent 82%);
+}
+.fa24-hero-content {
+  max-width: none;
+  width: 100%;
+  padding: 1.95rem 2rem 2.05rem;
+  color: #fff;
+}
+.fa24-hero .fa24-eyebrow { display: none !important; }
+.fa24-hero h1 {
+  font-size: clamp(1.55rem, 2.55vw, 1.92rem);
+  font-weight: 750;
+  letter-spacing: -.028em;
+  line-height: 1.14;
+  color: #fff !important;
+  margin: 0 0 .45rem;
+  max-width: 900px;
+}
+.fa24-hero .fa24-lead {
+  font-size: .94rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e6edf5 !important;
+  max-width: 800px;
+  margin: 0 0 .7rem;
+}
+.fa24-hero .fa24-description {
+  font-size: .87rem;
+  line-height: 1.6;
+  color: #e8f1fa !important;
+  max-width: 845px;
+  margin: .65rem 0 0;
+}
+.fa24-hero .fa24-tags { gap: .4rem; margin-top: .8rem; }
+.fa24-hero .fa24-tags span {
+  font-size: .63rem;
+  font-weight: 500;
+  letter-spacing: .015em;
+  color: #e7edf6 !important;
+  border: 1px solid rgba(184,201,219,.48);
+  border-radius: 3px;
+  background: rgba(3,18,34,.18);
+  padding: .2rem .42rem;
+}
+.fa24-hero .fa24-byline {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  max-width: 810px;
+}
+.fa24-hero .fa24-byline > div { display: flex; flex-direction: column; gap: .23rem; }
+.fa24-hero .fa24-byline small {
+  font-size: .65rem;
+  font-weight: 400;
+  letter-spacing: .03em;
+  color: #b1c2d4 !important;
+}
+.fa24-hero .fa24-byline strong {
+  font-size: .81rem;
+  font-weight: 600;
+  color: #fff !important;
+}
+
+/* The screenshot's restrained outline pills and election-style KPI tiles. */
+.fa24-pills {
+  margin: .45rem 0 1rem;
+  gap: .55rem;
+}
+.fa24-pills span {
+  font-size: .77rem;
+  line-height: 1.36;
+  padding: .4rem .68rem;
+  border-radius: 999px;
+  border: 1px solid #94a8be;
+}
+.fa24-pills span strong { font-weight: 750; }
+.fa24-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: .8rem;
+  margin: .9rem 0 1.2rem;
+}
+.fa24-metric,
+.fa24-wrapper .fa24-metric {
+  min-height: 110px;
+  border-radius: 9px;
+  padding: 1rem .95rem;
+  border: 1px solid #a1afbf !important;
+  background: transparent !important;
+  color: #eef3f8 !important;
+  box-shadow: none !important;
+  display: flex;
+  flex-direction: column;
+}
+.fa24-metric strong,
+.fa24-wrapper .fa24-metric strong {
+  color: #f2f6fc !important;
+  font-size: clamp(1.24rem, 2.1vw, 1.62rem);
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -.025em;
+}
+.fa24-metric span,
+.fa24-wrapper .fa24-metric span {
+  margin-top: .46rem;
+  color: #aebccb !important;
+  font-size: .78rem;
+  font-weight: 450;
+  line-height: 1.42;
+}
+body:not(.quarto-dark) .fa24-metric {
+  background: #fff !important;
+  border-color: #b6c5d5 !important;
+  color: #14263a !important;
+}
+body:not(.quarto-dark) .fa24-metric strong { color: #19324f !important; }
+body:not(.quarto-dark) .fa24-metric span { color: #4e5f71 !important; }
+
+.fa24-actions { margin: 1.05rem 0 1.65rem; gap: .6rem; }
+.fa24-actions a, .fa24-actions .fa24-dashboard-disabled {
+  border-radius: 7px;
+  padding: .65rem 1rem;
+  font-size: .83rem;
+  font-weight: 650;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 43px;
+}
+.fa24-actions .fa24-btn-primary { background: #286cf0; border: 1px solid #286cf0; color:#fff !important; }
+.fa24-actions .fa24-btn-primary:hover { background: #1f58c2; }
+.fa24-actions .fa24-btn-outline { border: 1px solid #a6b4c4; color: var(--bs-body-color) !important; }
+.fa24-actions .fa24-dashboard-disabled {
+  border: 1px dashed #8495a6;
+  color: var(--bs-secondary-color, #bdc8d5) !important;
+  cursor: not-allowed;
+  opacity: .9;
+}
+.fa24-actions a:focus-visible { outline: 3px solid #79c5ee; outline-offset: 3px; }
+.fa24-dashboard-hint { font-size: .76rem; opacity: .8; margin: -.7rem 0 1.35rem !important; }
+
+/* The sampling caveat stays visible in Methods, not between the hero and summary. */
+.fa24-method-note {
+  border: 1px solid var(--bs-border-color, #566b80);
+  border-left: 4px solid #3d95bf;
+  border-radius: 0 8px 8px 0;
+  padding: .95rem 1.15rem;
+  background: var(--bs-tertiary-bg, #0f263a);
+  color: var(--bs-body-color, inherit);
+  font-size: .88rem;
+  line-height: 1.62;
+  margin: 1.35rem 0 1.45rem;
+}
+.fa24-method-note strong { font-weight: 750; }
+
+@media (max-width: 780px) {
+  .fa24-hero { min-height: 0; }
+  .fa24-hero-content { padding: 1.65rem 1.55rem; }
+  .fa24-hero-shade { background: linear-gradient(90deg, rgba(3,18,34,.98), rgba(3,18,34,.67)), linear-gradient(0deg,rgba(3,18,34,.79),transparent); }
+  .fa24-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 520px) {
+  .fa24-hero { min-height: 0; }
+  .fa24-hero-content { padding: 1.4rem 1.1rem; }
+  .fa24-hero h1 { font-size: 1.52rem; }
+  .fa24-hero .fa24-lead { font-size: .88rem; }
+  .fa24-hero .fa24-byline { gap: .85rem; }
+  .fa24-metrics { grid-template-columns: 1fr 1fr; gap: .6rem; }
+  .fa24-metric, .fa24-wrapper .fa24-metric { min-height: 116px; padding: .85rem .75rem; }
+  .fa24-metric strong { font-size: 1.2rem !important; }
+  .fa24-metric span { font-size: .73rem !important; }
+  .fa24-actions > * { width: 100%; }
+}
+
+/* FinAccess methodology note: in-flow full-width layout repair (2026-11-06). */
+.fa24-wrapper div.fa24-method-note {
+  display: block !important;
+  position: static !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0;
+  box-sizing: border-box;
+  clear: both;
+  overflow-wrap: break-word;
+  margin: 1.4rem 0;
+}
+
+/* FinAccess methodology note: fixed high-contrast palette (dark and light modes). */
+.fa24-wrapper div.fa24-method-note {
+  background-color: #112d42 !important;
+  color: #f1f7fb !important;
+  border: 1px solid #3c657a !important;
+  border-left: 4px solid #61c8e7 !important;
+}
+.fa24-wrapper div.fa24-method-note strong {
+  color: #ffffff !important;
+}
+.fa24-wrapper div.fa24-method-note a {
+  color: #9ae4ff !important;
+}
