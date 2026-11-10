@@ -117,7 +117,7 @@ The official sampling documentation describes 92 geographic/residence strata and
 ## Research materials
 
 <div class="fa24-deliverables">
-<div><strong>Full research manuscript</strong><span><a href="../files/finaccess-2024/FinAccess_2024_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer">Read the published 24-page PDF report ↗</a>. This is the author-approved, unchanged document.</span></div>
+<div><strong>Full research manuscript</strong><span><a href="../files/finaccess-2024/FinAccess_2024_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer">Read the published 24-page PDF report ↗</a>. Formal financial inclusion reaches 84.83% of Kenyan adults, yet only 18.32% are financially healthy. In this report, I explore this gap using the 2024 FinAccess Household Survey. I examine how financial health differs across wealth, education, age, sex and place of residence, and explain what the findings reveal, including the limitations of the evidence.</span></div>
 
 <div>
   <strong>Tableau Public dashboard</strong>
@@ -129,11 +129,24 @@ The official sampling documentation describes 92 geographic/residence strata and
     </a>.
     Explore three dashboards covering national financial inclusion,
     socioeconomic inequalities, and adjusted statistical associations.
-    All results follow the approved research manuscript.
   </span>
 </div>
 <div><strong>Research methods</strong><span>Survey weighting, subgroup comparisons and exploratory adjusted associations; uncertainty remains qualified in the report.</span></div>
-<div><strong>Reproducibility</strong><span>Analysis scripts and aggregate research outputs are maintained separately. No respondent-level records are published on this portfolio.</span></div>
+
+<div>
+  <strong>Research code and reproducibility</strong>
+  <span>
+    <a href="https://github.com/aranfelix/kenya-finaccess-2024-analysis"
+       target="_blank"
+       rel="noopener noreferrer">
+      View Research Code on GitHub ↗
+    </a>.
+    Access the R analysis scripts, approved aggregate datasets,
+    research figures, methodology notes and reproducibility
+    documentation. Original respondent-level survey data
+    are not redistributed.
+  </span>
+</div>
 </div>
 
 **Official sources:** [2024 FinAccess Household Survey report (Central Bank of Kenya)](https://www.centralbank.go.ke/wp-content/uploads/2024/12/2024-FINACCESS-HOUSEHOLD-SURVEY-MAIN-REPORT.pdf) · [2024 FinAccess Survey Manual](https://www.centralbank.go.ke/wp-content/uploads/2024/12/2024-FinAccess-Household-Survey-Manual.pdf).
