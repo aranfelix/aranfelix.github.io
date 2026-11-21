@@ -1,0 +1,135 @@
+---
+title: "Credit Risk and Loan Repayment Behaviour"
+description: "Historical Home Credit repayment behaviour, SQL Server data integration and Python credit-risk modelling across 307,511 labelled applications."
+date: 2026-11-21
+categories: [Credit Risk, Research, SQL, Python, Machine Learning, Tableau]
+image: ../images/home-credit-risk/home-credit-risk-card.webp
+image-alt: "AI-generated financial analytics workspace with SQL Server and Python code displayed beside credit-risk charts on a laptop"
+format:
+  html:
+    title-block-style: none
+    toc: false
+    css: ../finaccess-case-study.css
+    page-layout: full
+    anchor-sections: true
+---
+
+::: {.fa24-wrapper}
+
+```{=html}
+<div class="fa24-hero" role="region" aria-label="Credit risk and loan repayment behaviour research">
+  <img class="fa24-hero-img" src="../images/home-credit-risk/home-credit-risk-hero.webp" alt="AI-generated illustration of a financial analytics workstation showing SQL Server, Python and credit-risk visualisations" loading="eager">
+  <div class="fa24-hero-shade"></div>
+  <div class="fa24-hero-content">
+    <h1>Credit Risk and Loan Repayment Behaviour</h1>
+    <p class="fa24-lead">A SQL Server-Based Analysis of Home Credit Lending Data</p>
+    <div class="fa24-tags"><span>CREDIT RISK</span><span>RESEARCH</span><span>SQL</span><span>PYTHON</span><span>TABLEAU</span></div>
+    <p class="fa24-description">Historical repayment behaviour, data quality and predictive model performance in the Home Credit Default Risk dataset.</p>
+    <div class="fa24-byline"><div><small>AUTHOR</small><strong>Aran Felix</strong></div><div><small>PUBLISHED</small><strong>21 November 2026</strong></div></div>
+  </div>
+</div>
+```
+
+<div class="fa24-pills"><span><strong>Author:</strong> Aran Felix</span><span><strong>Source:</strong> Home Credit Default Risk (2018)</span><span><strong>Methods:</strong> SQL Server, Python and Tableau</span><span><strong>Labelled sample:</strong> 307,511 applications</span><span><strong>Held-out test:</strong> 61,503 applications</span></div>
+
+<div class="fa24-metrics">
+<div class="fa24-metric"><strong>307,511</strong><span>Labelled applications analysed</span></div>
+<div class="fa24-metric"><strong>8.07%</strong><span>Recorded payment-difficulty rate</span></div>
+<div class="fa24-metric"><strong>0.7552</strong><span>Gradient-boosting test ROC-AUC</span></div>
+<div class="fa24-metric"><strong>33.35%</strong><span>Positive-case recall at top 10% review capacity</span></div>
+</div>
+
+<div class="fa24-actions">
+  <a class="fa24-btn-primary"
+     href="https://public.tableau.com/app/profile/aranfelix/viz/CreditRiskandLoanRepaymentBehaviourSQLServerPythonAnalytics/01FinancialCreditRiskOverview"
+     target="_blank" rel="noopener noreferrer">
+    Explore Interactive Dashboard ↗
+  </a>
+  <a class="fa24-btn-outline"
+     href="../files/home-credit-risk/Home_Credit_Risk_Research_Felix_Aran.pdf"
+     target="_blank" rel="noopener noreferrer">
+    Read Full Research Report (PDF) ↗
+  </a>
+</div>
+
+## Executive summary {#executive-summary}
+
+I analysed **307,511 labelled Home Credit applications** to examine recorded repayment difficulty, the completeness of related credit-history records and the performance of statistical prediction models. I integrated application and historical tables using SQL Server, checked key relationships and repayment chronology, and prepared **34 predictors** for modelling in Python. Of the labelled applications, **24,825 (8.07%)** carried the source-defined payment-difficulty outcome. The analysis compared an application-only logistic model, a logistic model enriched with credit history, and a compact gradient-boosting model. The final evaluation used **61,503 previously held-out labelled applications**, separate from the original Kaggle competition's 48,744 unlabelled applications. The selected gradient-boosting model achieved **0.7552 ROC-AUC** and **0.2455 average precision** on that held-out sample. The results describe historical predictive discrimination and review prioritisation; they do not represent a tested lending policy or a current Kenyan credit-risk estimate.
+
+Historical repayment records provided additional context beyond the application form. I distinguished **13,605,401 recorded payment entries** from the number of distinct observed instalment keys, checked payment dates and recorded amounts, and audited historical records that could not be matched to their expected parent tables. Under a retrospective top-10% review scenario, the selected model identified **1,656 of 4,965** positive cases in the held-out test sample, equivalent to **33.35% recall**. Reviewing the top 20% identified **2,577 cases**, or **51.90% recall**. These are capacity-based model summaries, not evidence that automated approvals or rejections would improve real-world outcomes. Subgroup results also showed differences in ranking, selection and calibration that warrant investigation without establishing discrimination or fairness. The linked report documents the source definitions, audits, validation process and remaining limitations.
+
+## Questions this research addresses
+
+<div class="fa24-question-grid">
+<div><strong>Credit risk</strong><p>How common was the source-defined payment-difficulty outcome in the labelled historical applications?</p></div>
+<div><strong>Repayment history</strong><p>What do recorded payments and observed instalments reveal about repayment timing and data coverage?</p></div>
+<div><strong>Prediction</strong><p>Do historical credit and repayment indicators improve model performance beyond application information?</p></div>
+<div><strong>Review and subgroups</strong><p>How much of the positive-case population can a fixed review capacity identify, and how does performance vary across groups?</p></div>
+</div>
+
+## Key findings
+
+**Payment difficulty appeared in 8.07% of labelled applications.** There were 24,825 source-defined positive outcomes among 307,511 labelled applications. This is a modelled payment-difficulty indicator, not a verified measurement of loan loss or a forecast of defaults in Kenya.
+
+**Historical information improved predictive performance.** ROC-AUC rose from **0.7384** for application-only logistic regression to **0.7514** for enriched logistic regression. The selected compact gradient-boosting model achieved **0.7552**. These differences describe performance on the locked historical test set, not a guaranteed improvement in production lending.
+
+**Review capacity changed the number of positive cases found.** Ranking the test sample by selected-model risk scores placed **1,656 positive cases** within the highest-scored 10% of applications. The highest-scored 20% contained **2,577**. Both scenarios use historical outcomes and assumed review capacities, rather than operational loan-decision rules.
+
+**Repayment records require careful denominator choices.** The historical data contained **13,605,401 payment entries**. Of the **13,602,496 dated entries**, approximately **68.44% were recorded early, 23.13% on time and 8.43% late**. A payment entry is not the same as a unique scheduled instalment, and observed amounts cannot establish full repayment coverage for wholly unobserved instalments.
+
+**Subgroup comparisons raised questions for further audit.** For example, the selected model's held-out ROC-AUC was approximately **0.7320** for applicants under 30 and **0.7000** for those aged 60 or older. Differences in risk distributions, selection rates and subgroup sizes complicate interpretation. These summaries alone cannot establish discrimination, fairness or deployment readiness.
+
+## Predictive model comparison {#model-comparison}
+
+The table compares the three models on the **same held-out sample of 61,503 labelled applications**, including 4,965 positive outcomes. Average precision is a precision-recall area summary, while the Brier score assesses probabilistic accuracy; lower Brier values are better.
+
+| Model | ROC-AUC | Average precision | Brier score | Top-10% recall |
+|:--|--:|--:|--:|--:|
+| Application-only logistic regression | 0.7384 | 0.2207 | 0.06891 | 31.50% |
+| Application + historical information, logistic regression | 0.7514 | 0.2359 | 0.06818 | 32.71% |
+| **Compact gradient boosting** | **0.7552** | **0.2455** | **0.06782** | **33.35%** |
+
+The gradient-boosting configuration was selected before the reserved test set was evaluated. Its advantage over the enriched logistic model was modest, so the results should not be treated as proof that a more complex model will always perform better.
+
+## Repayment behaviour and review capacity {#repayment-review}
+
+The historical payment analysis kept separate denominators for payment entries, dated entries, observed instalment keys and assessed amount coverage. Of **12,951,918 observed instalment keys**, the available amount information covered approximately 99.95% *of those observed keys*. This figure does not measure coverage of instalments absent from the source records. Among covered observed instalments, approximately **91.48%** had their recorded amount covered by the due date and **8.52%** after the due date. These statements concern observed historical records and depend on the study's amount-reconciliation rules.
+
+The model's prioritisation results provide a different view of performance. In the held-out sample, reviewing **6,151 highest-scored applications** (the top 10%) would identify **1,656 positive outcomes**: **26.92% precision** and **33.35% recall**. Reviewing **12,301 applications** (the top 20%) would identify **2,577**, yielding **20.95% precision** and **51.90% recall**. The exercise illustrates the trade-off between review effort and observed positive-case coverage. It does not estimate the financial return, cost or fairness of a real lending intervention.
+
+## Data and methods {#data-methods}
+
+I used the historical **Home Credit Default Risk** competition data, first released in 2018. The labelled application file provided 307,511 records, while a separate original competition test file contained 48,744 applications without the modelling outcome. I integrated eight analytical source tables in SQL Server, audited relationships and unmatched historical records, and verified repayment chronology. The final feature table contained 37 columns: an application identifier, the outcome, a recorded sex-code field retained for subgroup auditing, and **34 model predictors**. I split the labelled sample into fixed stratified training (**184,506**), validation (**61,502**) and held-out test (**61,503**) partitions. Python workflows developed and evaluated the logistic and gradient-boosting models, and Tableau displays aggregate findings only.
+
+The analysis has several limitations. The original source defines `TARGET` as a payment-difficulty outcome, not a certified default loss. Historical table coverage is incomplete, and unmatched historical parent records should not automatically be treated as invalid. The random held-out sample tests performance on historical data but does not provide an out-of-time prospective evaluation. The construction and lending-decision-time availability of external credit-related scores could not be independently verified. Subgroup differences are descriptive and do not establish discrimination. The dataset does not represent Kenya's contemporary lending population, and retrospective review rankings should not be used as loan approval or rejection policies without further validation and governance.
+
+<div class="fa24-method-note" role="note"><strong>Interpretation and responsible use.</strong> The analysis demonstrates a documented data-integration and predictive-modelling workflow. Reported metrics are retrospective and descriptive. It does not support individual lending decisions, causal claims or conclusions about Kenyan borrowers.</div>
+
+## Interactive research dashboard {#interactive-dashboard}
+
+The Tableau Public workbook contains six views: **Executive Overview**, **Historical Credit &amp; Repayment Behaviour**, **Predictive Model Performance**, **Credit Risk Review Capacity**, **Subgroup Performance &amp; Calibration**, and **Research Methods &amp; Limitations**. Use the dashboard navigation to explore these sections and change the review-capacity and subgroup selectors. The dashboard uses aggregate tables; individual application records and prediction scores are not published in the workbook.
+
+<div class="fa24-actions">
+  <a class="fa24-btn-primary"
+     href="https://public.tableau.com/app/profile/aranfelix/viz/CreditRiskandLoanRepaymentBehaviourSQLServerPythonAnalytics/01FinancialCreditRiskOverview"
+     target="_blank" rel="noopener noreferrer">
+    Open the six-dashboard Tableau workbook ↗
+  </a>
+</div>
+
+## Research materials
+
+<div class="fa24-deliverables">
+<div><strong>Full research manuscript</strong><span><a href="../files/home-credit-risk/Home_Credit_Risk_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer">Read the approved research PDF ↗</a>. The manuscript details the source data, SQL audits, feature preparation, model comparisons, repayment analysis, subgroup assessment and qualifications.</span></div>
+<div><strong>Tableau Public dashboard</strong><span><a href="https://public.tableau.com/app/profile/aranfelix/viz/CreditRiskandLoanRepaymentBehaviourSQLServerPythonAnalytics/01FinancialCreditRiskOverview" target="_blank" rel="noopener noreferrer">Explore all six interactive research dashboards ↗</a>. Review model performance, historical repayment patterns, review-capacity scenarios and subgroup findings.</span></div>
+<div><strong>Analytical methods</strong><span>SQL Server integration and chronology audits; Python model training, probability assessment and fixed held-out evaluation; Tableau reporting from aggregate extracts.</span></div>
+<div><strong>Reproducibility and code</strong><span>The analytical workflow uses documented scripts, fixed model partitions and checksum-verified outputs. A public code repository link will be added after the repository passes its publication review. Original competition records are not redistributed.</span></div>
+</div>
+
+**Data attribution:** [Home Credit Default Risk competition on Kaggle](https://www.kaggle.com/competitions/home-credit-default-risk). The source data are historical and governed by the competition's terms. Public research materials do not contain the original applicant-level datasets.
+
+<div class="fa24-art-note">Cover and card artwork are AI-generated illustrations. The displayed workstation and code are illustrative and are not screenshots from the actual analysis.</div>
+
+<div class="fa24-actions"><a class="fa24-btn-outline" href="../projects.qmd">← All projects</a></div>
+
+:::

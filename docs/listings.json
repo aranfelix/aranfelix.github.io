@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/projects/home-credit-risk-analytics.html",
       "/projects/kenya-financial-inclusion-2024.html",
       "/projects/kenya-voters.html"
     ]
@@ -9,6 +10,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/home-credit-risk-analytics.html",
       "/projects/kenya-financial-inclusion-2024.html",
       "/projects/kenya-voters.html"
     ]

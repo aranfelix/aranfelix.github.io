@@ -105,88 +105,67 @@
     "text": "Selected References\nCheeseman, N., Kanyinga, K., Lynch, G., Ruteere, M., & Willis, J. (2019). Kenya’s 2017 elections: Winner-takes-all politics as usual? Journal of Eastern African Studies, 13(2), 215–234. https://doi.org/10.1080/17531055.2019.1594072\nCheeseman, N., Kanyinga, K., Lynch, G., & Willis, J. (2024). Has Kenya democratized? Institutional strengthening and contingency in the 2022 general elections. Journal of Eastern African Studies, 18(2), 240–260. https://doi.org/10.1080/17531055.2024.2359154\nHarris, J. A. (2021). Election administration, resource allocation, and turnout: Evidence from Kenya. Comparative Political Studies, 54(3–4), 623–651. https://doi.org/10.1177/0010414020938083\nIndependent Electoral and Boundaries Commission. (2020). Data report of 2017 elections.\nIndependent Electoral and Boundaries Commission. (2022). Declaration of results for the election of President of the Republic of Kenya at the national tallying centre.\nKenya National Bureau of Statistics. (2019). 2019 Kenya population and housing census: Volumes I and IV.\nKenya National Bureau of Statistics. (n.d.). Summary report on Kenya’s population projections.\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Turning data into evidence and better decisions.",
+    "objectID": "projects/home-credit-risk-analytics.html",
+    "href": "projects/home-credit-risk-analytics.html",
+    "title": "Credit Risk and Loan Repayment Behaviour",
     "section": "",
-    "text": "STATISTICS · DATA ANALYTICS · RESEARCH & M&EOpen to opportunities\n\n\nI am a statistician and data analyst who turns raw data into clear, defensible evidence for banks, NGOs, research organisations and businesses: questionnaire design, digital data collection, statistical analysis, qualitative research, dashboards and M&E reporting.\nExplore Projects View CV Contact me\n\nOpen to full-time roles, contracts and consulting · Data Analyst · Research Analyst · M&E Analyst · BI & Reporting Analyst"
+    "text": "2026-11-21"
   },
   {
-    "objectID": "index.html#where-i-add-value",
-    "href": "index.html#where-i-add-value",
-    "title": "Turning data into evidence and better decisions.",
-    "section": "Where I add value",
-    "text": "Where I add value\n\n\n\n\nBanking & Finance\n\n\nAccurate numbers, clear reporting and analysis that can be audited.\n\n\n\nSQL extraction, validation and reconciliation\n\n\nExcel, Tableau and Power BI reporting\n\n\nSegmentation, trend analysis and logistic regression\n\n\n\n\n\n\nNGOs & Development\n\n\nDonor-ready evidence you can trust.\n\n\n\nQuestionnaires and digital data collection (ODK, KoboToolbox)\n\n\nIndicator frameworks and data quality checks\n\n\nSurvey analysis in SPSS, Stata and R\n\n\nQualitative coding in NVivo and ATLAS.ti\n\n\nDonor-style reporting\n\n\n\n\n\n\nResearch Organisations\n\n\nRigorous analysis that others can reproduce.\n\n\n\nStudy design, sampling and questionnaire design\n\n\nREDCap and CAPI data collection\n\n\nHypothesis testing, regression and ANOVA\n\n\nMixed-methods analysis\n\n\nDocumented workflows in R, Python and Stata\n\n\n\n\n\n\nBusiness & Corporate\n\n\nInsight that moves decisions.\n\n\n\nKPI dashboards in Tableau and Power BI\n\n\nCohort, trend and A/B-test analysis\n\n\nSQL-based reporting\n\n\nPlain-language summaries for managers"
+    "objectID": "projects/home-credit-risk-analytics.html#executive-summary",
+    "href": "projects/home-credit-risk-analytics.html#executive-summary",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Executive summary",
+    "text": "Executive summary\nI analysed 307,511 labelled Home Credit applications to examine recorded repayment difficulty, the completeness of related credit-history records and the performance of statistical prediction models. I integrated application and historical tables using SQL Server, checked key relationships and repayment chronology, and prepared 34 predictors for modelling in Python. Of the labelled applications, 24,825 (8.07%) carried the source-defined payment-difficulty outcome. The analysis compared an application-only logistic model, a logistic model enriched with credit history, and a compact gradient-boosting model. The final evaluation used 61,503 previously held-out labelled applications, separate from the original Kaggle competition’s 48,744 unlabelled applications. The selected gradient-boosting model achieved 0.7552 ROC-AUC and 0.2455 average precision on that held-out sample. The results describe historical predictive discrimination and review prioritisation; they do not represent a tested lending policy or a current Kenyan credit-risk estimate.\nHistorical repayment records provided additional context beyond the application form. I distinguished 13,605,401 recorded payment entries from the number of distinct observed instalment keys, checked payment dates and recorded amounts, and audited historical records that could not be matched to their expected parent tables. Under a retrospective top-10% review scenario, the selected model identified 1,656 of 4,965 positive cases in the held-out test sample, equivalent to 33.35% recall. Reviewing the top 20% identified 2,577 cases, or 51.90% recall. These are capacity-based model summaries, not evidence that automated approvals or rejections would improve real-world outcomes. Subgroup results also showed differences in ranking, selection and calibration that warrant investigation without establishing discrimination or fairness. The linked report documents the source definitions, audits, validation process and remaining limitations."
   },
   {
-    "objectID": "index.html#featured-work",
-    "href": "index.html#featured-work",
-    "title": "Turning data into evidence and better decisions.",
-    "section": "Featured work",
-    "text": "Featured work\n\n\n\n\n\n\n\n\n\n\nFinancial Inclusion and Financial Health in Kenya, 2024\n\n\n\nKenya\n\nResearch\n\nFinancial Inclusion\n\nSurvey Analysis\n\nR\n\nStatistics\n\n\n\nSurvey-weighted research on financial access, financial health and socioeconomic disparities among 19,750 Kenyan adults.\n\n\n\n\n\n\n\n\n\n\n\n\nMapping Kenya’s Electorate: Voter Registration, Presidential Turnout and Demographic Patterns, 2017–2022\n\n\n\nElections\n\nResearch\n\nData Analysis\n\nStatistics\n\nPython\n\nR\n\n\n\nCounty, constituency and ward comparisons of voter registration, presidential turnout and demographic patterns in Kenya, 2017–2022.\n\n\n\n\n\nNo matching items\n\nSee all projects →"
+    "objectID": "projects/home-credit-risk-analytics.html#questions-this-research-addresses",
+    "href": "projects/home-credit-risk-analytics.html#questions-this-research-addresses",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Questions this research addresses",
+    "text": "Questions this research addresses\n\n\nCredit risk\n\nHow common was the source-defined payment-difficulty outcome in the labelled historical applications?\n\n\n\nRepayment history\n\nWhat do recorded payments and observed instalments reveal about repayment timing and data coverage?\n\n\n\nPrediction\n\nDo historical credit and repayment indicators improve model performance beyond application information?\n\n\n\nReview and subgroups\n\nHow much of the positive-case population can a fixed review capacity identify, and how does performance vary across groups?"
   },
   {
-    "objectID": "index.html#why-work-with-me",
-    "href": "index.html#why-work-with-me",
-    "title": "Turning data into evidence and better decisions.",
-    "section": "Why work with me",
-    "text": "Why work with me\n\n\n\n\nNumbers and narratives\n\n\nI work in both quantitative tools (SPSS, Stata, R, Python) and qualitative tools (NVivo, ATLAS.ti), so your evidence has both the scale and the story.\n\n\n\n\n\nFrom questionnaire to report\n\n\nI design the questionnaire, collect the data digitally, analyse it and report it, so quality is protected at every step.\n\n\n\n\n\nPlain-language results\n\n\nYou get findings that a programme manager, donor or board member can understand and use, not just tables of output. Limits are stated plainly."
+    "objectID": "projects/home-credit-risk-analytics.html#key-findings",
+    "href": "projects/home-credit-risk-analytics.html#key-findings",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Key findings",
+    "text": "Key findings\nPayment difficulty appeared in 8.07% of labelled applications. There were 24,825 source-defined positive outcomes among 307,511 labelled applications. This is a modelled payment-difficulty indicator, not a verified measurement of loan loss or a forecast of defaults in Kenya.\nHistorical information improved predictive performance. ROC-AUC rose from 0.7384 for application-only logistic regression to 0.7514 for enriched logistic regression. The selected compact gradient-boosting model achieved 0.7552. These differences describe performance on the locked historical test set, not a guaranteed improvement in production lending.\nReview capacity changed the number of positive cases found. Ranking the test sample by selected-model risk scores placed 1,656 positive cases within the highest-scored 10% of applications. The highest-scored 20% contained 2,577. Both scenarios use historical outcomes and assumed review capacities, rather than operational loan-decision rules.\nRepayment records require careful denominator choices. The historical data contained 13,605,401 payment entries. Of the 13,602,496 dated entries, approximately 68.44% were recorded early, 23.13% on time and 8.43% late. A payment entry is not the same as a unique scheduled instalment, and observed amounts cannot establish full repayment coverage for wholly unobserved instalments.\nSubgroup comparisons raised questions for further audit. For example, the selected model’s held-out ROC-AUC was approximately 0.7320 for applicants under 30 and 0.7000 for those aged 60 or older. Differences in risk distributions, selection rates and subgroup sizes complicate interpretation. These summaries alone cannot establish discrimination, fairness or deployment readiness."
   },
   {
-    "objectID": "index.html#tools-and-methods",
-    "href": "index.html#tools-and-methods",
-    "title": "Turning data into evidence and better decisions.",
-    "section": "Tools and methods",
-    "text": "Tools and methods\n\n\n\nProgrammingand databases\n\n\nSQL\n\n\nPython\n\n\nRRStudio\n\n\n\n\nStatistical andqualitative software\n\n\nSPSS\n\n\nStata\n\n\nNVivo\n\n\nATLAS.ti\n\n\n\n\nData collectionand survey design\n\n\nODK Collect\n\n\nKoboToolbox\n\n\nREDCap\n\n\nCAPICAPIComputer-assisted interviewing\n\n\nQuestionnaire design\n\n\n\n\nVisualisationand reporting\n\n\nTableau\n\n\nPower BI\n\n\nExcel\n\n\n\n\nAnalyticmethods\n\n\n\nExploratory data analysis\n\n\nData cleaning and validation\n\n\nDescriptive and inferential statistics\n\n\nHypothesis tests (t-test, chi-square, post-hoc)\n\n\nANOVA\n\n\nLinear and logistic regression\n\n\nSegmentation and clustering\n\n\nCohort analysis\n\n\nA/B testing\n\n\nQuestionnaire and survey design, sampling\n\n\nThematic analysis"
+    "objectID": "projects/home-credit-risk-analytics.html#model-comparison",
+    "href": "projects/home-credit-risk-analytics.html#model-comparison",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Predictive model comparison",
+    "text": "Predictive model comparison\nThe table compares the three models on the same held-out sample of 61,503 labelled applications, including 4,965 positive outcomes. Average precision is a precision-recall area summary, while the Brier score assesses probabilistic accuracy; lower Brier values are better.\n\n\n\n\n\n\n\n\n\n\nModel\nROC-AUC\nAverage precision\nBrier score\nTop-10% recall\n\n\n\n\nApplication-only logistic regression\n0.7384\n0.2207\n0.06891\n31.50%\n\n\nApplication + historical information, logistic regression\n0.7514\n0.2359\n0.06818\n32.71%\n\n\nCompact gradient boosting\n0.7552\n0.2455\n0.06782\n33.35%\n\n\n\nThe gradient-boosting configuration was selected before the reserved test set was evaluated. Its advantage over the enriched logistic model was modest, so the results should not be treated as proof that a more complex model will always perform better."
   },
   {
-    "objectID": "index.html#methods-in-action",
-    "href": "index.html#methods-in-action",
-    "title": "Turning data into evidence and better decisions.",
-    "section": "Methods in action",
-    "text": "Methods in action\nPick a sector to see the methods I would apply and the questions they help answer.\n\nBanking & FinanceNGOs & M&EResearchBusiness analytics\n\n\n\nData validation and reconciliationExploratory analysisCustomer segmentationLogistic regressionTrend and seasonality analysisAnomaly detection (IQR, z-scores)KPI dashboards\n\nQuestions I can help answer\n\nWhich customer segments drive revenue, and which are likely to leave?\nWhere do reports disagree with the source data, and why?\nWhich transactions or accounts look unusual enough to review?\nHow is portfolio performance trending, and what is behind the change?\n\n\n\n\nQuestionnaire designDigital data collection (ODK, KoboToolbox, REDCap, CAPI)Indicator frameworksData quality assessmentSurvey data analysisThematic analysisMixed-methods triangulationDonor-style reporting\n\nQuestions I can help answer\n\nDid the programme reach its targets, and for whom?\nIs the data we are reporting reliable?\nWhat do participants say, and does it match the numbers?\nWhich locations or groups are falling behind?\n\n\n\n\nStudy design and samplingQuestionnaire designREDCap and CAPI data collectionSample-size planningHypothesis testingANOVA and non-parametric testsLinear and logistic regressionReproducible workflows\n\nQuestions I can help answer\n\nIs this difference real, or just noise?\nWhich factors are associated with the outcome after adjusting for others?\nHow large is the effect, and how sure are we?\nCould someone else reproduce this result?\n\n\n\n\nCohort and retention analysisA/B testingSegmentationForecasting and trendsSQL KPI reportingDashboard design\n\nQuestions I can help answer\n\nWhich customers stay, and what do they have in common?\nDid the change we made actually work?\nWhat is next quarter likely to look like?\nWhat should the dashboard show so managers act on it?\n\n\n\n\n\n  \n    Let's connect and work together!\n    Hiring for an analyst or research role, or need help with a data project? Send a message or reach me directly.\n\n    \n      \n      \n        Phone (WhatsApp)\n        +254 111 991 749\n      \n    \n\n    \n      \n      \n        E-mail\n        aranfelix2013@gmail.com\n      \n    \n\n    \n      \n      \n        LinkedIn\n        linkedin.com/in/aranfelix\n      \n    \n\n    \n      \n      \n        GitHub\n        github.com/aranfelix\n      \n    \n  \n\n  \n    \n      Send me a message\n      Name\n      Your email\n      Message\n      \n      \n      Send message"
+    "objectID": "projects/home-credit-risk-analytics.html#repayment-review",
+    "href": "projects/home-credit-risk-analytics.html#repayment-review",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Repayment behaviour and review capacity",
+    "text": "Repayment behaviour and review capacity\nThe historical payment analysis kept separate denominators for payment entries, dated entries, observed instalment keys and assessed amount coverage. Of 12,951,918 observed instalment keys, the available amount information covered approximately 99.95% of those observed keys. This figure does not measure coverage of instalments absent from the source records. Among covered observed instalments, approximately 91.48% had their recorded amount covered by the due date and 8.52% after the due date. These statements concern observed historical records and depend on the study’s amount-reconciliation rules.\nThe model’s prioritisation results provide a different view of performance. In the held-out sample, reviewing 6,151 highest-scored applications (the top 10%) would identify 1,656 positive outcomes: 26.92% precision and 33.35% recall. Reviewing 12,301 applications (the top 20%) would identify 2,577, yielding 20.95% precision and 51.90% recall. The exercise illustrates the trade-off between review effort and observed positive-case coverage. It does not estimate the financial return, cost or fairness of a real lending intervention."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About me",
-    "section": "",
-    "text": "I am Aran Felix, a statistician and data analyst. I take a question that matters to you, find or build the evidence to answer it, and explain the answer so you can act on it.\nI hold a BSc in Statistics and currently work as a data analyst with ADAC Consultancy. I combine questionnaire design, digital data collection, statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report."
+    "objectID": "projects/home-credit-risk-analytics.html#data-methods",
+    "href": "projects/home-credit-risk-analytics.html#data-methods",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Data and methods",
+    "text": "Data and methods\nI used the historical Home Credit Default Risk competition data, first released in 2018. The labelled application file provided 307,511 records, while a separate original competition test file contained 48,744 applications without the modelling outcome. I integrated eight analytical source tables in SQL Server, audited relationships and unmatched historical records, and verified repayment chronology. The final feature table contained 37 columns: an application identifier, the outcome, a recorded sex-code field retained for subgroup auditing, and 34 model predictors. I split the labelled sample into fixed stratified training (184,506), validation (61,502) and held-out test (61,503) partitions. Python workflows developed and evaluated the logistic and gradient-boosting models, and Tableau displays aggregate findings only.\nThe analysis has several limitations. The original source defines TARGET as a payment-difficulty outcome, not a certified default loss. Historical table coverage is incomplete, and unmatched historical parent records should not automatically be treated as invalid. The random held-out sample tests performance on historical data but does not provide an out-of-time prospective evaluation. The construction and lending-decision-time availability of external credit-related scores could not be independently verified. Subgroup differences are descriptive and do not establish discrimination. The dataset does not represent Kenya’s contemporary lending population, and retrospective review rankings should not be used as loan approval or rejection policies without further validation and governance.\n\nInterpretation and responsible use. The analysis demonstrates a documented data-integration and predictive-modelling workflow. Reported metrics are retrospective and descriptive. It does not support individual lending decisions, causal claims or conclusions about Kenyan borrowers."
   },
   {
-    "objectID": "about.html#what-i-am-looking-for",
-    "href": "about.html#what-i-am-looking-for",
-    "title": "About me",
-    "section": "What I am looking for",
-    "text": "What I am looking for\n\nRoles: Data Analyst, Research Analyst or Officer, Monitoring and Evaluation Analyst, and Business Intelligence or Reporting Analyst.\nSectors: banks and financial institutions, NGOs and development organisations, research institutions, and data-driven businesses.\nAlso: freelance and consulting projects."
+    "objectID": "projects/home-credit-risk-analytics.html#interactive-dashboard",
+    "href": "projects/home-credit-risk-analytics.html#interactive-dashboard",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Interactive research dashboard",
+    "text": "Interactive research dashboard\nThe Tableau Public workbook contains six views: Executive Overview, Historical Credit & Repayment Behaviour, Predictive Model Performance, Credit Risk Review Capacity, Subgroup Performance & Calibration, and Research Methods & Limitations. Use the dashboard navigation to explore these sections and change the review-capacity and subgroup selectors. The dashboard uses aggregate tables; individual application records and prediction scores are not published in the workbook.\n\n Open the six-dashboard Tableau workbook ↗"
   },
   {
-    "objectID": "about.html#how-i-can-help",
-    "href": "about.html#how-i-can-help",
-    "title": "About me",
-    "section": "How I can help",
-    "text": "How I can help\n\n\n\n\nResearch and questionnaire design\n\n\nTurn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.\n\n\n\n\n\nDigital data collection\n\n\nCollect data on phones and tablets with ODK Collect, KoboToolbox, REDCap and CAPI, with quality checks along the way.\n\n\n\n\n\nQuantitative analysis\n\n\nClean, test and model survey and programme data in SPSS, Stata, R or Python, and interpret the results.\n\n\n\n\n\nQualitative analysis\n\n\nCode interviews and focus groups in NVivo or ATLAS.ti and draw out themes that trace back to what people said.\n\n\n\n\n\nMonitoring and evaluation\n\n\nSet up indicators, check data quality, track progress and report evidence to donors and boards.\n\n\n\n\n\nDashboards and reporting\n\n\nBuild Tableau and Power BI dashboards, SQL and Excel reports, and clear charts that show decision-makers what is happening."
-  },
-  {
-    "objectID": "about.html#who-i-work-with",
-    "href": "about.html#who-i-work-with",
-    "title": "About me",
-    "section": "Who I work with",
-    "text": "Who I work with\n\nBanks and financial institutions that need accurate, well-documented reporting and analysis.\nNGOs and development programmes that need credible M&E evidence for donors and boards.\nResearch teams and institutions that need rigorous, reproducible analysis.\nBusinesses and consultancies that want analysis and dashboards to track performance."
-  },
-  {
-    "objectID": "about.html#why-work-with-me",
-    "href": "about.html#why-work-with-me",
-    "title": "About me",
-    "section": "Why work with me",
-    "text": "Why work with me\n\nI work from questionnaire to report. I design the instrument, collect the data digitally, analyse it and report it, so quality is protected at every step.\nI work on both sides of research. Numbers show the scale of a problem and interviews explain it. I can do both, which matters in research and M&E.\nI show my working. Methods are documented and analyses are reproducible, and my code is open on GitHub.\nI tell you what the data cannot say. You get limitations and uncertainty stated plainly, not a result that sounds more certain than it is."
-  },
-  {
-    "objectID": "about.html#how-a-project-works",
-    "href": "about.html#how-a-project-works",
-    "title": "About me",
-    "section": "How a project works",
-    "text": "How a project works\n\n\n1. Conversation\n\nWe agree the question, the data available, the deadline and what a useful result looks like.\n\n\n\n2. Plan\n\nYou receive a short written scope with methods, outputs and timeline.\n\n\n\n3. Analysis\n\nI clean, analyse and check the results, sharing progress along the way.\n\n\n\n4. Delivery\n\nA clear report, dashboard or presentation, with the documentation behind it.\n\n\n\n5. Handover\n\nI walk you through the findings so you can explain and defend them.\n\n\n\nWhere work was done for clients, I share only what I am permitted to disclose and anonymise the rest.\nSee my projects View my CV\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+    "objectID": "projects/home-credit-risk-analytics.html#research-materials",
+    "href": "projects/home-credit-risk-analytics.html#research-materials",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Research materials",
+    "text": "Research materials\n\n\nFull research manuscriptRead the approved research PDF ↗. The manuscript details the source data, SQL audits, feature preparation, model comparisons, repayment analysis, subgroup assessment and qualifications.\n\n\nTableau Public dashboardExplore all six interactive research dashboards ↗. Review model performance, historical repayment patterns, review-capacity scenarios and subgroup findings.\n\n\nAnalytical methodsSQL Server integration and chronology audits; Python model training, probability assessment and fixed held-out evaluation; Tableau reporting from aggregate extracts.\n\n\nReproducibility and codeThe analytical workflow uses documented scripts, fixed model partitions and checksum-verified outputs. A public code repository link will be added after the repository passes its publication review. Original competition records are not redistributed.\n\n\nData attribution: Home Credit Default Risk competition on Kaggle. The source data are historical and governed by the competition’s terms. Public research materials do not contain the original applicant-level datasets.\n\nCover and card artwork are AI-generated illustrations. The displayed workstation and code are illustrative and are not screenshots from the actual analysis.\n\n\n← All projects"
   },
   {
     "objectID": "cv.html",
@@ -236,6 +215,90 @@
     "title": "Curriculum Vitae",
     "section": "Software and tools",
     "text": "Software and tools\n\n\n\nArea\nTools\n\n\n\n\nStatistical analysis\nSPSS, Stata, R (RStudio), Python\n\n\nQualitative research\nNVivo, ATLAS.ti\n\n\nData collection\nODK Collect, KoboToolbox, REDCap, CAPI\n\n\nDatabases and spreadsheets\nSQL, Excel\n\n\nVisualisation and BI\nTableau, Power BI\n\n\n\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "I am Aran Felix, a statistician and data analyst. I take a question that matters to you, find or build the evidence to answer it, and explain the answer so you can act on it.\nI hold a BSc in Statistics and currently work as a data analyst with ADAC Consultancy. I combine questionnaire design, digital data collection, statistical analysis, qualitative research and dashboarding, so one person can carry a project from research design to a finished report."
+  },
+  {
+    "objectID": "about.html#what-i-am-looking-for",
+    "href": "about.html#what-i-am-looking-for",
+    "title": "About me",
+    "section": "What I am looking for",
+    "text": "What I am looking for\n\nRoles: Data Analyst, Research Analyst or Officer, Monitoring and Evaluation Analyst, and Business Intelligence or Reporting Analyst.\nSectors: banks and financial institutions, NGOs and development organisations, research institutions, and data-driven businesses.\nAlso: freelance and consulting projects."
+  },
+  {
+    "objectID": "about.html#how-i-can-help",
+    "href": "about.html#how-i-can-help",
+    "title": "About me",
+    "section": "How I can help",
+    "text": "How I can help\n\n\n\n\nResearch and questionnaire design\n\n\nTurn a vague question into a study you can answer: objectives, sampling, questionnaires and a data collection plan.\n\n\n\n\n\nDigital data collection\n\n\nCollect data on phones and tablets with ODK Collect, KoboToolbox, REDCap and CAPI, with quality checks along the way.\n\n\n\n\n\nQuantitative analysis\n\n\nClean, test and model survey and programme data in SPSS, Stata, R or Python, and interpret the results.\n\n\n\n\n\nQualitative analysis\n\n\nCode interviews and focus groups in NVivo or ATLAS.ti and draw out themes that trace back to what people said.\n\n\n\n\n\nMonitoring and evaluation\n\n\nSet up indicators, check data quality, track progress and report evidence to donors and boards.\n\n\n\n\n\nDashboards and reporting\n\n\nBuild Tableau and Power BI dashboards, SQL and Excel reports, and clear charts that show decision-makers what is happening."
+  },
+  {
+    "objectID": "about.html#who-i-work-with",
+    "href": "about.html#who-i-work-with",
+    "title": "About me",
+    "section": "Who I work with",
+    "text": "Who I work with\n\nBanks and financial institutions that need accurate, well-documented reporting and analysis.\nNGOs and development programmes that need credible M&E evidence for donors and boards.\nResearch teams and institutions that need rigorous, reproducible analysis.\nBusinesses and consultancies that want analysis and dashboards to track performance."
+  },
+  {
+    "objectID": "about.html#why-work-with-me",
+    "href": "about.html#why-work-with-me",
+    "title": "About me",
+    "section": "Why work with me",
+    "text": "Why work with me\n\nI work from questionnaire to report. I design the instrument, collect the data digitally, analyse it and report it, so quality is protected at every step.\nI work on both sides of research. Numbers show the scale of a problem and interviews explain it. I can do both, which matters in research and M&E.\nI show my working. Methods are documented and analyses are reproducible, and my code is open on GitHub.\nI tell you what the data cannot say. You get limitations and uncertainty stated plainly, not a result that sounds more certain than it is."
+  },
+  {
+    "objectID": "about.html#how-a-project-works",
+    "href": "about.html#how-a-project-works",
+    "title": "About me",
+    "section": "How a project works",
+    "text": "How a project works\n\n\n1. Conversation\n\nWe agree the question, the data available, the deadline and what a useful result looks like.\n\n\n\n2. Plan\n\nYou receive a short written scope with methods, outputs and timeline.\n\n\n\n3. Analysis\n\nI clean, analyse and check the results, sharing progress along the way.\n\n\n\n4. Delivery\n\nA clear report, dashboard or presentation, with the documentation behind it.\n\n\n\n5. Handover\n\nI walk you through the findings so you can explain and defend them.\n\n\n\nWhere work was done for clients, I share only what I am permitted to disclose and anonymise the rest.\nSee my projects View my CV\n\nLet’s discuss a data or research project\nHiring or collaborating? Get in touch"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Turning data into evidence and better decisions.",
+    "section": "",
+    "text": "STATISTICS · DATA ANALYTICS · RESEARCH & M&EOpen to opportunities\n\n\nI am a statistician and data analyst who turns raw data into clear, defensible evidence for banks, NGOs, research organisations and businesses: questionnaire design, digital data collection, statistical analysis, qualitative research, dashboards and M&E reporting.\nExplore Projects View CV Contact me\n\nOpen to full-time roles, contracts and consulting · Data Analyst · Research Analyst · M&E Analyst · BI & Reporting Analyst"
+  },
+  {
+    "objectID": "index.html#where-i-add-value",
+    "href": "index.html#where-i-add-value",
+    "title": "Turning data into evidence and better decisions.",
+    "section": "Where I add value",
+    "text": "Where I add value\n\n\n\n\nBanking & Finance\n\n\nAccurate numbers, clear reporting and analysis that can be audited.\n\n\n\nSQL extraction, validation and reconciliation\n\n\nExcel, Tableau and Power BI reporting\n\n\nSegmentation, trend analysis and logistic regression\n\n\n\n\n\n\nNGOs & Development\n\n\nDonor-ready evidence you can trust.\n\n\n\nQuestionnaires and digital data collection (ODK, KoboToolbox)\n\n\nIndicator frameworks and data quality checks\n\n\nSurvey analysis in SPSS, Stata and R\n\n\nQualitative coding in NVivo and ATLAS.ti\n\n\nDonor-style reporting\n\n\n\n\n\n\nResearch Organisations\n\n\nRigorous analysis that others can reproduce.\n\n\n\nStudy design, sampling and questionnaire design\n\n\nREDCap and CAPI data collection\n\n\nHypothesis testing, regression and ANOVA\n\n\nMixed-methods analysis\n\n\nDocumented workflows in R, Python and Stata\n\n\n\n\n\n\nBusiness & Corporate\n\n\nInsight that moves decisions.\n\n\n\nKPI dashboards in Tableau and Power BI\n\n\nCohort, trend and A/B-test analysis\n\n\nSQL-based reporting\n\n\nPlain-language summaries for managers"
+  },
+  {
+    "objectID": "index.html#featured-work",
+    "href": "index.html#featured-work",
+    "title": "Turning data into evidence and better decisions.",
+    "section": "Featured work",
+    "text": "Featured work\n\n\n\n\n\n\n\n\n\n\nCredit Risk and Loan Repayment Behaviour\n\n\n\nCredit Risk\n\nResearch\n\nSQL\n\nPython\n\nMachine Learning\n\nTableau\n\n\n\nHistorical Home Credit repayment behaviour, SQL Server data integration and Python credit-risk modelling across 307,511 labelled applications.\n\n\n\n\n\n\n\n\n\n\n\n\nFinancial Inclusion and Financial Health in Kenya, 2024\n\n\n\nKenya\n\nResearch\n\nFinancial Inclusion\n\nSurvey Analysis\n\nR\n\nStatistics\n\n\n\nSurvey-weighted research on financial access, financial health and socioeconomic disparities among 19,750 Kenyan adults.\n\n\n\n\n\n\n\n\n\n\n\n\nMapping Kenya’s Electorate: Voter Registration, Presidential Turnout and Demographic Patterns, 2017–2022\n\n\n\nElections\n\nResearch\n\nData Analysis\n\nStatistics\n\nPython\n\nR\n\n\n\nCounty, constituency and ward comparisons of voter registration, presidential turnout and demographic patterns in Kenya, 2017–2022.\n\n\n\n\n\nNo matching items\n\nSee all projects →"
+  },
+  {
+    "objectID": "index.html#why-work-with-me",
+    "href": "index.html#why-work-with-me",
+    "title": "Turning data into evidence and better decisions.",
+    "section": "Why work with me",
+    "text": "Why work with me\n\n\n\n\nNumbers and narratives\n\n\nI work in both quantitative tools (SPSS, Stata, R, Python) and qualitative tools (NVivo, ATLAS.ti), so your evidence has both the scale and the story.\n\n\n\n\n\nFrom questionnaire to report\n\n\nI design the questionnaire, collect the data digitally, analyse it and report it, so quality is protected at every step.\n\n\n\n\n\nPlain-language results\n\n\nYou get findings that a programme manager, donor or board member can understand and use, not just tables of output. Limits are stated plainly."
+  },
+  {
+    "objectID": "index.html#tools-and-methods",
+    "href": "index.html#tools-and-methods",
+    "title": "Turning data into evidence and better decisions.",
+    "section": "Tools and methods",
+    "text": "Tools and methods\n\n\n\nProgrammingand databases\n\n\nSQL\n\n\nPython\n\n\nRRStudio\n\n\n\n\nStatistical andqualitative software\n\n\nSPSS\n\n\nStata\n\n\nNVivo\n\n\nATLAS.ti\n\n\n\n\nData collectionand survey design\n\n\nODK Collect\n\n\nKoboToolbox\n\n\nREDCap\n\n\nCAPICAPIComputer-assisted interviewing\n\n\nQuestionnaire design\n\n\n\n\nVisualisationand reporting\n\n\nTableau\n\n\nPower BI\n\n\nExcel\n\n\n\n\nAnalyticmethods\n\n\n\nExploratory data analysis\n\n\nData cleaning and validation\n\n\nDescriptive and inferential statistics\n\n\nHypothesis tests (t-test, chi-square, post-hoc)\n\n\nANOVA\n\n\nLinear and logistic regression\n\n\nSegmentation and clustering\n\n\nCohort analysis\n\n\nA/B testing\n\n\nQuestionnaire and survey design, sampling\n\n\nThematic analysis"
+  },
+  {
+    "objectID": "index.html#methods-in-action",
+    "href": "index.html#methods-in-action",
+    "title": "Turning data into evidence and better decisions.",
+    "section": "Methods in action",
+    "text": "Methods in action\nPick a sector to see the methods I would apply and the questions they help answer.\n\nBanking & FinanceNGOs & M&EResearchBusiness analytics\n\n\n\nData validation and reconciliationExploratory analysisCustomer segmentationLogistic regressionTrend and seasonality analysisAnomaly detection (IQR, z-scores)KPI dashboards\n\nQuestions I can help answer\n\nWhich customer segments drive revenue, and which are likely to leave?\nWhere do reports disagree with the source data, and why?\nWhich transactions or accounts look unusual enough to review?\nHow is portfolio performance trending, and what is behind the change?\n\n\n\n\nQuestionnaire designDigital data collection (ODK, KoboToolbox, REDCap, CAPI)Indicator frameworksData quality assessmentSurvey data analysisThematic analysisMixed-methods triangulationDonor-style reporting\n\nQuestions I can help answer\n\nDid the programme reach its targets, and for whom?\nIs the data we are reporting reliable?\nWhat do participants say, and does it match the numbers?\nWhich locations or groups are falling behind?\n\n\n\n\nStudy design and samplingQuestionnaire designREDCap and CAPI data collectionSample-size planningHypothesis testingANOVA and non-parametric testsLinear and logistic regressionReproducible workflows\n\nQuestions I can help answer\n\nIs this difference real, or just noise?\nWhich factors are associated with the outcome after adjusting for others?\nHow large is the effect, and how sure are we?\nCould someone else reproduce this result?\n\n\n\n\nCohort and retention analysisA/B testingSegmentationForecasting and trendsSQL KPI reportingDashboard design\n\nQuestions I can help answer\n\nWhich customers stay, and what do they have in common?\nDid the change we made actually work?\nWhat is next quarter likely to look like?\nWhat should the dashboard show so managers act on it?\n\n\n\n\n\n  \n    Let's connect and work together!\n    Hiring for an analyst or research role, or need help with a data project? Send a message or reach me directly.\n\n    \n      \n      \n        Phone (WhatsApp)\n        +254 111 991 749\n      \n    \n\n    \n      \n      \n        E-mail\n        aranfelix2013@gmail.com\n      \n    \n\n    \n      \n      \n        LinkedIn\n        linkedin.com/in/aranfelix\n      \n    \n\n    \n      \n      \n        GitHub\n        github.com/aranfelix\n      \n    \n  \n\n  \n    \n      Send me a message\n      Name\n      Your email\n      Message\n      \n      \n      Send message"
   },
   {
     "objectID": "projects/kenya-financial-inclusion-2024.html",

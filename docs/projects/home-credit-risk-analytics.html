@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-11-21">
+<meta name="description" content="Historical Home Credit repayment behaviour, SQL Server data integration and Python credit-risk modelling across 307,511 labelled applications.">
+
+<title>Credit Risk and Loan Repayment Behaviour – Aran Felix</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-f7dad29bb5c4a9332615d2ea3b05bcbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-eb20e13e6fa24a7c795f0fe739d7ff54.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f7dad29bb5c4a9332615d2ea3b05bcbb.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../tools.css">
+<link rel="stylesheet" href="../finaccess-case-study.css">
+<meta property="og:title" content="Credit Risk and Loan Repayment Behaviour – Aran Felix">
+<meta property="og:description" content="Historical Home Credit repayment behaviour, SQL Server data integration and Python credit-risk modelling across 307,511 labelled applications.">
+<meta property="og:image" content="https://aranfelix.github.io/images/home-credit-risk/home-credit-risk-card.webp">
+<meta property="og:site_name" content="Aran Felix">
+<meta property="og:image:alt" content="AI-generated financial analytics workspace with SQL Server and Python code displayed beside credit-risk charts on a laptop">
+<meta name="twitter:title" content="Credit Risk and Loan Repayment Behaviour – Aran Felix">
+<meta name="twitter:description" content="Historical Home Credit repayment behaviour, SQL Server data integration and Python credit-risk modelling across 307,511 labelled applications.">
+<meta name="twitter:image" content="https://aranfelix.github.io/images/home-credit-risk/home-credit-risk-card.webp">
+<meta name="twitter:image:alt" content="AI-generated financial analytics workspace with SQL Server and Python code displayed beside credit-risk charts on a laptop">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo.png" alt="Aran Felix, The Data Cruncher" class="navbar-logo light-content">
+    <img src="../images/logo.png" alt="Aran Felix, The Data Cruncher" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../research-m-e.html"> 
+<span class="menu-text">Research &amp; M&amp;E</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-contact" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Contact</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-contact">    
+        <li>
+    <a class="dropdown-item" href="https://wa.me/254111991749"><i class="bi bi-whatsapp" role="img">
+</i> 
+ <span class="dropdown-text">WhatsApp</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://www.linkedin.com/in/aranfelix/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="dropdown-text">LinkedIn</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="mailto:aranfelix2013@gmail.com"><i class="bi bi-envelope" role="img">
+</i> 
+ <span class="dropdown-text">Email</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/aranfelix"><i class="bi bi-github" role="img">
+</i> 
+ <span class="dropdown-text">GitHub</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Credit Risk and Loan Repayment Behaviour</h1></header>
+
+
+<header id="title-block-header">
+
+
+<p class="date">2026-11-21</p>
+</header>
+
+
+<div class="fa24-wrapper">
+<div class="fa24-hero" role="region" aria-label="Credit risk and loan repayment behaviour research">
+  <img class="fa24-hero-img" src="../images/home-credit-risk/home-credit-risk-hero.webp" alt="AI-generated illustration of a financial analytics workstation showing SQL Server, Python and credit-risk visualisations" loading="eager">
+  <div class="fa24-hero-shade"></div>
+  <div class="fa24-hero-content">
+    <h1>Credit Risk and Loan Repayment Behaviour</h1>
+    <p class="fa24-lead">A SQL Server-Based Analysis of Home Credit Lending Data</p>
+    <div class="fa24-tags"><span>CREDIT RISK</span><span>RESEARCH</span><span>SQL</span><span>PYTHON</span><span>TABLEAU</span></div>
+    <p class="fa24-description">Historical repayment behaviour, data quality and predictive model performance in the Home Credit Default Risk dataset.</p>
+    <div class="fa24-byline"><div><small>AUTHOR</small><strong>Aran Felix</strong></div><div><small>PUBLISHED</small><strong>21 November 2026</strong></div></div>
+  </div>
+</div>
+<div class="fa24-pills">
+<span><strong>Author:</strong> Aran Felix</span><span><strong>Source:</strong> Home Credit Default Risk (2018)</span><span><strong>Methods:</strong> SQL Server, Python and Tableau</span><span><strong>Labelled sample:</strong> 307,511 applications</span><span><strong>Held-out test:</strong> 61,503 applications</span>
+</div>
+<div class="fa24-metrics">
+<div class="fa24-metric">
+<strong>307,511</strong><span>Labelled applications analysed</span>
+</div>
+<div class="fa24-metric">
+<strong>8.07%</strong><span>Recorded payment-difficulty rate</span>
+</div>
+<div class="fa24-metric">
+<strong>0.7552</strong><span>Gradient-boosting test ROC-AUC</span>
+</div>
+<div class="fa24-metric">
+<strong>33.35%</strong><span>Positive-case recall at top 10% review capacity</span>
+</div>
+</div>
+<div class="fa24-actions">
+<p><a class="fa24-btn-primary" href="https://public.tableau.com/app/profile/aranfelix/viz/CreditRiskandLoanRepaymentBehaviourSQLServerPythonAnalytics/01FinancialCreditRiskOverview" target="_blank" rel="noopener noreferrer"> Explore Interactive Dashboard ↗ </a> <a class="fa24-btn-outline" href="../files/home-credit-risk/Home_Credit_Risk_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer"> Read Full Research Report (PDF) ↗ </a></p>
+</div>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive summary</h2>
+<p>I analysed <strong>307,511 labelled Home Credit applications</strong> to examine recorded repayment difficulty, the completeness of related credit-history records and the performance of statistical prediction models. I integrated application and historical tables using SQL Server, checked key relationships and repayment chronology, and prepared <strong>34 predictors</strong> for modelling in Python. Of the labelled applications, <strong>24,825 (8.07%)</strong> carried the source-defined payment-difficulty outcome. The analysis compared an application-only logistic model, a logistic model enriched with credit history, and a compact gradient-boosting model. The final evaluation used <strong>61,503 previously held-out labelled applications</strong>, separate from the original Kaggle competition’s 48,744 unlabelled applications. The selected gradient-boosting model achieved <strong>0.7552 ROC-AUC</strong> and <strong>0.2455 average precision</strong> on that held-out sample. The results describe historical predictive discrimination and review prioritisation; they do not represent a tested lending policy or a current Kenyan credit-risk estimate.</p>
+<p>Historical repayment records provided additional context beyond the application form. I distinguished <strong>13,605,401 recorded payment entries</strong> from the number of distinct observed instalment keys, checked payment dates and recorded amounts, and audited historical records that could not be matched to their expected parent tables. Under a retrospective top-10% review scenario, the selected model identified <strong>1,656 of 4,965</strong> positive cases in the held-out test sample, equivalent to <strong>33.35% recall</strong>. Reviewing the top 20% identified <strong>2,577 cases</strong>, or <strong>51.90% recall</strong>. These are capacity-based model summaries, not evidence that automated approvals or rejections would improve real-world outcomes. Subgroup results also showed differences in ranking, selection and calibration that warrant investigation without establishing discrimination or fairness. The linked report documents the source definitions, audits, validation process and remaining limitations.</p>
+</section>
+<section id="questions-this-research-addresses" class="level2">
+<h2 class="anchored" data-anchor-id="questions-this-research-addresses">Questions this research addresses</h2>
+<div class="fa24-question-grid">
+<div>
+<strong>Credit risk</strong>
+<p>
+How common was the source-defined payment-difficulty outcome in the labelled historical applications?
+</p>
+</div>
+<div>
+<strong>Repayment history</strong>
+<p>
+What do recorded payments and observed instalments reveal about repayment timing and data coverage?
+</p>
+</div>
+<div>
+<strong>Prediction</strong>
+<p>
+Do historical credit and repayment indicators improve model performance beyond application information?
+</p>
+</div>
+<div>
+<strong>Review and subgroups</strong>
+<p>
+How much of the positive-case population can a fixed review capacity identify, and how does performance vary across groups?
+</p>
+</div>
+</div>
+</section>
+<section id="key-findings" class="level2">
+<h2 class="anchored" data-anchor-id="key-findings">Key findings</h2>
+<p><strong>Payment difficulty appeared in 8.07% of labelled applications.</strong> There were 24,825 source-defined positive outcomes among 307,511 labelled applications. This is a modelled payment-difficulty indicator, not a verified measurement of loan loss or a forecast of defaults in Kenya.</p>
+<p><strong>Historical information improved predictive performance.</strong> ROC-AUC rose from <strong>0.7384</strong> for application-only logistic regression to <strong>0.7514</strong> for enriched logistic regression. The selected compact gradient-boosting model achieved <strong>0.7552</strong>. These differences describe performance on the locked historical test set, not a guaranteed improvement in production lending.</p>
+<p><strong>Review capacity changed the number of positive cases found.</strong> Ranking the test sample by selected-model risk scores placed <strong>1,656 positive cases</strong> within the highest-scored 10% of applications. The highest-scored 20% contained <strong>2,577</strong>. Both scenarios use historical outcomes and assumed review capacities, rather than operational loan-decision rules.</p>
+<p><strong>Repayment records require careful denominator choices.</strong> The historical data contained <strong>13,605,401 payment entries</strong>. Of the <strong>13,602,496 dated entries</strong>, approximately <strong>68.44% were recorded early, 23.13% on time and 8.43% late</strong>. A payment entry is not the same as a unique scheduled instalment, and observed amounts cannot establish full repayment coverage for wholly unobserved instalments.</p>
+<p><strong>Subgroup comparisons raised questions for further audit.</strong> For example, the selected model’s held-out ROC-AUC was approximately <strong>0.7320</strong> for applicants under 30 and <strong>0.7000</strong> for those aged 60 or older. Differences in risk distributions, selection rates and subgroup sizes complicate interpretation. These summaries alone cannot establish discrimination, fairness or deployment readiness.</p>
+</section>
+<section id="model-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="model-comparison">Predictive model comparison</h2>
+<p>The table compares the three models on the <strong>same held-out sample of 61,503 labelled applications</strong>, including 4,965 positive outcomes. Average precision is a precision-recall area summary, while the Brier score assesses probabilistic accuracy; lower Brier values are better.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: right;">ROC-AUC</th>
+<th style="text-align: right;">Average precision</th>
+<th style="text-align: right;">Brier score</th>
+<th style="text-align: right;">Top-10% recall</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Application-only logistic regression</td>
+<td style="text-align: right;">0.7384</td>
+<td style="text-align: right;">0.2207</td>
+<td style="text-align: right;">0.06891</td>
+<td style="text-align: right;">31.50%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Application + historical information, logistic regression</td>
+<td style="text-align: right;">0.7514</td>
+<td style="text-align: right;">0.2359</td>
+<td style="text-align: right;">0.06818</td>
+<td style="text-align: right;">32.71%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Compact gradient boosting</strong></td>
+<td style="text-align: right;"><strong>0.7552</strong></td>
+<td style="text-align: right;"><strong>0.2455</strong></td>
+<td style="text-align: right;"><strong>0.06782</strong></td>
+<td style="text-align: right;"><strong>33.35%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The gradient-boosting configuration was selected before the reserved test set was evaluated. Its advantage over the enriched logistic model was modest, so the results should not be treated as proof that a more complex model will always perform better.</p>
+</section>
+<section id="repayment-review" class="level2">
+<h2 class="anchored" data-anchor-id="repayment-review">Repayment behaviour and review capacity</h2>
+<p>The historical payment analysis kept separate denominators for payment entries, dated entries, observed instalment keys and assessed amount coverage. Of <strong>12,951,918 observed instalment keys</strong>, the available amount information covered approximately 99.95% <em>of those observed keys</em>. This figure does not measure coverage of instalments absent from the source records. Among covered observed instalments, approximately <strong>91.48%</strong> had their recorded amount covered by the due date and <strong>8.52%</strong> after the due date. These statements concern observed historical records and depend on the study’s amount-reconciliation rules.</p>
+<p>The model’s prioritisation results provide a different view of performance. In the held-out sample, reviewing <strong>6,151 highest-scored applications</strong> (the top 10%) would identify <strong>1,656 positive outcomes</strong>: <strong>26.92% precision</strong> and <strong>33.35% recall</strong>. Reviewing <strong>12,301 applications</strong> (the top 20%) would identify <strong>2,577</strong>, yielding <strong>20.95% precision</strong> and <strong>51.90% recall</strong>. The exercise illustrates the trade-off between review effort and observed positive-case coverage. It does not estimate the financial return, cost or fairness of a real lending intervention.</p>
+</section>
+<section id="data-methods" class="level2">
+<h2 class="anchored" data-anchor-id="data-methods">Data and methods</h2>
+<p>I used the historical <strong>Home Credit Default Risk</strong> competition data, first released in 2018. The labelled application file provided 307,511 records, while a separate original competition test file contained 48,744 applications without the modelling outcome. I integrated eight analytical source tables in SQL Server, audited relationships and unmatched historical records, and verified repayment chronology. The final feature table contained 37 columns: an application identifier, the outcome, a recorded sex-code field retained for subgroup auditing, and <strong>34 model predictors</strong>. I split the labelled sample into fixed stratified training (<strong>184,506</strong>), validation (<strong>61,502</strong>) and held-out test (<strong>61,503</strong>) partitions. Python workflows developed and evaluated the logistic and gradient-boosting models, and Tableau displays aggregate findings only.</p>
+<p>The analysis has several limitations. The original source defines <code>TARGET</code> as a payment-difficulty outcome, not a certified default loss. Historical table coverage is incomplete, and unmatched historical parent records should not automatically be treated as invalid. The random held-out sample tests performance on historical data but does not provide an out-of-time prospective evaluation. The construction and lending-decision-time availability of external credit-related scores could not be independently verified. Subgroup differences are descriptive and do not establish discrimination. The dataset does not represent Kenya’s contemporary lending population, and retrospective review rankings should not be used as loan approval or rejection policies without further validation and governance.</p>
+<div class="fa24-method-note" role="note">
+<strong>Interpretation and responsible use.</strong> The analysis demonstrates a documented data-integration and predictive-modelling workflow. Reported metrics are retrospective and descriptive. It does not support individual lending decisions, causal claims or conclusions about Kenyan borrowers.
+</div>
+</section>
+<section id="interactive-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-dashboard">Interactive research dashboard</h2>
+<p>The Tableau Public workbook contains six views: <strong>Executive Overview</strong>, <strong>Historical Credit &amp; Repayment Behaviour</strong>, <strong>Predictive Model Performance</strong>, <strong>Credit Risk Review Capacity</strong>, <strong>Subgroup Performance &amp; Calibration</strong>, and <strong>Research Methods &amp; Limitations</strong>. Use the dashboard navigation to explore these sections and change the review-capacity and subgroup selectors. The dashboard uses aggregate tables; individual application records and prediction scores are not published in the workbook.</p>
+<div class="fa24-actions">
+<p><a class="fa24-btn-primary" href="https://public.tableau.com/app/profile/aranfelix/viz/CreditRiskandLoanRepaymentBehaviourSQLServerPythonAnalytics/01FinancialCreditRiskOverview" target="_blank" rel="noopener noreferrer"> Open the six-dashboard Tableau workbook ↗ </a></p>
+</div>
+</section>
+<section id="research-materials" class="level2">
+<h2 class="anchored" data-anchor-id="research-materials">Research materials</h2>
+<div class="fa24-deliverables">
+<div>
+<strong>Full research manuscript</strong><span><a href="../files/home-credit-risk/Home_Credit_Risk_Research_Felix_Aran.pdf" target="_blank" rel="noopener noreferrer">Read the approved research PDF ↗</a>. The manuscript details the source data, SQL audits, feature preparation, model comparisons, repayment analysis, subgroup assessment and qualifications.</span>
+</div>
+<div>
+<strong>Tableau Public dashboard</strong><span><a href="https://public.tableau.com/app/profile/aranfelix/viz/CreditRiskandLoanRepaymentBehaviourSQLServerPythonAnalytics/01FinancialCreditRiskOverview" target="_blank" rel="noopener noreferrer">Explore all six interactive research dashboards ↗</a>. Review model performance, historical repayment patterns, review-capacity scenarios and subgroup findings.</span>
+</div>
+<div>
+<strong>Analytical methods</strong><span>SQL Server integration and chronology audits; Python model training, probability assessment and fixed held-out evaluation; Tableau reporting from aggregate extracts.</span>
+</div>
+<div>
+<strong>Reproducibility and code</strong><span>The analytical workflow uses documented scripts, fixed model partitions and checksum-verified outputs. A public code repository link will be added after the repository passes its publication review. Original competition records are not redistributed.</span>
+</div>
+</div>
+<p><strong>Data attribution:</strong> <a href="https://www.kaggle.com/competitions/home-credit-default-risk">Home Credit Default Risk competition on Kaggle</a>. The source data are historical and governed by the competition’s terms. Public research materials do not contain the original applicant-level datasets.</p>
+<div class="fa24-art-note">
+Cover and card artwork are AI-generated illustrations. The displayed workstation and code are illustrative and are not screenshots from the actual analysis.
+</div>
+<div class="fa24-actions">
+<a class="fa24-btn-outline" href="../projects.html">← All projects</a>
+</div>
+</section>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/aranfelix\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2026 Aran Felix · The Data Cruncher</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Built with Quarto</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
