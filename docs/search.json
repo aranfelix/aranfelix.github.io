@@ -168,6 +168,13 @@
     "text": "Research materials\n\n\nFull research manuscriptRead the approved research PDF ↗. The manuscript details the source data, SQL audits, feature preparation, model comparisons, repayment analysis, subgroup assessment and qualifications.\n\n\nTableau Public dashboardExplore all six interactive research dashboards ↗. Review model performance, historical repayment patterns, review-capacity scenarios and subgroup findings.\n\n\nAnalytical methodsSQL Server integration and chronology audits; Python model training, probability assessment and fixed held-out evaluation; Tableau reporting from aggregate extracts.\n\n\nReproducibility and codeThe analytical workflow uses documented scripts, fixed model partitions and checksum-verified outputs. A public code repository link will be added after the repository passes its publication review. Original competition records are not redistributed.\n\n\nData attribution: Home Credit Default Risk competition on Kaggle. The source data are historical and governed by the competition’s terms. Public research materials do not contain the original applicant-level datasets.\n\nCover and card artwork are AI-generated illustrations. The displayed workstation and code are illustrative and are not screenshots from the actual analysis.\n\n\n← All projects"
   },
   {
+    "objectID": "projects/home-credit-risk-analytics.html#research-code-and-reproducibility",
+    "href": "projects/home-credit-risk-analytics.html#research-code-and-reproducibility",
+    "title": "Credit Risk and Loan Repayment Behaviour",
+    "section": "Research Code and Reproducibility",
+    "text": "Research Code and Reproducibility\nThe complete research repository contains the SQL Server and Python analysis scripts, reproducibility documentation, approved aggregate findings, and the final research report. Original competition datasets and applicant-level records are not published.\nExplore the Home Credit Risk Analytics repository"
+  },
+  {
     "objectID": "cv.html",
     "href": "cv.html",
     "title": "Curriculum Vitae",

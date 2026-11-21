@@ -133,3 +133,9 @@ The Tableau Public workbook contains six views: **Executive Overview**, **Histor
 <div class="fa24-actions"><a class="fa24-btn-outline" href="../projects.qmd">← All projects</a></div>
 
 :::
+
+## Research Code and Reproducibility
+
+The complete research repository contains the SQL Server and Python analysis scripts, reproducibility documentation, approved aggregate findings, and the final research report. Original competition datasets and applicant-level records are not published.
+
+[Explore the Home Credit Risk Analytics repository](https://github.com/aranfelix/home-credit-risk-analytics)
